@@ -1,0 +1,12 @@
+---
+layout: post
+name: archlinux-postgresql-shmmax
+title: 解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題
+date: 2012-01-25 11:42:00.000000000 +08:00
+categories:
+- archlinux
+- solved
+- postgresql
+permalink: /2012/01/archlinux-postgresql-shmmax.html
+---
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-Hq2C6FYVwF8/Tx95ktvy8UI/AAAAAAAAD8c/EHdvlKtIVCk/s1600/PostgreSQL-9.gif" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="317" width="400" src="http://2.bp.blogspot.com/-Hq2C6FYVwF8/Tx95ktvy8UI/AAAAAAAAD8c/EHdvlKtIVCk/s400/PostgreSQL-9.gif" /></a></div><br />上次更新後，重新啟動電腦時 PostgreSQL service 發生錯誤，<br />看到 /var/log/postgresql.log 裡面有這些東西：<br /><br /><div>LOG:  received smart shutdown request<br />LOG:  autovacuum launcher shutting down<br />LOG:  shutting down<br />LOG:  database system is shut down<br />FATAL:  could not create shared memory segment: Invalid argument<br />DETAIL:  Failed system call was shmget(key=5432001, size=41279488, 03600).<br />HINT:  <strong>This error usually means that PostgreSQL's request for a shared memory segment exceeded your kernel's SHMMAX parameter. </strong> You can either reduce the request size or reconfigure the kernel with larger SHMMAX.  To reduce the request size (currently 41279488 bytes), reduce PostgreSQL's shared memory usage, perhaps by reducing shared_buffers or max_connections.<br />        If the request size is already small, it's possible that it is less than your kernel's SHMMIN parameter, in which case raising the request size or reconfiguring SHMMIN is called for.<br />        The PostgreSQL documentation contains more information about shared memory configuration.<br />LOG:  database system was shut down at 2012-01-25 03:53:18 CST<br /></div><br />根據粗體字貼心的提醒，可以先來更改系統設定：<br /><br />$ sysctl -w kernel.shmmax=134217728<br /><br />再重新啟動 PostgreSQL 就大功告成：<br /><br />$ rc.d start postgresql<br /><br />但這個設定重新開機之後就沒了，所以還要寫入系統設定檔裡<br /><br />$ echo 'kernel.shmmax = 134217728' >> /etc/sysctl.conf<br /><br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-2666709530526127847?l=polar-dev.blogspot.com' alt='' /></div>
