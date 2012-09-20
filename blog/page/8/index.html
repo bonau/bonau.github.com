@@ -9,9 +9,7 @@
   <meta name="author" content="munouzin">
 
   
-  <meta name="description" content=" Originally uploaded by munouzin. 前幾天翻到這張圖，笑超久的 orz 那時候跟 PC 在 iCON 研究協定，
-還有什麼「快給我名單啊笨蛋」之類的協定 XD
-">
+  <meta name="description" content="http://www.zedshaw.com/projects/scgi_rails/faq.html Q: It's really slow when I start it up and seems to leak memory. A: You’re running it in &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +64,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/03/05/scgi-solution-with-slow-speed/">SCGI Solution With Slow Speed</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-03-05T00:00:00+08:00" pubdate data-updated="true">Mar 5<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p>http://www.zedshaw.com/projects/scgi_rails/faq.html</p></p>
+
+<p><pre>Q:  It's really slow when I start it up and seems to leak memory.</pre></p>
+
+<p><p>A:  You’re running it in development mode.  You most likely configured<br />
+your processor with “-e development” so all you need to do is:</p></p>
+
+<p><blockquote>scgi_ctrl config -M -e development<br />
+scgi_ctrl restart</blockquote></p>
+
+<p><p>This “merges” (-M) your previous configuration with the new config<br />
+of “-e development” and then restarts your processor.</p></p>
+
+<p><p>XD</p></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -665,6 +712,10 @@ wxWindow 真的是很好的選擇.
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/20/ban-dao-github-liao/">搬到 GitHub 了</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
       </li>
     
@@ -678,10 +729,6 @@ wxWindow 真的是很好的選擇.
     
       <li class="post">
         <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
       </li>
     
   </ul>
