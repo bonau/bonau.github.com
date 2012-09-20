@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Chrome/Chromium 藍白畫面 - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Chrome 的使用經驗大致上是不錯的，除了目前缺了些好用的 hack tool 跟 web development 工具，還有吃掉大量記憶體之外。( 別說些什麼記憶體很便宜之類的屁話啦，我家有台電腦是用 Rambus 的&#8230; )不過最近我還發現他另外一個奇妙的 Bug，就是我常常在用 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bonau.github.com/2009/08/chromechromium.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bonau.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Chrome/Chromium 藍白畫面</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-13T05:07:00+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">Chrome 的使用經驗大致上是不錯的，<br />除了目前缺了些好用的 hack tool 跟 web development 工具，<br />還有吃掉大量記憶體之外。<br /><br />( 別說些什麼記憶體很便宜之類的屁話啦，我家有台電腦是用 Rambus 的&#8230; )<br /><br />不過最近我還發現他另外一個奇妙的 Bug，<br />就是我常常在用 Chrome 切換分頁的時候讓 Windows XP 整個當掉，<br />而且是藍白畫面那種。<br />細看之後發現錯誤是出在 win32k.sys<br />其實 XP 還算穩定，我已經很久沒有碰到藍白畫面了，<br />而且我從未碰過 win32k.sys 這東西引發的當機，<br />所以就用這個去 Chromium 查了一下，<br />看到這篇：<br /><a href="http://code.google.com/p/chromium/issues/detail?id=10011">Issue 10011: BSOD in win32k.sys on XP SP3</a><br />http://code.google.com/p/chromium/issues/detail?id=10011<br /><br />開發者很快的回答了問題，<br />指出似乎是 win32k.sys 在 page fault 時產生的錯誤，<br />這個回答是可信的，因為我常常在切換分頁的時候，產生大量 I/O，<br />而每個分頁又是不同的 Process，切換起來有時候還比 Firefox 2.x 更慢。<div><br /></div><div>結果問題還是出在 Windows XP 身上，唉。<br /><br />解決方式是更新到 Windows XP SP3 之後再套用 <a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718">KB959252</a> 更新<br />http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718<br />這個更新是有語言限制的，<br />像我安裝的是英文版 XP 就用英文版的，<br />如果安裝的是中文版 XP 就要改選正體中文頁面來下載。<br /><div><br /></div><div>希望此後不會再因為 Chrome 瀏覽器引發藍白當機 ˊˋ</div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-3109891721055068366?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-13T05:07:00+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/bsod/'>bsod</a>, <a class='category' href='/blog/categories/chrome/'>chrome</a>, <a class='category' href='/blog/categories/chromium/'>chromium</a>, <a class='category' href='/blog/categories/win32k/'>win32k</a>, <a class='category' href='/blog/categories/windows-xp/'>windows xp</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bonau.github.com/2009/08/chromechromium.html" data-via="" data-counturl="http://bonau.github.com/2009/08/chromechromium.html" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/2009/08/chrome-firebug-lite.html" title="Next Post: 在 Chrome 使用 Firebug Lite">在 Chrome 使用 Firebug Lite &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: firebug | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/firebug/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Chrome 使用 Firebug Lite]]></title>
+    <link href="http://bonau.github.com/2009/08/chrome-firebug-lite.html"/>
+    <updated>2009-08-13T05:58:00+08:00</updated>
+    <id>http://bonau.github.com/2009/08/chrome-firebug-lite</id>
+    <content type="html"><![CDATA[<div>Firebug 很好用，但是 Firefox 效能真的不好，<div>即使到了 3.5 還是一樣。</div><div><br /></div><div>而由於 Firefox 的套件多半是 JavaScript + XUI 製作的，</div><div>所以要跟別套瀏覽器相容也並不是那麼樣的困難，</div><div>Firebug 自己出了一套 Lite 給其他瀏覽器使用：</div><div><a href="http://getfirebug.com/lite.html">http://getfirebug.com/lite.html</a></div><div>而這個也可以用在 Chrome 上。</div><h3>安裝</h3><div>在上面的網址找到 "Firebug Lite as bookmarklet"</div><div><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s1600-h/screenshot.13-08-2009+06.05.44.png"><img src="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s320/screenshot.13-08-2009+06.05.44.png" border="0" alt="" id="BLOGGER_PHOTO_ID_5369202538405556946" style="cursor: pointer; width: 295px; height: 241px; " /></a></div><div><div><br /></div><div>然後把底下 "Firebug Lite" 的連結用拖曳的方式拉到書籤工具列上，</div><div>這樣就可以在 Chrome 使用 Firebug Lite 了哦 A_A</div><h3>原理</h3><div>原理是他會 require 一個遠端的 JavaScript 檔案，</div><div>用那個檔案來啟動 Firebug，所以只要有連上網路，就可以隨時用到最新的 Firebug 了。</div><div>離線使用的方法日後有空再補上。</div><h3>已知問題</h3><div>HTML 元素檢視會有些問題 ( 可能是因為 Firebug 也是元素之一吧 )，</div><div>不過好在 Chrome 有自己還不錯用的元素檢視器，</div><div>可以先擋著用。</div></div></div>
+
+
+<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-792029656646164883?l=polar-dev.blogspot.com' alt='' /></div>
+
+]]></content>
+  </entry>
+  
+</feed>

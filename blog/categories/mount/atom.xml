@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mount | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/mount/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[掛載硬碟映像檔中的分割區]]></title>
+    <link href="http://bonau.github.com/2012/07/mount-partition-in-disk-image.html"/>
+    <updated>2012-07-20T02:45:00+08:00</updated>
+    <id>http://bonau.github.com/2012/07/mount-partition-in-disk-image</id>
+    <content type="html"><![CDATA[<br />有天因為方便的關係將整個硬碟用 dd 備份了起來，<br />有天要用裡面的資料，<br />卻發現我好像只 mount 過 partition image 而不是 disk image...<br /><br />想了一下其實也很好處理，<br />我們需要 parted 來找到分割區的定義點，<br />然後再掛載他：<br /><br /><pre>$parted /path/to/disk.img unit B print<br /><br />Model:  (file)<br />磁碟 /path/to/disk.img：320071851520B<br />磁區大小 (邏輯/物理)：512B/512B<br />分割區：msdos<br /><br />編號  起始點      結束點          大小            類型      檔案系統    旗標<br /> 1   <strong>1048576B</strong>  320069435391B  320068386816B  primary  ntfs      啟動<br /></pre><br />之後就是 mount 囉<br /><br /><pre>$mkdir /mnt/somedir<br />$mount -o loop,offset=1048576 /path/to/disk.img /mnt/somedir</pre><br />全劇終。<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-1442284356330002106?l=polar-dev.blogspot.com' alt='' /></div>
+
+]]></content>
+  </entry>
+  
+</feed>

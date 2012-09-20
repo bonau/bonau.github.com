@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: google chrome | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/google-chrome/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[About Installing Google Chrome in Arch Linux]]></title>
+    <link href="http://bonau.github.com/2012/01/about-installing-google-chrome-in-arch.html"/>
+    <updated>2012-01-20T18:33:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/about-installing-google-chrome-in-arch</id>
+    <content type="html"><![CDATA[<p><b><span style="font-size: x-large;">If you choose Chromium...</span></b><br />It's easy to install Chromium, the most powerful browser from Google, in Arch Linux. Just make sure you have enabled "extra" repository in /etc/pacman.conf and type:<br /><br />$ pacman -S chromium<br /><br />all things done.<br /><br /><b><span style="font-size: x-large;">If you'd like to install Google Chrome Stable...</span></b><br />However, if you'd like it more stable, you can take a look in <a href="https://aur.archlinux.org/" target="_blank">AUR</a>. Of course it's not provided by Arch Linux&nbsp;officially. The package I use is here:<br /><br /><span style=""><span style="color: #6c83b0; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">google-chrome 16.0.912.75-1 by&nbsp;</span><span style="color: #888888; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">t3ddy</span></span><br /><a href="https://aur.archlinux.org/packages.php?ID=37469">https://aur.archlinux.org/packages.php?ID=37469</a><br /><br />Download the tarbell and untar it:<br /><br />$ tar xzf google-chrome.tar.gz<br />$ cd google-chrome/<br /><br />And then make package:<br /><br />$ makepkg -s<br /><br />You may see the makepkg script asking you to download required libraries. Confirm and continue. After running makepkg script, the current directory (google-chrome/) contains a few extra files, include "google-chrome-xx.x.xxx.xx-x-YOUR_ARCH.pkg.tar.xz". Install it by pacman, for example in my case:<br /><br />$ pacman -U&nbsp;google-chrome-16.0.912.75-1-x86_64.pkg.tar.xz<br /><br />Confirm and install. Now you should see Google Chrome in gnome-shell (kde kickoff or something.)<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-8398508615793915320?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+</feed>

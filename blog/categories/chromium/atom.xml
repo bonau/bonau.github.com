@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: chromium | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/chromium/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[About Installing Google Chrome in Arch Linux]]></title>
+    <link href="http://bonau.github.com/2012/01/about-installing-google-chrome-in-arch.html"/>
+    <updated>2012-01-20T18:33:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/about-installing-google-chrome-in-arch</id>
+    <content type="html"><![CDATA[<p><b><span style="font-size: x-large;">If you choose Chromium...</span></b><br />It's easy to install Chromium, the most powerful browser from Google, in Arch Linux. Just make sure you have enabled "extra" repository in /etc/pacman.conf and type:<br /><br />$ pacman -S chromium<br /><br />all things done.<br /><br /><b><span style="font-size: x-large;">If you'd like to install Google Chrome Stable...</span></b><br />However, if you'd like it more stable, you can take a look in <a href="https://aur.archlinux.org/" target="_blank">AUR</a>. Of course it's not provided by Arch Linux&nbsp;officially. The package I use is here:<br /><br /><span style=""><span style="color: #6c83b0; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">google-chrome 16.0.912.75-1 by&nbsp;</span><span style="color: #888888; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">t3ddy</span></span><br /><a href="https://aur.archlinux.org/packages.php?ID=37469">https://aur.archlinux.org/packages.php?ID=37469</a><br /><br />Download the tarbell and untar it:<br /><br />$ tar xzf google-chrome.tar.gz<br />$ cd google-chrome/<br /><br />And then make package:<br /><br />$ makepkg -s<br /><br />You may see the makepkg script asking you to download required libraries. Confirm and continue. After running makepkg script, the current directory (google-chrome/) contains a few extra files, include "google-chrome-xx.x.xxx.xx-x-YOUR_ARCH.pkg.tar.xz". Install it by pacman, for example in my case:<br /><br />$ pacman -U&nbsp;google-chrome-16.0.912.75-1-x86_64.pkg.tar.xz<br /><br />Confirm and install. Now you should see Google Chrome in gnome-shell (kde kickoff or something.)<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-8398508615793915320?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[有關 Google Chrome/Chromium 使用太多記憶體]]></title>
+    <link href="http://bonau.github.com/2009/08/google-chromechromium_14.html"/>
+    <updated>2009-08-14T20:55:00+08:00</updated>
+    <id>http://bonau.github.com/2009/08/google-chromechromium_14</id>
+    <content type="html"><![CDATA[<p><a href="http://www.google.com/support/forum/p/Chrome/thread?tid=7503e986d7037c43&amp;hl=en">http://www.google.com/support/forum/p/Chrome/thread?tid=7503e986d7037c43&amp;hl=en</a><div><br /></div><div>似乎沒有什麼好的解答。</div><div>關掉卡巴之後，記憶體的用量反而攀升了……</div><div><br /></div><div>後來使用 --memory-model=high 倒是解了這個問題，</div><div>雖然 Physical memory 用得比較多，</div><div>但總比一直 page fault 來得好。</div><div><br /></div><div>記憶體少的用戶該怎麼辦呢……</div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7853350203470300382?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Chrome/Chromium 的啟動參數]]></title>
+    <link href="http://bonau.github.com/2009/08/google-chromechromium.html"/>
+    <updated>2009-08-14T15:50:00+08:00</updated>
+    <id>http://bonau.github.com/2009/08/google-chromechromium</id>
+    <content type="html"><![CDATA[<p>本文是參考 Chromium Build 23135<br />不同版本也許會有些選項不能使用。<br /><br />使用的方式：在 Chrome 捷徑裡的「目標」欄位填入<br />Chrome.exe --option-1 --option-2<br />例如<br />C:\xxx\chrome.exe --enable-udd-profiles --start-maximized<br />代表「使用多使用者設定檔模式」及「啟動時最大化」<br /><br />常用的選項：<br /><br /><table><tbody><tr><td>allow-all-activex</td><td>預設讓各種附加元件可以使用</td></tr><tr><td>auto-spell-correct</td><td>輸入文字時自動修正錯字</td></tr><tr><td>bookmark-menu</td><td>在網址列的右側多加一個書籤按鈕</td></tr><tr><td>disable-audio</td><td>不啟用背景音效音樂</td></tr><tr><td>disable-images</td><td>不載入圖案</td></tr><tr><td>disable-java</td><td>不啟用 JAVA</td></tr><tr><td>disable-javascript</td><td>不啟用 JavaScript</td></tr><tr><td>disable-logging</td><td>不啟用事件紀錄</td></tr><tr><td>disable-plugins</td><td>不啟用任何附加元件</td></tr><tr><td>disable-popup-blocking</td><td>不阻止彈出式視窗</td></tr><tr><td>disk-cache-dir=xxx</td><td>手動設定硬碟快取的目錄</td></tr><tr><td>disk-cache-size=xxx</td><td>限制硬碟快取大小</td></tr><tr><td>enable-udd-profiles</td><td>啟用多使用者設定檔，可在瀏覽時按 Ctrl+M 管理使用者</td></tr><tr><td>enable-sync</td><td>允許網路同步書籤</td></tr><tr><td>enable-user-scripts</td><td>啟用使用者自訂 Scripts<span class="Apple-tab-span" style="white-space:pre"> </span></td></tr><tr><td>memory-model=xxx</td><td>記憶體模型，xxx 可為 high, medium, low<br />如果電腦有配備 1.5GB 以上記憶體，<br />使用 Chrome 切換分頁時卻常會讀取硬碟，<br />就可以使用 high 來解決這個問題。<br />根據 Chrome 原始碼，原理似乎不是配給記憶體，<br />而是很多 Chorme 的元件會依據你給予的 Memory Model，<br />決定是否要限制每個 Process 的 Working Set</td></tr><tr><td>no-default-browser-check</td><td>不檢查預設瀏覽器是否為 Chrome</td></tr><tr><td>old-new-tab-page</td><td>使用 2.0 時代的新頁籤預設版面</td></tr><tr><td>process-per-site</td><td>每個網站使用一個 Process</td></tr><tr><td>process-per-tab</td><td>每個網頁各使用一個 Process</td></tr><tr><td>user-scripts-dir=xxx</td><td>如果有 --enable-user-scripts 這個啟動選項的話，<br />則會在開啟新網頁的時候，將指定目錄的 JavaScript 都執行一遍，<br />跟 Opera 的 User Scripts 功能類似。</td></tr></tbody></table><br /><br />全部的選項：<br /><br />allow-all-activex<br />allow-sandbox-debugging<br />always-enable-dev-tools<br />app<br />assert-test<br />auto-spell-correct<br />automation-channel<br />bookmark-menu<br />browser-subprocess-path<br />country<br />crash-test<br />debug-print<br />diagnostics<br />disable-audio<br />disable-custom-jumplist<br />disable-dev-tools<br />disable-hang-monitor<br />disable-images<br />disable-java<br />disable-javascript<br />disable-logging<br />disable-metrics<br />disable-new-tab-first-run<br />disable-plugins<br />disable-popup-blocking<br />disable-prompt-on-repost<br />disable-web-security<br />disable-winsta<br />disk-cache-dir=xxx<br />disk-cache-size=xxx<br />dns-log-details<br />dns-prefetch-disable<br />dom-automation<br />dump-histograms-on-exit<br />enable-application-cache<br />enable-benchmarking<br />enable-databases<br />enable-extensions<br />enable-fastback<br />enable-file-cookies<br />enable-local-storage<br />enable-logging<br />enable-monitor-profile<br />enable-native-web-workers<br />enable-plugins<br />enable-remote-fonts<br />enable-renderer-accessibility<br />enable-sdch<br />enable-seccomp-sandbox<br />enable-session-storage<br />enable-stats-table<br />enable-sync<br />enable-tabtastic2<br />enable-udd-profiles<br />enable-user-scripts<br />enable-watchdog<br />enable-web-resources<br />enable-xss-auditor<br />extensions-update-frequency<br />file-descriptor-limit<br />first-run<br />force-fieldtest<br />gears-plugin-path<br />google-internal-crash-reporting<br />hide-icons<br />homepage<br />import<br />in-process-plugins<br />incognito<br />install-extension<br />js-flags<br />load-extension<br />load-plugin<br />log-filter-prefix<br />log-level<br />log-plugin-messages<br />make-default-browser<br />media-cache-size<br />memory-model=xxx<br />memory-profile<br />message-loop-histogrammer<br />metrics-recording-only<br />new-ftp<br />new-tab-page<br />no-default-browser-check<br />no-events<br />no-first-run<br />no-js-randomness<br />no-proxy-server<br />no-sandbox<br />old-new-tab-page<br />omnibox-popup-count<br />pack-extension<br />pack-extension-key<br />parent-profile<br />pinned-tab-count<br />playback-mode<br />plugin<br />plugin-data-dir<br />plugin-launcher<br />plugin-path<br />plugin-startup-dialog<br />print<br />privacy-blacklist<br />process-per-site<br />process-per-tab<br />proxy-auto-detect<br />proxy-bypass-list<br />proxy-pac-url<br />proxy-server<br />record-mode<br />remote-shell-port<br />renderer<br />renderer-assert-test<br />renderer-cmd-prefix<br />renderer-crash-dumping<br />renderer-crash-test<br />renderer-startup-dialog<br />restore-last-session<br />safe-plugins<br />search-in-omnibox-hint<br />show-icons<br />silent-dump-on-dcheck<br />simple-data-source<br />single-process<br />start-maximized<br />tab-count-to-load-on-session-restore<br />test-name<br />test-sandbox<br />testing-channel<br />thumbnail-store<br />trusted-plugins<br />try-chrome-again<br />uninstall<br />use-lf-heap<br />user-agent<br />user-data-dir<br />user-scripts-dir<br />utility<br />utility-cmd-prefix<br />wait-for-debugger-children<br />web-worker-process-per-core<br />web-worker-share-processes<br />winhttp-proxy-resolver<br />worker<br />zygote<br />zygote-cmd-prefix<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-4619864317918659032?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在 Chrome 使用 Firebug Lite]]></title>
+    <link href="http://bonau.github.com/2009/08/chrome-firebug-lite.html"/>
+    <updated>2009-08-13T05:58:00+08:00</updated>
+    <id>http://bonau.github.com/2009/08/chrome-firebug-lite</id>
+    <content type="html"><![CDATA[<div>Firebug 很好用，但是 Firefox 效能真的不好，<div>即使到了 3.5 還是一樣。</div><div><br /></div><div>而由於 Firefox 的套件多半是 JavaScript + XUI 製作的，</div><div>所以要跟別套瀏覽器相容也並不是那麼樣的困難，</div><div>Firebug 自己出了一套 Lite 給其他瀏覽器使用：</div><div><a href="http://getfirebug.com/lite.html">http://getfirebug.com/lite.html</a></div><div>而這個也可以用在 Chrome 上。</div><h3>安裝</h3><div>在上面的網址找到 "Firebug Lite as bookmarklet"</div><div><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s1600-h/screenshot.13-08-2009+06.05.44.png"><img src="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s320/screenshot.13-08-2009+06.05.44.png" border="0" alt="" id="BLOGGER_PHOTO_ID_5369202538405556946" style="cursor: pointer; width: 295px; height: 241px; " /></a></div><div><div><br /></div><div>然後把底下 "Firebug Lite" 的連結用拖曳的方式拉到書籤工具列上，</div><div>這樣就可以在 Chrome 使用 Firebug Lite 了哦 A_A</div><h3>原理</h3><div>原理是他會 require 一個遠端的 JavaScript 檔案，</div><div>用那個檔案來啟動 Firebug，所以只要有連上網路，就可以隨時用到最新的 Firebug 了。</div><div>離線使用的方法日後有空再補上。</div><h3>已知問題</h3><div>HTML 元素檢視會有些問題 ( 可能是因為 Firebug 也是元素之一吧 )，</div><div>不過好在 Chrome 有自己還不錯用的元素檢視器，</div><div>可以先擋著用。</div></div></div>
+
+
+<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-792029656646164883?l=polar-dev.blogspot.com' alt='' /></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Chrome/Chromium 藍白畫面]]></title>
+    <link href="http://bonau.github.com/2009/08/chromechromium.html"/>
+    <updated>2009-08-13T05:07:00+08:00</updated>
+    <id>http://bonau.github.com/2009/08/chromechromium</id>
+    <content type="html"><![CDATA[<p>Chrome 的使用經驗大致上是不錯的，<br />除了目前缺了些好用的 hack tool 跟 web development 工具，<br />還有吃掉大量記憶體之外。<br /><br />( 別說些什麼記憶體很便宜之類的屁話啦，我家有台電腦是用 Rambus 的... )<br /><br />不過最近我還發現他另外一個奇妙的 Bug，<br />就是我常常在用 Chrome 切換分頁的時候讓 Windows XP 整個當掉，<br />而且是藍白畫面那種。<br />細看之後發現錯誤是出在 win32k.sys<br />其實 XP 還算穩定，我已經很久沒有碰到藍白畫面了，<br />而且我從未碰過 win32k.sys 這東西引發的當機，<br />所以就用這個去 Chromium 查了一下，<br />看到這篇：<br /><a href="http://code.google.com/p/chromium/issues/detail?id=10011">Issue 10011: BSOD in win32k.sys on XP SP3</a><br />http://code.google.com/p/chromium/issues/detail?id=10011<br /><br />開發者很快的回答了問題，<br />指出似乎是 win32k.sys 在 page fault 時產生的錯誤，<br />這個回答是可信的，因為我常常在切換分頁的時候，產生大量 I/O，<br />而每個分頁又是不同的 Process，切換起來有時候還比 Firefox 2.x 更慢。<div><br /></div><div>結果問題還是出在 Windows XP 身上，唉。<br /><br />解決方式是更新到 Windows XP SP3 之後再套用 <a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718">KB959252</a> 更新<br />http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718<br />這個更新是有語言限制的，<br />像我安裝的是英文版 XP 就用英文版的，<br />如果安裝的是中文版 XP 就要改選正體中文頁面來下載。<br /><div><br /></div><div>希望此後不會再因為 Chrome 瀏覽器引發藍白當機 ˊˋ</div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-3109891721055068366?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+</feed>

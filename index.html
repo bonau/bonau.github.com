@@ -9,7 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="有天因為方便的關係將整個硬碟用 dd 備份了起來，有天要用裡面的資料，卻發現我好像只 mount 過 partition image 而不是 disk image&#8230;想了一下其實也很好處理，我們需要 parted 來找到分割區的定義點，然後再掛載他：$parted /path/to/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,7 +65,369 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-20T02:45:00+08:00" pubdate data-updated="true">Jul 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><br />有天因為方便的關係將整個硬碟用 dd 備份了起來，<br />有天要用裡面的資料，<br />卻發現我好像只 mount 過 partition image 而不是 disk image&#8230;<br /><br />想了一下其實也很好處理，<br />我們需要 parted 來找到分割區的定義點，<br />然後再掛載他：<br /><br /><pre>$parted /path/to/disk.img unit B print<br /><br />Model:  (file)<br />磁碟 /path/to/disk.img：320071851520B<br />磁區大小 (邏輯/物理)：512B/512B<br />分割區：msdos<br /><br />編號  起始點      結束點          大小            類型      檔案系統    旗標<br /> 1   <strong>1048576B</strong>  320069435391B  320068386816B  primary  ntfs      啟動<br /></pre><br />之後就是 mount 囉<br /><br /><pre>$mkdir /mnt/somedir<br />$mount -o loop,offset=1048576 /path/to/disk.img /mnt/somedir</pre><br />全劇終。<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-1442284356330002106?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 Shmmax 設定無法啟動的問題</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-25T11:42:00+08:00" pubdate data-updated="true">Jan 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-Hq2C6FYVwF8/Tx95ktvy8UI/AAAAAAAAD8c/EHdvlKtIVCk/s1600/PostgreSQL-9.gif" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="317" width="400" src="http://2.bp.blogspot.com/-Hq2C6FYVwF8/Tx95ktvy8UI/AAAAAAAAD8c/EHdvlKtIVCk/s400/PostgreSQL-9.gif" /></a></div><br />上次更新後，重新啟動電腦時 PostgreSQL service 發生錯誤，<br />看到 /var/log/postgresql.log 裡面有這些東西：<br /><br /><div>LOG:  received smart shutdown request<br />LOG:  autovacuum launcher shutting down<br />LOG:  shutting down<br />LOG:  database system is shut down<br />FATAL:  could not create shared memory segment: Invalid argument<br />DETAIL:  Failed system call was shmget(key=5432001, size=41279488, 03600).<br />HINT:  <strong>This error usually means that PostgreSQL&#8217;s request for a shared memory segment exceeded your kernel&#8217;s SHMMAX parameter. </strong> You can either reduce the request size or reconfigure the kernel with larger SHMMAX.  To reduce the request size (currently 41279488 bytes), reduce PostgreSQL&#8217;s shared memory usage, perhaps by reducing shared_buffers or max_connections.<br />        If the request size is already small, it&#8217;s possible that it is less than your kernel&#8217;s SHMMIN parameter, in which case raising the request size or reconfiguring SHMMIN is called for.<br />        The PostgreSQL documentation contains more information about shared memory configuration.<br />LOG:  database system was shut down at 2012-01-25 03:53:18 CST<br /></div><br />根據粗體字貼心的提醒，可以先來更改系統設定：<br /><br />$ sysctl -w kernel.shmmax=134217728<br /><br />再重新啟動 PostgreSQL 就大功告成：<br /><br />$ rc.d start postgresql<br /><br />但這個設定重新開機之後就沒了，所以還要寫入系統設定檔裡<br /><br />$ echo &#8216;kernel.shmmax = 134217728&#8217; >> /etc/sysctl.conf<br /><br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-2666709530526127847?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-20T18:33:00+08:00" pubdate data-updated="true">Jan 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><b><span style="font-size: x-large;">If you choose Chromium&#8230;</span></b><br />It&#8217;s easy to install Chromium, the most powerful browser from Google, in Arch Linux. Just make sure you have enabled &#8220;extra&#8221; repository in /etc/pacman.conf and type:<br /><br />$ pacman -S chromium<br /><br />all things done.<br /><br /><b><span style="font-size: x-large;">If you&#8217;d like to install Google Chrome Stable&#8230;</span></b><br />However, if you&#8217;d like it more stable, you can take a look in <a href="https://aur.archlinux.org/" target="_blank">AUR</a>. Of course it&#8217;s not provided by Arch Linux&nbsp;officially. The package I use is here:<br /><br /><span style=""><span style="color: #6c83b0; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">google-chrome 16.0.912.75-1 by&nbsp;</span><span style="color: #888888; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">t3ddy</span></span><br /><a href="https://aur.archlinux.org/packages.php?ID=37469">https://aur.archlinux.org/packages.php?ID=37469</a><br /><br />Download the tarbell and untar it:<br /><br />$ tar xzf google-chrome.tar.gz<br />$ cd google-chrome/<br /><br />And then make package:<br /><br />$ makepkg -s<br /><br />You may see the makepkg script asking you to download required libraries. Confirm and continue. After running makepkg script, the current directory (google-chrome/) contains a few extra files, include &#8220;google-chrome-xx.x.xxx.xx-x-YOUR_ARCH.pkg.tar.xz&#8221;. Install it by pacman, for example in my case:<br /><br />$ pacman -U&nbsp;google-chrome-16.0.912.75-1-x86_64.pkg.tar.xz<br /><br />Confirm and install. Now you should see Google Chrome in gnome-shell (kde kickoff or something.)<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-8398508615793915320?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, Etc.) in Gmaps4rails Way!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-12T22:41:00+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-rAETIAOI_iM/Tw7wh6vLyII/AAAAAAAADnU/o1ZqLOdx9aw/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+22%253A37%253A27.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="338" src="http://2.bp.blogspot.com/-rAETIAOI_iM/Tw7wh6vLyII/AAAAAAAADnU/o1ZqLOdx9aw/s640/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+22%253A37%253A27.png" width="640" /></a></div><br />Google Maps API has it&#8217;s&nbsp;<a href="http://code.google.com/intl/zh-TW/apis/maps/documentation/javascript/advertising.html" target="_blank">official AdSense Library</a>, which allow you to add advertisement in your own map view easily. By using gmaps4rails, the recently popular map service library in RubyOnRails, some problems occurred if we write the javascript tag mention on the&nbsp;Google Maps API&nbsp;document. Why? because the google maps api version gmaps4rails used is not the newest version. Using the newest js library result in conflict between different versions of Google Maps API.<br /><br />To avoid this, we can simply put {&nbsp;:libraries =&gt; [:adsense] } in :map_options, for example:<br /><br /><pre>@google_maps_html = gmaps( :map_options =&gt; {</pre><pre>    :detect_location =&gt; true,<br />    <span style="color: #990000;"><b>:libraries =&gt; [:adsense],</b></span><br />    :center_on_user =&gt; true,<br />    :zoom =&gt; 15,<br />    :auto_zoom =&gt; false,<br />    :auto_adjust =&gt; true,<br />    :disableDefaultUI =&gt; true },<br />    :markers =&gt; { :data =&gt; @json })</pre><span style="font-family: monospace;"><span style="white-space: pre;">&nbsp;</span></span><div>And in our view, put javascript like this <b><span style="color: #990000;">in the window load callback</span></b>:<br /><br /><pre><br />  Gmaps.map.callback = function() {<br />    var adUnitDiv = document.createElement('div');<br />    var adUnitOptions = {<br />    format: google.maps.adsense.AdFormat.HALF_BANNER,<br />    position: google.maps.ControlPosition.TOP_CENTER,<br />    publisherId: '<i><span style="background-color: white; color: #666666;">your publisher id</span></i>',<br />    <span style="color: #990000;"><b>map: this.map,</b></span><br />    visible: true</pre><pre>  };<br />  var adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions);<br /></pre><br />&nbsp; &nbsp; &nbsp;<br />The :libraries key seems not appear on the&nbsp;<a href="https://github.com/apneadiving/Google-Maps-for-Rails/wiki/" target="_blank">Google-Maps-for-Rails wiki</a>. But after trace the source code, we don&#8217;t have to modify the plugin but just use it. Force working with the newest Google Maps API with gmaps4rails is not recommended.&nbsp;</div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-2277722151436231612?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve Gnome-terminal No Wrapping Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-12T17:05:00+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-J37GkIV8Evw/Tw6hJGMxpcI/AAAAAAAADmo/qinicGRvJnU/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+16%253A59%253A51.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="252" src="http://2.bp.blogspot.com/-J37GkIV8Evw/Tw6hJGMxpcI/AAAAAAAADmo/qinicGRvJnU/s400/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+16%253A59%253A51.png" width="400" /></a></div><div class="separator" style="clear: both; text-align: left;"><span style="text-align: -webkit-auto;"><br /></span></div><div class="separator" style="clear: both; text-align: left;"><span style="text-align: -webkit-auto;">You may notice that&nbsp;sometimes long commands doesn&#8217;t be wrapped when&nbsp;using bash in gnome-terminal. However, it&#8217;s considered to be a bug of gnome-terminal. the solution is pretty simple: use system default font! which is configurable in preference dialog.</span></div><div class="separator" style="clear: both; text-align: left;"><span style="text-align: -webkit-auto;"><br /></span></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-NwSfvJbap9I/Tw6htkVOfKI/AAAAAAAADmw/MO4bectkhRE/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+17%253A02%253A15.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="290" src="http://2.bp.blogspot.com/-NwSfvJbap9I/Tw6htkVOfKI/AAAAAAAADmw/MO4bectkhRE/s400/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+17%253A02%253A15.png" width="400" /></a></div><br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-5407999248321376007?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/01/ubuntu-unity-linux-gnome-3-alt-alt-alt.html">找回 Gnome 3 遺失的關機選項</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-08T02:52:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>除了 Ubuntu 自家擁有優秀(?)的 Unity 之外，近期各 Linux 發行版都陸續升級到了 Gnome 3，界面乾淨俐落，清新可人。然而忙碌了一天之後要關機時，卻遍尋不著關機的選項……。</p><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-CH-afycLoIQ/TwiQXTGD22I/AAAAAAAADJk/4KtsqV4vTrU/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-08+02%253A34%253A41.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em; "><img border="0" height="293" src="http://1.bp.blogspot.com/-CH-afycLoIQ/TwiQXTGD22I/AAAAAAAADJk/4KtsqV4vTrU/s320/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-08+02%253A34%253A41.png" width="320" class="polar-normal-image" /></a></div><p>鎖定、切換、登出，啊怎麼只有暫停 囧 說好的關機呢？重新開機呢？就算登出了還是找不到。別擔心，其實他們都還在，只是需要多按一個 Alt 鍵而已。點開螢幕右上角，有你名字的選單後，按下 Alt 鍵，「關閉電源…」按鈕就會出現了，重新開機也在裡面。</p><p>嫌每次都要多按 Alt 太麻煩嗎？多數 Linux 發行版裡面都有這個套件：gnome-shell-extension-alternative-status-menu 以 Arch Linux 的文字界面安裝為例，以 root 權限執行：</p><br /><pre>$ pacman -S gnome-shell-extension-alternative-status-menu<br /></pre><br />再重新登入就可以了！<br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-5864629396768117441?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/01/archlinux.html">迷上 ArchLinux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-07T20:22:00+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-u4O2SgJIepQ/Twg3FILCTYI/AAAAAAAADJM/_r_R1si7_aU/s1600/archlinux-logo-dark-90dpi.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="106" src="http://3.bp.blogspot.com/-u4O2SgJIepQ/Twg3FILCTYI/AAAAAAAADJM/_r_R1si7_aU/s320/archlinux-logo-dark-90dpi.png" width="320" /></a></div><p>使用了 Ubuntu 跟 Debian 好多年，也深深被 dpkg 套件系統吸引，但多年來這個系統自身所製造的東西越來越多，更改的設定也越來越多，當底層的套件在流程上有所更動的時候，這些高階的系統又無法及時做出反應，這時候系統的穩定性就會受到考驗了。後來我在 Ubuntu 與 Debian 社群反映問題、協助解決問題，但越是努力解決發現問題越大──為什麼以方便使用為設計導向的 Linux，會變成使用者需要不斷 Debug 的窘況？</p><p>後來接觸到了 ArchLinux，起初對於它必須像 FreeBSD 與 Gentoo 一樣什麼設定都自己來覺得有點排斥。後來使用了一陣子之後，發現系統還滿穩定的，自己也在調校系統的途中，對於 Linux 的架構更加了解，大部分的問題也都可以在 Arch Wiki 裡面找到解法，也沒有所謂版本升級的問題，因為它總是在最新版（可理解為 Debian的Sid），討論的時候只要看時間點就好，不需要去關心對方使用的究竟是哪一個發行版。</p>以下是 ArchLinux 官網所遵循的幾個原則<sup>[1]</sup>：<br /><ul><li>簡約</li><li>穩定性比方便性更重要</li><li>使用者為中心</li><li>開放</li><li>自由</li></ul><p>在 Linux 百家爭鳴的時代，很多發行方都會為使用者做了「太多事」，以致於系統不穩定，且使用者排除障礙的方式更加困難，在 ArchLinux 以簡約為信條的前提之下，相信往後與 Linux 的相處將會更加融洽且和諧吧。:)</p><br /><a name='more'></a>[1]&nbsp;The Arch Way - Wiki - ArchLinux&nbsp;<a href="https://wiki.archlinux.org/index.php/The_Arch_Way">https://wiki.archlinux.org/index.php/The_Arch_Way</a><br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-1800613171244714960?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/12/reactivate-notify-osd-instead-of.html">Reactivate Notify-osd Instead of Notification-daemon</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-01T18:28:00+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"># killall notification-daemon<br /># /usr/lib/notify-osd/notify-osd > /dev/null &<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7326950602372682896?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/11/opera-1010-qt4-build-version-for-ubuntu.html">Opera 10.10 QT4 Build Version for Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-30T21:32:00+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">It seems like it only has QT3 version for Opera official site.<br />However, there&#8217;s an official QT4 build indeed.<br /><br />When downloading Opera,<br />click cancel and change &#8220;qt3&#8221; in the URL to &#8220;qt4&#8221;,<br />or in general you may browse the directory where the file lays on, in order to get compressed files instead of packages.<br /><br />For example,<br />Opera 10.10 for debian/Ubuntu builds in QT4 (AMD64):<br /><a href="http://snapshot.opera.com/unix/rc-4742/x86_64-linux/opera_10.10.4742.gcc4.qt4_amd64.deb">http://snapshot.opera.com/unix/rc-4742/x86_64-linux/opera_10.10.4742.gcc4.qt4_amd64.deb</a><br /><br />The directory:<br /><a href="http://snapshot.opera.com/unix/rc-4742/">http://snapshot.opera.com/unix/rc-4742/</a><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-6787806418766216386?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/11/opera-unite.html">Opera Unite 讓個人電腦也能成為小雲端</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-30T08:26:00+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">Opera 10.10 於數日前推出，<br />一項從 Beta 時就備受矚目的新功能 Opera Unite，<br />現在也內建在 Opera 10.10 了。<br /><br />簡單來說 Opera Unite 提供了 Opera 瀏覽器一個架設 Server 的功能，<br />讓 Opera 不只是 WWW Client，也是 WWW Server。<br />也就是說，在打開 Opera 10.10 的時候，<br />你的電腦也擁有了小型的雲端功能，<br />區域網路中其他的電腦通通連接到你這朵雲就可以做很多事情了。<br /><br />咦？那我用 HFS 跟 PCMan FTPd 不就好了嗎？<br />為什麼我需要 Opera Unite 呢？<br /><br />企業雲端之所以被很多人所期待，<br />是因為小企業並沒有足以支出空間、電力、硬體、人力給伺服器，<br />所以才仰賴雲端，<br />相對之下，大多數需要架設 Server 的人，自己可能也並沒有太多相關的知識，<br />設想在家中需要跟兄弟姊妹分享照片但又不想用隨身碟拔來拔去的時候，<br />要是有一個已經設定好的 Server 不是很好嗎？<br />對外的頻寬也並不重要，因為現在區網至少都有 10Mbps 嘛，<br />成本方面的話以上面這個例子來看，至少還省了一個隨身碟。<br /><br />因此相對於企業雲端運算而言，<br />Opera Unite 提供了較小單位的雲朵，<br />讓大部分家庭或辦公單位能夠提供更安全私密，<br />卻又更廉價的資訊網路應用，<br />分享的對象並不需要安裝 Opera，<br />只要用各種可以瀏覽網頁的瀏覽器即可。<br />當不想分享了，就關掉 Opera、關機，<br />一切都非常的方便，<br />如果需要跟更多人分享的話，<br />也可以連接到更大朵的雲(例如 Google, Zoho)去。<br /><br />大致上的分享流程如下：<br /><br />1. 申請 Opera ID，得到你的個人網址，<br />例如 munou.operaunite.com<br />2. 打開 Opera 並設定電腦名稱，得到這台電腦的網址<br />例如 home.munou.operaunite.com<br />3. 開啟 Opera Unite 應用程式，<br />例如音樂分享程式 Music Player<br />4. 把密碼給予要分享的第二者，<br />例如 &#8220;EdJ3&#8221;，或是也可以公開不設定密碼。<br />5. 第二者連到網址進行分享，<br />例如連線到 home.munou.operaunite.com，選擇音樂程式並輸入密碼 &#8220;EdJ3&#8221;。<br /><br />而比較令我在意的是，<br />Opera 從 9 開始就內建 BitTorrent 與 Widget 等令人疑惑的功能，<br />隨著小雲端 Opera Unite 的推出，一切似乎漸漸有了眉目。<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7262037519453588053?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -76,6 +438,26 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
     
   </ul>
 </section>

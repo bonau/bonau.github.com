@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: archlinux | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/archlinux/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題]]></title>
+    <link href="http://bonau.github.com/2012/01/archlinux-postgresql-shmmax.html"/>
+    <updated>2012-01-25T11:42:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/archlinux-postgresql-shmmax</id>
+    <content type="html"><![CDATA[<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-Hq2C6FYVwF8/Tx95ktvy8UI/AAAAAAAAD8c/EHdvlKtIVCk/s1600/PostgreSQL-9.gif" imageanchor="1" style="margin-left:1em; margin-right:1em"><img border="0" height="317" width="400" src="http://2.bp.blogspot.com/-Hq2C6FYVwF8/Tx95ktvy8UI/AAAAAAAAD8c/EHdvlKtIVCk/s400/PostgreSQL-9.gif" /></a></div>
+
+
+<br />上次更新後，重新啟動電腦時 PostgreSQL service 發生錯誤，<br />看到 /var/log/postgresql.log 裡面有這些東西：<br /><br /><div>LOG:  received smart shutdown request<br />LOG:  autovacuum launcher shutting down<br />LOG:  shutting down<br />LOG:  database system is shut down<br />FATAL:  could not create shared memory segment: Invalid argument<br />DETAIL:  Failed system call was shmget(key=5432001, size=41279488, 03600).<br />HINT:  <strong>This error usually means that PostgreSQL's request for a shared memory segment exceeded your kernel's SHMMAX parameter. </strong> You can either reduce the request size or reconfigure the kernel with larger SHMMAX.  To reduce the request size (currently 41279488 bytes), reduce PostgreSQL's shared memory usage, perhaps by reducing shared_buffers or max_connections.<br />        If the request size is already small, it's possible that it is less than your kernel's SHMMIN parameter, in which case raising the request size or reconfiguring SHMMIN is called for.<br />        The PostgreSQL documentation contains more information about shared memory configuration.<br />LOG:  database system was shut down at 2012-01-25 03:53:18 CST<br /></div><br />根據粗體字貼心的提醒，可以先來更改系統設定：<br /><br />$ sysctl -w kernel.shmmax=134217728<br /><br />再重新啟動 PostgreSQL 就大功告成：<br /><br />$ rc.d start postgresql<br /><br />但這個設定重新開機之後就沒了，所以還要寫入系統設定檔裡<br /><br />$ echo 'kernel.shmmax = 134217728' >> /etc/sysctl.conf<br /><br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-2666709530526127847?l=polar-dev.blogspot.com' alt='' /></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[About Installing Google Chrome in Arch Linux]]></title>
+    <link href="http://bonau.github.com/2012/01/about-installing-google-chrome-in-arch.html"/>
+    <updated>2012-01-20T18:33:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/about-installing-google-chrome-in-arch</id>
+    <content type="html"><![CDATA[<p><b><span style="font-size: x-large;">If you choose Chromium...</span></b><br />It's easy to install Chromium, the most powerful browser from Google, in Arch Linux. Just make sure you have enabled "extra" repository in /etc/pacman.conf and type:<br /><br />$ pacman -S chromium<br /><br />all things done.<br /><br /><b><span style="font-size: x-large;">If you'd like to install Google Chrome Stable...</span></b><br />However, if you'd like it more stable, you can take a look in <a href="https://aur.archlinux.org/" target="_blank">AUR</a>. Of course it's not provided by Arch Linux&nbsp;officially. The package I use is here:<br /><br /><span style=""><span style="color: #6c83b0; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">google-chrome 16.0.912.75-1 by&nbsp;</span><span style="color: #888888; font-family: 'Bitstream Vera Sans', 'Lucida Grande', Arial, sans-serif; font-size: 14px; font-weight: bold;">t3ddy</span></span><br /><a href="https://aur.archlinux.org/packages.php?ID=37469">https://aur.archlinux.org/packages.php?ID=37469</a><br /><br />Download the tarbell and untar it:<br /><br />$ tar xzf google-chrome.tar.gz<br />$ cd google-chrome/<br /><br />And then make package:<br /><br />$ makepkg -s<br /><br />You may see the makepkg script asking you to download required libraries. Confirm and continue. After running makepkg script, the current directory (google-chrome/) contains a few extra files, include "google-chrome-xx.x.xxx.xx-x-YOUR_ARCH.pkg.tar.xz". Install it by pacman, for example in my case:<br /><br />$ pacman -U&nbsp;google-chrome-16.0.912.75-1-x86_64.pkg.tar.xz<br /><br />Confirm and install. Now you should see Google Chrome in gnome-shell (kde kickoff or something.)<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-8398508615793915320?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[找回 Gnome 3 遺失的關機選項]]></title>
+    <link href="http://bonau.github.com/2012/01/ubuntu-unity-linux-gnome-3-alt-alt-alt.html"/>
+    <updated>2012-01-08T02:52:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/ubuntu-unity-linux-gnome-3-alt-alt-alt</id>
+    <content type="html"><![CDATA[<p>除了 Ubuntu 自家擁有優秀(?)的 Unity 之外，近期各 Linux 發行版都陸續升級到了 Gnome 3，界面乾淨俐落，清新可人。然而忙碌了一天之後要關機時，卻遍尋不著關機的選項……。</p>
+
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-CH-afycLoIQ/TwiQXTGD22I/AAAAAAAADJk/4KtsqV4vTrU/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-08+02%253A34%253A41.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em; "><img border="0" height="293" src="http://1.bp.blogspot.com/-CH-afycLoIQ/TwiQXTGD22I/AAAAAAAADJk/4KtsqV4vTrU/s320/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-08+02%253A34%253A41.png" width="320" class="polar-normal-image" /></a></div>
+
+
+<p>鎖定、切換、登出，啊怎麼只有暫停 囧 說好的關機呢？重新開機呢？就算登出了還是找不到。別擔心，其實他們都還在，只是需要多按一個 Alt 鍵而已。點開螢幕右上角，有你名字的選單後，按下 Alt 鍵，「關閉電源…」按鈕就會出現了，重新開機也在裡面。</p>
+
+
+<p>嫌每次都要多按 Alt 太麻煩嗎？多數 Linux 發行版裡面都有這個套件：gnome-shell-extension-alternative-status-menu 以 Arch Linux 的文字界面安裝為例，以 root 權限執行：</p>
+
+
+<br /><pre>$ pacman -S gnome-shell-extension-alternative-status-menu<br /></pre><br />再重新登入就可以了！<br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-5864629396768117441?l=polar-dev.blogspot.com' alt='' /></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[迷上 ArchLinux]]></title>
+    <link href="http://bonau.github.com/2012/01/archlinux.html"/>
+    <updated>2012-01-07T20:22:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/archlinux</id>
+    <content type="html"><![CDATA[<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-u4O2SgJIepQ/Twg3FILCTYI/AAAAAAAADJM/_r_R1si7_aU/s1600/archlinux-logo-dark-90dpi.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="106" src="http://3.bp.blogspot.com/-u4O2SgJIepQ/Twg3FILCTYI/AAAAAAAADJM/_r_R1si7_aU/s320/archlinux-logo-dark-90dpi.png" width="320" /></a></div>
+
+
+<p>使用了 Ubuntu 跟 Debian 好多年，也深深被 dpkg 套件系統吸引，但多年來這個系統自身所製造的東西越來越多，更改的設定也越來越多，當底層的套件在流程上有所更動的時候，這些高階的系統又無法及時做出反應，這時候系統的穩定性就會受到考驗了。後來我在 Ubuntu 與 Debian 社群反映問題、協助解決問題，但越是努力解決發現問題越大──為什麼以方便使用為設計導向的 Linux，會變成使用者需要不斷 Debug 的窘況？</p>
+
+
+<p>後來接觸到了 ArchLinux，起初對於它必須像 FreeBSD 與 Gentoo 一樣什麼設定都自己來覺得有點排斥。後來使用了一陣子之後，發現系統還滿穩定的，自己也在調校系統的途中，對於 Linux 的架構更加了解，大部分的問題也都可以在 Arch Wiki 裡面找到解法，也沒有所謂版本升級的問題，因為它總是在最新版（可理解為 Debian的Sid），討論的時候只要看時間點就好，不需要去關心對方使用的究竟是哪一個發行版。</p>
+
+
+<p>以下是 ArchLinux 官網所遵循的幾個原則<sup>[1]</sup>：<br /><ul><li>簡約</li><li>穩定性比方便性更重要</li><li>使用者為中心</li><li>開放</li><li>自由</li></ul><p>在 Linux 百家爭鳴的時代，很多發行方都會為使用者做了「太多事」，以致於系統不穩定，且使用者排除障礙的方式更加困難，在 ArchLinux 以簡約為信條的前提之下，相信往後與 Linux 的相處將會更加融洽且和諧吧。:)</p><br /><a name='more'></a>[1]&nbsp;The Arch Way - Wiki - ArchLinux&nbsp;<a href="https://wiki.archlinux.org/index.php/The_Arch_Way">https://wiki.archlinux.org/index.php/The_Arch_Way</a><br /><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-1800613171244714960?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+</feed>

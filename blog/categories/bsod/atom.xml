@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bsod | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/bsod/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chrome/Chromium 藍白畫面]]></title>
+    <link href="http://bonau.github.com/2009/08/chromechromium.html"/>
+    <updated>2009-08-13T05:07:00+08:00</updated>
+    <id>http://bonau.github.com/2009/08/chromechromium</id>
+    <content type="html"><![CDATA[<p>Chrome 的使用經驗大致上是不錯的，<br />除了目前缺了些好用的 hack tool 跟 web development 工具，<br />還有吃掉大量記憶體之外。<br /><br />( 別說些什麼記憶體很便宜之類的屁話啦，我家有台電腦是用 Rambus 的... )<br /><br />不過最近我還發現他另外一個奇妙的 Bug，<br />就是我常常在用 Chrome 切換分頁的時候讓 Windows XP 整個當掉，<br />而且是藍白畫面那種。<br />細看之後發現錯誤是出在 win32k.sys<br />其實 XP 還算穩定，我已經很久沒有碰到藍白畫面了，<br />而且我從未碰過 win32k.sys 這東西引發的當機，<br />所以就用這個去 Chromium 查了一下，<br />看到這篇：<br /><a href="http://code.google.com/p/chromium/issues/detail?id=10011">Issue 10011: BSOD in win32k.sys on XP SP3</a><br />http://code.google.com/p/chromium/issues/detail?id=10011<br /><br />開發者很快的回答了問題，<br />指出似乎是 win32k.sys 在 page fault 時產生的錯誤，<br />這個回答是可信的，因為我常常在切換分頁的時候，產生大量 I/O，<br />而每個分頁又是不同的 Process，切換起來有時候還比 Firefox 2.x 更慢。<div><br /></div><div>結果問題還是出在 Windows XP 身上，唉。<br /><br />解決方式是更新到 Windows XP SP3 之後再套用 <a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718">KB959252</a> 更新<br />http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718<br />這個更新是有語言限制的，<br />像我安裝的是英文版 XP 就用英文版的，<br />如果安裝的是中文版 XP 就要改選正體中文頁面來下載。<br /><div><br /></div><div>希望此後不會再因為 Chrome 瀏覽器引發藍白當機 ˊˋ</div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-3109891721055068366?l=polar-dev.blogspot.com' alt='' /></div></p>
+]]></content>
+  </entry>
+  
+</feed>

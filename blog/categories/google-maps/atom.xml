@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: google maps | My Octopress Blog]]></title>
+  <link href="http://bonau.github.com/blog/categories/google-maps/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:44:38+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!]]></title>
+    <link href="http://bonau.github.com/2012/01/using-google-maps-api-libraries-adsense.html"/>
+    <updated>2012-01-12T22:41:00+08:00</updated>
+    <id>http://bonau.github.com/2012/01/using-google-maps-api-libraries-adsense</id>
+    <content type="html"><![CDATA[<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-rAETIAOI_iM/Tw7wh6vLyII/AAAAAAAADnU/o1ZqLOdx9aw/s1600/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+22%253A37%253A27.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="338" src="http://2.bp.blogspot.com/-rAETIAOI_iM/Tw7wh6vLyII/AAAAAAAADnU/o1ZqLOdx9aw/s640/%25E8%259E%25A2%25E5%25B9%2595%25E6%2588%25AA%25E5%259C%2596%25E5%25AD%2598%25E7%2582%25BA+2012-01-12+22%253A37%253A27.png" width="640" /></a></div>
+
+
+<br />Google Maps API has it's&nbsp;<a href="http://code.google.com/intl/zh-TW/apis/maps/documentation/javascript/advertising.html" target="_blank">official AdSense Library</a>, which allow you to add advertisement in your own map view easily. By using gmaps4rails, the recently popular map service library in RubyOnRails, some problems occurred if we write the javascript tag mention on the&nbsp;Google Maps API&nbsp;document. Why? because the google maps api version gmaps4rails used is not the newest version. Using the newest js library result in conflict between different versions of Google Maps API.<br /><br />To avoid this, we can simply put {&nbsp;:libraries =&gt; [:adsense] } in :map_options, for example:<br /><br /><pre>@google_maps_html = gmaps( :map_options =&gt; {</pre><pre>    :detect_location =&gt; true,<br />    <span style="color: #990000;"><b>:libraries =&gt; [:adsense],</b></span><br />    :center_on_user =&gt; true,<br />    :zoom =&gt; 15,<br />    :auto_zoom =&gt; false,<br />    :auto_adjust =&gt; true,<br />    :disableDefaultUI =&gt; true },<br />    :markers =&gt; { :data =&gt; @json })</pre><span style="font-family: monospace;"><span style="white-space: pre;">&nbsp;</span></span><div>And in our view, put javascript like this <b><span style="color: #990000;">in the window load callback</span></b>:<br /><br /><pre><br />  Gmaps.map.callback = function() {<br />    var adUnitDiv = document.createElement('div');<br />    var adUnitOptions = {<br />    format: google.maps.adsense.AdFormat.HALF_BANNER,<br />    position: google.maps.ControlPosition.TOP_CENTER,<br />    publisherId: '<i><span style="background-color: white; color: #666666;">your publisher id</span></i>',<br />    <span style="color: #990000;"><b>map: this.map,</b></span><br />    visible: true</pre><pre>  };<br />  var adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions);<br /></pre><br />&nbsp; &nbsp; &nbsp;<br />The :libraries key seems not appear on the&nbsp;<a href="https://github.com/apneadiving/Google-Maps-for-Rails/wiki/" target="_blank">Google-Maps-for-Rails wiki</a>. But after trace the source code, we don't have to modify the plugin but just use it. Force working with the newest Google Maps API with gmaps4rails is not recommended.&nbsp;</div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-2277722151436231612?l=polar-dev.blogspot.com' alt='' /></div>
+
+]]></content>
+  </entry>
+  
+</feed>
