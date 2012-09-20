@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Munou Diagram 2</title>
+  <meta name="author" content="munouzin">
+
+  
+  <meta name="description" content="Photoed by jaxxon 最近可能連 Munou Diagram 會出現錯誤訊息,
+那代表 Blog 使用的資料庫掛點了,
+不過說也奇怪, SQLite 應該沒那麼不穩,
+但是最近用 typo 卻常常出現這種狀況,
+尤其更新到最新版之後就更嚴重了,
+比較常出現在頻繁的 XHR 之下, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bonau.github.com/blog/page/6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Munou Diagram 2" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Munou Diagram 2</a></h1>
+  
+    <h2>Let's munou!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bonau.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/28/solving-sqlite-database-locked/">設法解決 Database Locked 的問題</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-28T00:00:00+08:00" pubdate data-updated="true">Jan 28<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://www.flickr.com/photos/jaxxon/16914729/"><img src="http://farm1.static.flickr.com/13/16914729_1721fa7cea_m.jpg" /></a><br />
+Photoed by <a href="http://www.flickr.com/photos/jaxxon/">jaxxon</a></p></p>
+
+<p><p>最近可能連 Munou Diagram 會出現錯誤訊息,<br />
+那代表 Blog 使用的資料庫掛點了,<br />
+不過說也奇怪, SQLite 應該沒那麼不穩,<br />
+但是最近用 typo 卻常常出現這種狀況,<br />
+尤其更新到最新版之後就更嚴重了,<br />
+比較常出現在頻繁的 XHR 之下,<br />
+我該怎麼解決呢? Orz</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/27/mybloglog/">MyBlogLog: 誰來過我家？</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-27T00:00:00+08:00" pubdate data-updated="true">Jan 27<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><img src="http://farm1.static.flickr.com/164/370573776_8d0bf377d3_m.jpg" /><br />
+圖：<a href="http://www.mybloglog.com/">MyBlogLog</a> 首頁畫面</p></p>
+
+<p><p>雖然稱不上是人類救星, 但至少也應該會是 Blogger 們的福音,<br />
+又發現一個不錯的社群工具可用了,<br />
+先在這個網站申請會員, 放上你的大頭照,<br />
+在有放置 MyBlogLog 的 Widget 的網站就會留下足跡,<br />
+那個 Widget 其實說穿了就是一串 JavaScript Code,<br />
+因此當然您也可以利用網站裡面的功能產生這段 Code,<br />
+讓來訪的遊客留下足跡,<br />
+大家就各自可以知道誰來過自己的 Blog,<br />
+並且去瀏覽這些訪客的 Blog.</p></p>
+
+<p><p>很有趣的想法, 對吧?</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/27/lovely-previewbubble/">加入可愛的 PreviewBubble</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-27T00:00:00+08:00" pubdate data-updated="true">Jan 27<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p>注意到右邊 del.icio.us 的預覽圖了嗎?<br />
+<img src="http://farm1.static.flickr.com/158/370541890_ea5ac39c21.jpg?v=0" /></p></p>
+
+<p><p>這個站的速度很快喔, 我才移上去沒多久他就截好圖了,<br />
+使用方式也非常簡單, 只要打上這段程式碼:</p></p>
+
+<p><pre><code>&lt;script type="text/javascript" src="http://www.websnapr.com/js/previewbubble.js"&gt;&lt;/script&gt;
+</code></pre></p>
+
+<p><p>然後讓 hyperlink 上的 class=&#8221;previewlink&#8221; 就行啦!<br />
+如果 anchor 本來就有 class 該怎麼辦?<br />
+用空白隔開就好了. 例如 class=&#8221;previewlink anotherStyle&#8221;</p></p>
+
+<p><p>Have fun! :)</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/27/live-preview-sucks/">關掉可惡的 Live Preview 了</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-27T00:00:00+08:00" pubdate data-updated="true">Jan 27<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p>Typo 的 Live Preview 很可怕, 貼文每兩秒就會送一次 XMLHttpRequest,<br />
+然後我的 SQLite 就負荷不了了 Orz</p></p>
+
+<p><p>雖然我認為這應該不是 Rails 的問題而是 Typo 的問題啦,<br />
+不過目前尚未證實,<br />
+關掉 Live Preview 的方法很簡單,<br />
+把</p></p>
+
+<p><pre><code>app/views/admin/shared/_edit.rhtml
+</code></pre></p>
+
+<p><p>最後的</p></p>
+
+<p><pre><code>&lt;%= observe_form "#{form_type}_form",
+      :frequency =&gt; 2,
+      :complete =&gt; "$('preview').src = request.responseText; Element.show('preview');",
+      :url =&gt; { :action =&gt; "preview" } %&gt;
+</code></pre></p>
+
+<p><p>其中的 &lt;%= 改成 &lt;%# 就好啦!<br />
+不過我是在用 svn 定期更新 typo,<br />
+不知道後來會不會出問題?<br />
+反正 svn 會提醒我這邊有 diff 吧?<br />
+應該沒問題啦.</p></p>
+
+<p><p>應該啦.</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/26/haml-html-abstraction-markup-language/">Haml: HTML Abstraction Markup Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-26T00:00:00+08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://haml.hamptoncatlin.com/">HAML project</a><br />
+http://haml.hamptoncatlin.com/</p></p>
+
+<p><p>Rails 又出奇招啦, 雖然這東西早就被支援了,<br />
+不過我在更新 typo 的時候發現裝了一個 haml plugin,<br />
+還有個 theme 順勢改為 haml 來寫,<br />
+於是我翻開來看看, 哇, 好醜!</p></p>
+
+<p><p>但是比 Erb 好看多了.</p></p>
+
+<p><p>總之他就只是把 HTML 變成 YAML-like 的東西,<br />
+不過 HTML tag 的 prefix 竟然是 %<br />
+然後指令碼的 prefix 則是 = </p></p>
+
+<p><p>來看看程式碼</p></p>
+
+<p><pre><code>%html
+  %head
+    %title= "草安您好"
+  %body
+    #contents
+      %h1 "tyr.munou.tw"
+      %ul.cast
+        %li "tyr 是大神"
+        %li "munou 沒腦"
+        %li "tw 台灣"
+    #outer= render :partial =&gt; 'sidebar'
+</code></pre></p>
+
+<p><p>會相當於什麼呢?</p></p>
+
+<p><pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;草安您好&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="content"&gt;
+      &lt;ul class="cast"&gt;
+        &lt;li&gt;tyr 是大神&lt;/li&gt;
+        &lt;li&gt;munou 沒腦&lt;/li&gt;
+        &lt;li&gt;tw 台灣&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="outer"&gt;
+      &lt;%= render :partial =&gt; 'sidebar' %&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></p>
+
+<p><p>看起來不錯, 但是看久了都是奇怪符號反兒不太順眼,<br />
+因此我也沒有要詳細介紹下去的意思,<br />
+等待另一個 alternative 出現吧.</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/25/b2d-pure-kgb/">B2DpureKGB</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-25T00:00:00+08:00" pubdate data-updated="true">Jan 25<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p>兩年前使用了 B2DpureGnome，覺得實在棒透了，不過 KDE 的版本一直弄得不很漂亮，不過現在看起來已改進許多，安裝到硬碟之後稍微修改一下就變得不錯看了：</p></p>
+
+<p><p><a href="http://www.flickr.com/photos/munouzin/368679553/"><img src="http://farm1.static.flickr.com/130/368679553_855bc3bf34_m.jpg" /></a><br />
+圖一：登入之後的樣子，當然我有選桌布，然後排了一下圖示。</p></p>
+
+<p><p><a href="http://www.flickr.com/photos/munouzin/368679775/"><img src="http://farm1.static.flickr.com/127/368679775_3d3171fced_m.jpg" /></a><br />
+圖二：一般使用情形</p></p>
+
+<p><p><a href="http://www.flickr.com/photos/munouzin/368679840/"><img src="http://farm1.static.flickr.com/125/368679840_be9aecb2ee_m.jpg" /></a><br />
+圖三：PCMan 掛逼的情景，ASCII art 不至於走樣太多。</p></p>
+
+<p><p><a href="http://www.flickr.com/photos/munouzin/368680011/"><img src="http://farm1.static.flickr.com/186/368680011_1139e089a5_m.jpg" /></a><br />
+圖四：Firefox 執行畫面，中文字都沒有糊掉，真漂亮。</p></p>
+
+<p><p><a href="http://www.flickr.com/photos/munouzin/368680298/"><img src="http://farm1.static.flickr.com/170/368680298_295816ce89_m.jpg" /></a><br />
+圖五：Glade IDE – 開發 GUI 環境的好幫手。</p></p>
+
+<p><p>不過當然還是要吐槽一下，用 Klik 下載 Opera 之後竟然選單都變成可怕的亂碼，如果只是普通的亂碼也就算了，是「可怕的」亂碼，不過這應該是 Qt 跟 Klik 結合的問題吧？</p></p>
+
+<p><p>還有就是 Firefox 一裝 Flash Player Plugin 之後竟然就常常會莫名地 Crash 掉，不知道這是怎麼一回事？另外就是 Linux 各套件系統都會遇到的問題：RubyGems 的安裝都得要經過套件系統，要是有迫切需要安裝的套件卻沒有人在維護相對應的 .deb 或 .rpm，用起來反而會麻煩加倍……</p></p>
+
+<p><p>趕快灌 VMware 習慣一下 B2D Linux 吧，有很多高手在幫忙維護，現在大家做 Web 設計也都會儘量避開 IE Only 之嫌，我想過不久我們就可以跟 Windows 說掰掰啦～其實 Windows XP 也沒那麼不好，但是 Vista 就有點不好用了，而且最重要的是，有些東西在 Windows 裝起來礙手礙腳的，在 Linux 系統就比較不會了。</p></p>
+
+<p><p>B2D 要繼續加油喔～中文的 Linux 好順眼啊 XD</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/24/late-to-the-party/">Late to the Party &#8211; Design Pattern in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-24T00:00:00+08:00" pubdate data-updated="true">Jan 24<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://www.flickr.com/photos/munouzin/368849652/"><img src="http://farm1.static.flickr.com/130/368849652_d15738f244_m.jpg" /></a></p></p>
+
+<p><p>如果你是 Design Pattern 的新手, 使用 Ruby 也有一段時間, 或是 Ruby 新手, Design Pattern 修習有一段時間, 那麼這個 Blog 有很多 Design Pattern 的 Implementation 可以參考:</p></p>
+
+<p><blockquote>
+    <p><a href="http://cwilliams.textdriven.com/">Late to the Party</a><br />
+    http://cwilliams.textdriven.com/</p>
+</blockquote></p>
+
+<p><p>以及其中的</p></p>
+
+<p><blockquote>
+    <p><a href="http://cwilliams.textdriven.com/articles/category/ruby">Ruby Category</a><br />
+    http://cwilliams.textdriven.com/articles/category/ruby</p>
+</blockquote></p>
+
+<p><p>包括 Decorator, Observer 等常見的 Pattern, 也有 Singleton 等概念在裡面, 非常推薦.</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/24/disadvantages-of-ruby/">Ruby 的缺點</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-24T00:00:00+08:00" pubdate data-updated="true">Jan 24<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://www.flickr.com/photos/alphadesigner/354044811/"><img src="http://farm1.static.flickr.com/154/354044811_725cf2e6a7_m.jpg" /></a><br />
+圖：Red Rain, by <a href="http://www.flickr.com/photos/alphadesigner/">NeverB4Breakfast</a></p></p>
+
+<p><p>Ruby 用到現在, 也有三年餘了, 從一開始被他的 Iterator 震懾,<br />
+然後被他的 Pure-OO 概念吸引, 到現在發現了不少缺點,<br />
+不管是語法上, 架構上, 實作上, 都有諸多不滿意的地方,<br />
+而就我所知這些缺陷, Ruby 也早就試著改進, 雖然優點多於缺點,<br />
+但 Rite 推出之前, 還是不吐不快.<br />
+所以今天就讓我大快朵頤狠咬 Ruby 一口吧!</p></p>
+
+<p><h2>JavaEye 的觀點</h2></p>
+
+<p><p>JavaEye 的這篇<a href="http://www.javaeye.com/topic/22061">罵一罵 Ruby</a>
+已經說了不少 Ruby 的缺點, 來總結一下吧:</p></p>
+
+<p><ol>
+<li>缺乏 Virtual Machine</li>
+<li>Unicode 支援不佳</li>
+<li>企業應用 ( 2PC, scaling problem, etc. )</li>
+<li>Library, default action 匱乏</li>
+<li>沒有編譯階段</li>
+<li>缺乏文件</li>
+</ol></p>
+
+<p><p>Ruby 發展過快，有些缺點是難免的, 這裡也不是要幫 Ruby 說話, 不過就我所知這些問題大概都有解──沒有解的, 至少也有解釋.</p></p>
+
+<p><ol>
+<li>Ruby 已經有很多套 Virtual Machine 正在開發,<br />
+ Ruby 的理念中並不想把這種 Language 跟其他 Tools<br />
+ 綁在一起, 因此這樣的設計架構是可以理解的.</li>
+<li>這是很嚴重的問題，Unicode 現在大致上已經被解決了,<br />
+ 但其他 encoding 的問題並沒有太大的進展,<br />
+ 不過我在這方面很弱，所以也不方便做太多 Comments (倒)</li>
+<li>Scaling 的問題一直有在改善, 這種 Full-Stack 的語言工具,<br />
+ 其實都面臨同樣的問題, 不過正因為我們已經交給他們了,<br />
+ 因此就請信任 Ruby 開發者們的能力吧.<br />
+ 2PC 的問題倒是比較難解,<br />
+ 不能以 「Ruby 的社群不在大企業」萊矇混過關,<br />
+ 身為以平行處理為目標的 Ruby 而言,<br />
+ 這其實有點難自圓其說, 但要更改現有架構,<br />
+ 對於彈性強的 Ruby 而言, 恐怕也是有些窒礙難行.</li>
+<li>Library 早已經不缺了, 倒是品質確實參差不齊,<br />
+ 管理上雖已有 RubyGems 了但還是不方便,<br />
+ 而且 RubyGems 也還在 0.9.x 的開發階段,<br />
+ 但是面對現有的 Gems, 要更改架構我看也相當困難吧.</li>
+<li>Ruby 這種直譯式語言本來要 Compile 就會有點困難,<br />
+ 天曉得你下一步會往哪裡去? 變數有沒有定義根本無從知道,<br />
+ 不過對於強型態的語言來說, 沒能 Compile 確實有點詭異.</li>
+<li>文件啊… 這也是 Ruby 一直以來的痛, 倒也不是不齊全,<br />
+ 其實文件數量很夠, 但是由於發展過為迅速,<br />
+ 導致於很多今天才寫出來的 document, 可能明天就不適用了,<br />
+ 關於這點我認為 Ruby 需要一套更完善的文件系統,<br />
+ metadata 當然也要儘量描述,<br />
+ 這份文件到底是適用於哪個版本的軟體,<br />
+ 免得牛頭不對馬嘴.</li>
+</ol></p>
+
+<p><h2>我的觀點</h2></p>
+
+<p><p>那問題到底出在哪裡呢? 就我而言, Ruby 在語法上有幾個我看不慣的地方:</p></p>
+
+<p><ol>
+<li>Iterator indicator delimit<br />
+ 這東西不確定是好是壞, 不過我就是看那幾個 |a, b| 不順眼,<br />
+ 後來想想這可能是為了要方便某些場合下可以一行秒殺的程式,<br />
+ 但是為了這點就要多按兩次 shift 更令人難過.</li>
+<li>Overloading 醜斃了<br />
+ 我的媽, 哪有人 method 裡面的 overloading 都用 .is_a?<br />
+ 在實作的? 不僅不美觀又不實用, 打起字來又特別費力,<br />
+ 氣死人了.</li>
+<li>預設用 underscore, 也很醜<br />
+ 不過這是個人習慣問題, 像我就比較喜歡 camel 型態,<br />
+ toSym 比 to_sym 要來得經濟划算多了, 看起來也不會多吃力.</li>
+</ol></p>
+
+<p><p>架構上:</p></p>
+
+<p><ol>
+<li>Install libraries 需要 administrator/root 權限<br />
+ 雖然 RubyGems 成功模仿 CPAN 架構,<br />
+ 但希望能更進一步區分哪些 libs 不需要 root 權.<br />
+ 很多 libs 明明不需要裝在 /usr/lib/<br />
+ 卻還是沒辦法輕鬆在自己的 work directory 使用這些 libs.</li>
+<li>過度包裝<br />
+ require &#8216;iconv&#8217; 之後還得 include Iconv,<br />
+ 這雖然比較保險啦, 但是一想到不 include 就得用<br />
+ Iconv.iconv() 來 call method 就不禁覺得有些好笑.</li>
+</ol></p>
+
+<p><p>實作上也有令人流淚的悲傷:</p></p>
+
+<p><ol>
+<li>有時縮寫有時不縮寫<br />
+ to_s 這種縮寫實在很詭譎, 誰知道 s 是指什麼啊?<br />
+ 既然是要讓程式碼變得更易於閱讀,<br />
+ 那麼 「知其所指」 應該是非常基本的.</li>
+<li>Overloading again<br />
+ 忘記從哪一版開始, 「string」 + fixnum<br />
+ 竟然會產生 TypeError,<br />
+ 這是要使用者自己定義 operator overloading 的意思嗎?</li>
+<li>Meta-meta-programming<br />
+ Ruby 雖是我目前看過最漂亮的語言, 但也是最暴力的語言!<br />
+ 怎麼可以有個 Tool 能發展至今, 底層卻依然充滿了 eval 呢?<br />
+ 就連新興的 Gems 也一樣, 動不動就使用 eval.<br />
+ 幸虧這些 developer 都有一定功力,<br />
+ 不至於發生太嚴重的 Injection 災情, 但天有不測風雲,<br />
+ Ruby 也有摔破的一天, 這樣惡搞, 安全性令人質疑.</li>
+</ol></p>
+
+<p><p>這時候就會很恨自己平常沒有記下缺陷的地方, 因此這些缺陷也是講得零零散散, 有待大家把它補齊吧! 大家一起為新世代的程式語言一起努力.</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/01/newyear-2007/">新のものがたり</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-01T00:00:00+08:00" pubdate data-updated="true">Jan 1<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://www.flickr.com/photos/munouzin/355682271/"><img src="http://farm1.static.flickr.com/126/355682271_10ab398726_m.jpg" /></a><br />
+圖：台北 101 與煙火?!</p></p>
+
+<p><p>一直很期待 2007 的到來，但既不是因為 Perl6, Py3k, Rite 的開發，也不是因為天時地利人和可以搞大事業，而是一直有預感，今年一定會很美好，於是就這樣期待著了。</p></p>
+
+<p><p>大學過到現在已經一半多了，卻一直感受不到自己在上「大學」很像一個一天到晚在填鴨的補習班，然後自己就是那隻肥鴨， 2007 年，也有可能是繼續這樣度過的吧？</p></p>
+
+<p><p>1/1 就要結束了，今年也請多多指教。</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/17/nginx-a-http-server/">Nginx: An HTTP Server, HTTP Reverse Proxy and IMAP/POP3 Proxy Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-17T00:00:00+08:00" pubdate data-updated="true">Dec 17<span>th</span>, 2006</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><img src="http://farm1.static.flickr.com/119/368872776_d09ab58f2f_m.jpg" /></p></p>
+
+<p><p>在找 Apache mod_proxy 的說明時，意外發現這個東西。</p></p>
+
+<p><p>Nginx = Engine X<br />
+<a href="http://wiki.codemongers.com/Nginx">http://wiki.codemongers.com/Nginx</a></p></p>
+
+<p><p>Ruby On Rails + Mongrel 設定範例<br />
+<a href="http://wiki.codemongers.com/NginxRubyonRailsMongrel">http://wiki.codemongers.com/NginxRubyonRailsMongrel</a></p></p>
+
+<p><p>看起來真不錯耶，好想玩喔，可是好像沒那個<a href="http://www.libertytimes.com.tw/2004/new/jan/7/today-int4.htm">火星時間</a>。我要趕快把 Ruby On Rails 傳授給我的學弟們，然後讓他們去傷腦筋 Configuration 的問題 XD</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/bonau">@bonau</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bonau',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("munouzin", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/munouzin" class="twitter-follow-button" data-show-count="false">Follow @munouzin</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - munouzin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'munou-diagram';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

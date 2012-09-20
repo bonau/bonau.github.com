@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 他山之腦 | Munou Diagram 2]]></title>
+  <link href="http://bonau.github.com/blog/categories/他山之腦/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:59:52+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[munouzin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Win32 把 VMware 硬碟掛載起來！]]></title>
+    <link href="http://bonau.github.com/blog/2008/09/08/%E5%9C%A8-win32-%E6%8A%8A-vmware-%E7%A1%AC%E7%A2%9F%E6%8E%9B%E8%BC%89%E8%B5%B7%E4%BE%86%EF%BC%81/"/>
+    <updated>2008-09-08T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2008/09/08/在-win32-把-vmware-硬碟掛載起來！</id>
+    <content type="html"><![CDATA[<p><p>這是 VMware 官方的軟體，叫 VMware DiskMount Utilities，目前出到 5.5.0 版，不過我不知道他能不能掛載 6.0 的硬碟，因為我現在也還在用 VMware Workstation 5.5。那麼首先就先去下載 VMware DiskMount Utilities 吧，官網上我目前還找不到連結可以連過去，是後來才拿掉的，不知道原因為何，可能真的不支援 6.0 吧。</p> <blockquote> <p><a title="http://www.vmware.com/download/eula/diskmount_ws_v55.html" href="http://www.vmware.com/download/eula/diskmount_ws_v55.html">http://www.vmware.com/download/eula/diskmount_ws_v55.html</a></p></blockquote> <p>安裝之後按「開始 / 執行 / 輸入 cmd」後執行下列語法：</p> <blockquote> <p>C:\&gt; cd "C:\Program Files\VMware\VMware DiskMount Utility\"<br />C:\&gt; vmware-mount x: D:\vmware硬碟路徑.vmdk</p></blockquote> <p>就可以看到多了一個 X 槽，裡面就是你 vmdk 檔案的第一個 Volume 啦，如果還要掛載其他 Volume 可以在 x: 前面加上 /v:2 或 /v:3 依此類推。</p> <p>也是有 GUI 的介面啦，不過我沒用過，不知道會不會有版本相容問題，可以到這裡下載：<a title="http://petruska.stardock.net/Software/VMware.html" href="http://petruska.stardock.net/Software/VMware.html">http://petruska.stardock.net/Software/VMware.html</a></p></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[有趣的攜帶版 Opera]]></title>
+    <link href="http://bonau.github.com/blog/2008/07/18/opera-portable/"/>
+    <updated>2008-07-18T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2008/07/18/opera-portable</id>
+    <content type="html"><![CDATA[<p>Firefox 有隨身碟版本，那麼 Opera 呢？<br />
+這要歸功於 kejut.com──我們終於有 Opera Portable 可以用啦！</p>
+
+
+
+
+<p><a href="http://www.kejut.com/operaportable" target="_blank">Opera Portable</a>
+http://www.kejut.com/operaportable</p>
+
+
+
+
+<p>作者似乎是印尼裔，不過也有可能只是懂印尼文的人？<br />
+我稍微研究了一下作者不過查不出什麼頭緒，<br />
+無論如何都要感謝他！</p>
+
+
+
+
+<p>至於為什麼說他有趣呢？<br />
+一方面是他的運作方式、一方面是他的網頁。</p>
+
+
+
+
+<p>[caption id="" align="alignnone" width="500" caption="Portable Opera House?"]<a href="http://www.flickr.com/photos/davesmith/925699800/"><img src="http://farm2.static.flickr.com/1275/925699800_8738748a9e.jpg?v=0" alt="Portable Opera House?" width="500" height="200" /></a>[/caption]
+<h3>版本與運作方式</h3>
+依照版本不同，Opera Portable 有兩種不同的運作方式，<br />
+不過兩者相同的是，Opera 都包裝在一個可執行檔裡面了，<br />
+執行的時候 Opera 會被解壓縮然後執行，速度還算快，<br />
+相當方便好用。</p>
+
+
+
+
+<p><strong>Personal 版本</strong>可於啟動時建立一個 Profile，<br />
+結束後所有快取、設定、密碼等等都會存在這個 Profile，<br />
+方便於 USB 隨身碟使用，屬於隱密性比較低但是較方便的版本。</p>
+
+
+
+
+<p><strong>One-Use 版本</strong>則是單純執行 Opera，<br />
+不會儲存任何資料，<br />
+較強調隱私性，屬於隱密性較高但是不太方便取用個人資料的版本。
+<h3>何時何地使用它？</h3>
+底下是翻譯 Opera Portable 網頁的 "Where and When to Use Opera Portable" 一段，<br />
+作者為了想出這幾點可真是費盡苦思啊！<br />
+以下列出原文與我自己的翻譯，可以參考看看。</p>
+
+
+
+
+<p>Where and When to Use Opera Portable<br />
+何時何地使用 Opera Portable？
+<ul>
+    <li>When you are in a library / internet cafe / lab / other public places, Opera is usually not installed, and you are forced to bear with IE or Firefox that is indeed slower than Opera.<br />
+當你在圖書館 / 網咖 / 辦公室 / 其他公共場合，電腦通常不會裝 Opera，而只好被迫忍受那些明顯比 Opera 慢的 IE 或 Firefox 的時候。</li>
+    <li>When you want to surf 'secret' websites but you afraid that your traces remains, use Opera Portable, because when you close Opera Portable, all data will be overwritten and erased (not just erased)!<br />
+當你想逛一些「秘密」網站，又怕自己留下痕跡的時候，使用 Opera Portable 吧。當你關閉 Opera Portable 的時候，所有資料都會被<em>覆寫並消除</em>（不只是刪掉而已）！</li>
+    <li>When you use your own computer but IE is severely infected by worms, viruses, spyware, horses, rats, rabbits, dragonflies, etc. And you are afraid! And Opera comes...<br />
+當你使用自己電腦，但 IE 已嚴重被蠕蟲、病毒、間諜軟體、木馬、老鼠、兔子、蒼蠅... 等感染，你剉到不行！這時候 Opera 降臨......</li>
+    <li>When you want to have Opera anywhere you go, either on a USB flash disk or a CD (because Opera Portable doesn't require the medium to be writable!)<br />
+當你想讓 Opera 陪你走天涯，不管是裝在 USB 隨身碟或 CD 的時候（因為 Opera Portable 不一定要存在可寫的儲存裝置！）。</li>
+    <li>When you promote Opera to your friends, before installing it, it's better if you can show it first, right?<br />
+當你想推薦 Opera 給朋友使用時，在安裝之前最好先 Show 給他們看一下，對吧？</li>
+</ul>
+總之，一起來用 Opera 吧！</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[StarOffice 免費用？]]></title>
+    <link href="http://bonau.github.com/blog/2007/08/14/google-pack-with-staroffice/"/>
+    <updated>2007-08-14T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2007/08/14/google-pack-with-staroffice</id>
+    <content type="html"><![CDATA[<p><p><a href="http://www.flickr.com/photos/munouzin/1109046375"><img src="http://farm2.static.flickr.com/1054/1109046375_bea689fc9a.jpg?v=0" /></a></p></p>
+
+
+
+
+<p><p>這篇<a href="http://mmdays.wordpress.com/2007/08/14/google_pack_includes_staroffice/">Google 再踹 Microsoft 一腳: StarOffice 也被放進 Google Pack</a>，看了真是大快人心！雖然說 Office 2007 其實還不錯用，但對於喜愛用免費軟體的使用者來說無疑是一大福音。其實就算是資訊相關科系出身的使用者，會懂得去使用進階功能的人還真是寥寥可數，StarOffice 說實在已經夠大家用了，不過效能不會比 Office 好是確定的，Office 在近年來在效能上有很大的改善 ( 其他部分如 Bug 與安全性則不予置評 )，這點算是值得令人肯定的地方。</p></p>
+
+
+
+
+<p><p>就像這樣，軟體各有優劣，尊重使用者擁有多元的選擇，不正是「自由」軟體的本意嗎？</p></p>
+
+]]></content>
+  </entry>
+  
+</feed>

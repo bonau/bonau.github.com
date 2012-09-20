@@ -4,7 +4,7 @@
   <title><![CDATA[Munou Diagram 2]]></title>
   <link href="http://bonau.github.com/atom.xml" rel="self"/>
   <link href="http://bonau.github.com/"/>
-  <updated>2012-09-20T12:52:16+08:00</updated>
+  <updated>2012-09-20T12:59:52+08:00</updated>
   <id>http://bonau.github.com/</id>
   <author>
     <name><![CDATA[munouzin]]></name>
@@ -77,6 +77,533 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[目前的 Debian Linux Desktop]]></title>
+    <link href="http://bonau.github.com/blog/2010/12/12/%E7%9B%AE%E5%89%8D%E7%9A%84-debian-linux-desktop/"/>
+    <updated>2010-12-12T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/12/12/目前的-debian-linux-desktop</id>
+    <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/munouzin/5254386252/"><img src="http://z.nisra.net/~hhwang/5254386252_1e6ed8ecd9_m.jpg" alt="My Debian Screenshot" /></a> <br />
+哇哈哈，把 Debian 弄得賞心悅目真的是超 geek 。不過右上角的那些 Systray icon 還是挺礙眼的，雖然 GTK Theme 好像可以連 icon 一起換，但我得找到 Debian way 才不會把系統弄得一團糟&#8230;&#8230;</p>
+
+<p>目前調校過介面的軟體有 gdm3, wine, pulseaudio, openjdk 等，等到一切都調校完畢之後，再 release 一份完整的美化過程吧，長程目標是建構一套讓藝術工作者用得很爽看得也很爽的 Linux。感謝 <a href="http://debug.tw/">Debug.tw</a> 提供很美的網站讓我的 Screenshot 加分 XD</p>
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[C級排球裁判研習心得]]></title>
+    <link href="http://bonau.github.com/blog/2010/05/31/c%E7%B4%9A%E6%8E%92%E7%90%83%E8%A3%81%E5%88%A4%E7%A0%94%E7%BF%92%E5%BF%83%E5%BE%97/"/>
+    <updated>2010-05-31T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/05/31/c級排球裁判研習心得</id>
+    <content type="html"><![CDATA[<p><img style="float:right;" src="http://farm5.static.flickr.com/4022/4654771319_fc766b7ca3_m.jpg" alt="場試一景" /></p>
+
+<p>剛參加完台北市 C 級排球裁判研習，<br />
+發現網路上好像比較少人分享研習的心得，<br />
+於是決定好好的來寫一下這篇，<br />
+給有興趣參加的人參考一下。
+<h3>有點長的緣起</h3>
+先說說為什麼我要參加這個研習好了，<br />
+這跟這次我所學到的東西，<br />
+是有很大關聯的，<br />
+所以我覺得這方面可以分享一下。</p>
+
+<p>我從小就是跟運動沾不上邊的人，<br />
+運動神經的不發達到了連老師都特地找我媽關切的程度，<br />
+所以那時候就是唸書唸書唸書，<br />
+老師說：「因為你體育不好，就要在其他方面比別人強啊！」<br />
+長輩說：「沒關係啦你看體育好也賺不了幾個錢啊。」<br />
+同學說：「欸死胖子不會打球去旁邊坐啦。」<br />
+直到高中我覺得排球真是有趣，<br />
+少了一些肢體衝突跟侵略性，多了一些協調跟默契，<br />
+是個很有人情味的運動，<br />
+所以到了大學我就跟著系隊練習，<br />
+也不知道是不是因為這樣，打排球的大多數人都很和氣，<br />
+也很願意好聲好氣地教新手怎麼打球，<br />
+這對於從小一打球就只會妨礙別人、被人臭罵的我來說，<br />
+真的是很珍貴的一個學習機會。<br />
+實際上這幾年也一直接觸到一些，<br />
+我覺得無論讀了多少書也無法學到的寶貴經驗，<br />
+包括了衝突的即時協調、多點專注的反應能力（不能只看球）、<br />
+瞬間記憶臨時戰術這些有關應變協調的能力。</p>
+
+<p>好不容易，<br />
+後來練習到了可以跟「一般人」打球的地步，<br />
+但同時間也看到了自己技術跟反應力的瓶頸。<br />
+大學最後手腕受傷跟準備考試休息了一年，<br />
+我心裡卻一直很想打排球！</p>
+
+<p>研究所第二年，手傷比較好了，在交大跟不認識的人一起打球，<br />
+一兩年沒打，手感、球感、腳步、規則，什麼我都無法進入狀況，<br />
+有種顏面盡失的感覺，<br />
+也深深地檢討，那幾年學到的東西都到哪裡去了？</p>
+
+<p>怎麼辦呢？難道就不打了嗎？<br />
+我還是很喜歡排球啊！<br />
+仔細思考之後，我覺得喜愛排球有很多形式，<br />
+上了陳儷勻老師的排球課也讓我發現，<br />
+打球並不是唯一的出路，<br />
+因此去年我就一直想參加排球裁判的研習，<br />
+一方面找到一個繼續喜愛排球的方式，<br />
+一方面也從不同角度去重新檢視自己打球的問題。</p>
+
+<p>這次參加的是台北排協經中華排協認可，<br />
+在台北教育大學所舉辦的地區性排球裁判研習會，<br />
+雖然我去年就有報名，不過沒有報名成功 XD<br />
+今年雖然論文跟課業忙得要死，<br />
+但這是我一直很想參加的活動。
+<h3>第一日 - 5/28</h3>
+<img style="float:right;" src="http://farm5.static.flickr.com/4042/4654771305_65abde6c04_m.jpg" alt="有點雞肋的背包" />
+睡沒有多久，早上就搭著高鐵趕去參加研習了，<br />
+上課的地點在北教大體育系的教室。<br />
+上課前林文亮老師發了一些講義跟一個莫名其妙的手提包，<br />
+其實手提包本身並不會太差啦，<br />
+不過印了一堆中文字，字型又是不太好看的標楷體，<br />
+拿在路上真是令人感覺有些羞赧。</p>
+
+<p>看了看時程表&#8230;&#8230; ！！！！<br />
+下午陳儷勻老師要來宣傳牆壁排球耶！<br />
+他宣傳這個真是太不遺餘力了，<br />
+不過後來是心理系的學生來代講，<br />
+真可惜沒辦法跟老師哈拉 XD<br />
+是說這人以前在輔大常看到啊，<br />
+好像也是乙組跟喔告他們一起的吧，<br />
+不過不太熟不敢直接打招呼，哈哈。</p>
+
+<p>接著是開幕典禮，<br />
+也就是在教室裡面有長官跟老師致詞，<br />
+幸好老師都不喜歡講廢話，<br />
+老師們似乎也很想把握時間講一些很有用的東西，<br />
+所以一開始的感覺就還不錯。 ←討厭落落長的開幕
+<h4>第一堂：裁判概論</h4>
+是由年過七旬的王老師來上課，<br />
+講了裁判在比賽之外的重要事情，<br />
+包括一些會議以及平常準備的工作，<br />
+當然也有一些實務的經驗分享，<br />
+裁判糾紛該怎麼處理等等。</p>
+
+<p>值得一提的是，這幾堂課的老師都很準時且有禮，<br />
+教材也都是有準備過，而不是隨便上去講講，<br />
+看他們在裁判新制手冊裡面做滿了筆記就知道，
+<strong>裁判真的不只是抓得嚴格、看得仔細就能勝任的</strong>。</p>
+
+<p>而看到王老師如此年紀了還在從事這樣的教育工作，<br />
+真的是會升起一種「無論做什麼事都需要熱情」的感覺。
+<h4>第二堂：規則解說</h4>
+接下來是許老師的規則講解，<br />
+跟我同期的人好像大多都對基本規則蠻熟悉了，<br />
+老師問一問之後確認沒問題，<br />
+就開始講一些<strong>比較細節的部份</strong>，<br />
+包括攔網的種類，以及後排與自由球員攔網犯規成立的不同之處、<br />
+發球與越位的判定順序、一二裁與司線員的職權分野、<br />
+延誤比賽與不當請求，這種一般裁判容易忽略或混淆的規則。<br />
+教學的過程中他一直說「這樣各位老師清楚嗎」，<br />
+聽得真是心虛 Orz
+<h4>第三堂：紀錄法</h4>
+最後一堂是周老師的紀錄法，<br />
+有經驗就知道，紀錄台一個恍神真的會讓比賽失序，<br />
+記錯輪轉、發球順序，（要是有罰分的時候就更加混亂）<br />
+打了錯誤的指示給二裁，<br />
+會讓大家很不開心，<br />
+因此老師從頭帶大家做一次紀錄，<br />
+製造了一堆狀況給大家寫，<br />
+雖然老師也不免在中間有了小凸槌，<br />
+不過整體來說也是堂不錯的課。</p>
+
+<p>整天坐下來屁股有點痛，<br />
+中餐的便當&#8230; 嗯，就只是一個普通的便當。<br />
+一下子要吸收很多知識，<br />
+不過這也代表兩千元算是花得值得，<br />
+至少老師們都是很有料的。
+<h3>第二日 - 5/29</h3>
+<img style="float:right;" src="http://farm5.static.flickr.com/4043/4654771317_995c095538_m.jpg" alt="上課地點" />
+這天進入了場地實習，<br />
+除了中午吃便當，整天幾乎都在球場，<br />
+室內球場的空調似乎有點問題，整天都有點悶熱。
+<h4>第四堂：執法示範</h4>
+老師先簡單示範一些手勢，<br />
+隨即進入了實習的階段，<br />
+所以之前沒有先看過會有點吃力，<br />
+短時間要記起來，然後反射性的反應是不太可能的。
+<h4>第五堂：執法實習</h4>
+這次因為學員比較多的關係，<br />
+一個人能實習的時間並不多，<br />
+基本上就是每<strong>六個人為一組，分別輪一裁二裁，以及司線員的角色</strong>，<br />
+沒有上場實習的人就下場打球或是休息。<br />
+一二裁由兩位許老師負責指導，<br />
+司線員由王老師以及周老師指導。</p>
+
+<p>我第一組上去，先吹二裁，<br />
+老師提醒後才知道原來二裁要跑來跑去的，<br />
+要監督防守方，<br />
+不能只站在中線，<br />
+而且鳴笛時手勢不能先比勝方&#8230; 等等。</p>
+
+<p>站上一裁的看台上更緊張，<br />
+不知道為什麼只要站上去就會一直覺得自己快要跌下來一樣，<br />
+然後就兩腿僵硬，<br />
+吹了幾球之後就有點軟腳，真是奧少年。<br />
+加上第一組上來、新制越中線觸網規則不太習慣、<br />
+有人製造了一大堆情況，同時間有一大堆犯規，<br />
+我超慌亂的，就一直被兩個老師譙 XD<br />
+不過最後幾球穩定了自己的心情後，<br />
+就吹得比較順暢了。<br />
+一裁比較容易犯的錯誤是：
+<ol>
+	<li>鳴笛太小聲太長</li>
+	<li>鳴笛跟手勢同時出現</li>
+	<li>手勢不確實，動作不夠自信或過大</li>
+	<li>判決沒有自信，無法被觀眾與球員信任</li>
+	<li>確實有誤判情事發生後，影響後續的比賽</li>
+</ol>
+這也是老師說他的評分標準，<br />
+他說<strong>誤判是難免，但要盡速決定公正或改判，避免影響比賽節奏，這比什麼都重要！</strong>
+這方面可以多看 youtube 上面的企聯排球賽紀錄影片，<br />
+看看別人一裁是怎麼比的。</p>
+
+<p>司線員也是蠻令我意外，<br />
+王老師跟我耳提面命，<strong>不只是要看線，<br />
+還要幫忙看有沒有 touch 跟發球有沒有過邊線，<br />
+有球員試圖跳發時最好還要跟著跑動，</strong>
+我一直以為只要看發球端線跟有沒有 out 而已 = =<br />
+touch 真是超難判斷，<br />
+尤其雙方你來我往的時候，根本不知道最後攻擊的是那一方，<br />
+當然也就不太能確定對方有沒有 touch 到&#8230;<br />
+這方面我真的要多下一點功夫。</p>
+
+<p>實習時，老師認為有問題的人，<br />
+會等全部人都實習完畢後，再輪一次，
+<strong>給你多一些練習的機會</strong>。
+<h4>第六堂：紀錄法考試</h4>
+下午的紀錄法考試是<strong>大家一起考</strong>，<br />
+老師人真好，一直提示大家不要忘記一些細節，<br />
+包括<strong>特殊記號以及對裁判的手勢</strong>，<br />
+只能說這方面要是沒有考超過 70 分真的不太好&#8230;&#8230;</p>
+
+<p>由於一早就被罵的關係，<br />
+後來一有機會我就跟著其他組的學員一起比裁判，<br />
+一起跑二裁，<br />
+一有問題就去找老師，跟旁邊新認識的同學，
+<strong>問些蠢問題總比之後下場執法引起糾紛要好得多</strong>，<br />
+最好能在大家面前問，這樣大家都聽得到答案，也能得到討論，<br />
+反正大家都是來研習的，就不要太害怕去問了。
+<h3>第三日 - 5/30</h3>
+<h4>第七堂：規則筆試</h4>
+<img style="float:right;" src="http://farm5.static.flickr.com/4063/4654771311_fbb3a5aa45_m.jpg" alt="規則講義" />
+早上筆試，在第一天的教室考，<br />
+題目不算難，老師也說<strong>今年題目已經蠻簡單</strong>，<br />
+但是我做起來還是不太順手 XD<br />
+只能說上課筆記有關的條文一定要都背很熟，<br />
+（<strong>只背筆記不行哦，要去看相關條文比較保險，因為會考四十分的填充</strong>）<br />
+其他規則最少也要瞄過一遍，<br />
+像最令我頭大的是「司線員手勢的八個時機」填充，<br />
+我怎麼掰就是少了一個。
+<h4>第八堂：執法場試</h4>
+交卷後就回到昨天的球場考場試了，<br />
+跟昨天的實習一樣六個人一組，<br />
+第一組要從列隊開始，<br />
+這是厄運也是福利，<br />
+厄運是，考試這麼緊張的場合要多了一些狀況，<br />
+福利是，只有第一組都有這個練習機會，<br />
+我吹二裁的時候一直跑動，<br />
+防守方只要近網我就露出專注的神情，<br />
+吹一裁也是同樣的，<br />
+攻擊方只要近網就側身去看網端跟中線。</p>
+
+<p>中間我有誤判一球，<br />
+幸好跟我一組的二裁給了我面子，<br />
+我也沒有一副很畏縮的樣子，<br />
+不然大概就大扣分了，<br />
+但是下場之後我時時想起那一球，<br />
+之後真的要多找一些機會才是。</p>
+
+<p>考完已經是下午的事情了，<br />
+但已經比行程表提前許多，<br />
+所有老師們在前面給大家問有關規則跟排球協會的問題，<br />
+包括<strong>裁判證會在網站公佈合格之後，扣留在當地排球協會，<br />
+等待準裁判去當地排協找機會實習幾次後才會發回</strong>之類的行政問題。<br />
+老師也說大盃賽通常需要大量裁判，但是經費可能又不太足夠外縣市的人住宿，<br />
+所以<strong>希望有多一點專業的裁判人才，也能解除主辦盃賽的經濟壓力</strong>。</p>
+
+<p>問完問題之後就頒發結業證書，結束了三天的研習。</p>
+
+<p>由於這三天都在趕進度的關係，<br />
+加上我是自己報名，認識的人也只是打過照面而已，<br />
+所以我實在沒有什麼時間，也不太好意思能多照相 XD<br />
+這是有一點可惜的，
+<strong>希望大家能夠團報，然後多照相留下一點記憶哦～</strong>
+<h3>心得感想</h3>
+不太建議基本規則不太清楚的人來研習跟考試，<br />
+（所謂基本規則是像一局 25 分啦，五局三勝三局兩勝制度啦，<br />
+賽末局比分要多少啦，幾分要換場地啦，<br />
+deuce 是什麼之類的啦，身體觸球跟發球的允許部位&#8230;，很基本。）<br />
+因為雖然是 C 級，通常只適合擔任大比賽的司線與記錄員，<br />
+但其實已經在討論一些一二裁的細節部份了，<br />
+包括同時犯規的處理等等，<br />
+至於 B 級，老師說比較著重在持球跟連擊之類，<br />
+這種比較有爭議的判決。<br />
+A 級的神秘面紗，等我兩年後要是有考 B 級再跟各位揭曉 XD</p>
+
+<p>這兩天很感謝一旁的國小老師，<br />
+還有大學的強者學弟跟我討論，<br />
+當然更感謝老師們全程都很專注很認真的在看球、教學、指正，<br />
+這次研習最讓我覺得有收穫的是對於裁判的重新認識，<br />
+雖然本來就知道裁判不好當，<br />
+但是並不只是因為要承擔比賽結果的壓力，<br />
+而是在這樣的壓力與沸騰的球賽之下，<br />
+還能眼觀四面耳聽八方、保持公正冷靜，<br />
+然後做出優雅的判決手勢，<br />
+且能持續這樣的工作，時時調整自己。</p>
+
+<p>這不也是無論站上裁判台還是演出舞台，<br />
+都應該要擁有的能力嗎？<br />
+看著很多大型盃賽，裁判不夠專業被眾人圍剿的情形，<br />
+看著一些售票演出，呈現出糟糕的效果引起眾怒的情形，<br />
+要作這些有觀眾的工作，真的得要有所覺悟才是。</p>
+
+<p>最後希望自己能夠考上，<br />
+當兵後能有機會實習、執法、打球，<br />
+也期望自己能不斷地主動學習跟參與，<br />
+不要像以前的書呆子肥鵝一樣，<br />
+什麼都要老師餵。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[隱藏 GNOME 桌面上掛載的儲存媒體圖示]]></title>
+    <link href="http://bonau.github.com/blog/2010/04/10/%E9%9A%B1%E8%97%8F-gnome-%E6%A1%8C%E9%9D%A2%E4%B8%8A%E6%8E%9B%E8%BC%89%E7%9A%84%E5%84%B2%E5%AD%98%E5%AA%92%E9%AB%94%E5%9C%96%E7%A4%BA/"/>
+    <updated>2010-04-10T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/04/10/隱藏-gnome-桌面上掛載的儲存媒體圖示</id>
+    <content type="html"><![CDATA[<p>執行 gconf-editor<br />
+找到 /apps/nautilus/desktop/volumes_visible<br />
+然後不要打勾→完成了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu custom DNS for PPPoE]]></title>
+    <link href="http://bonau.github.com/blog/2010/04/07/ubuntu-custom-dns-for-pppoe/"/>
+    <updated>2010-04-07T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/04/07/ubuntu-custom-dns-for-pppoe</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve found that whenever I dial up PPPoE<br />
+the /etc/resolv.conf will be rewritten<br />
+so that name server is always set as ISP&#8217;s default DNS.<br />
+However, it&#8217;s affected by the configuration of PPPoE.<br />
+Now we&#8217;ll try to solve this.</p>
+
+<p><pre>
+$ sudoedit /etc/ppp/peers/dsl-provider
+</pre>
+find:
+<pre>
+usepeerdns
+</pre>
+change it to:
+<pre>
+#usepeerdns
+</pre></p>
+
+<p>Then feel free to edit /etc/resolv.conf.<br />
+PPPoE will not overwrite your settings anymore.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[終於可以關掉 Chrome 的翻譯建議了]]></title>
+    <link href="http://bonau.github.com/blog/2010/03/31/%E7%B5%82%E6%96%BC%E5%8F%AF%E4%BB%A5%E9%97%9C%E6%8E%89-chrome-%E7%9A%84%E7%BF%BB%E8%AD%AF%E5%BB%BA%E8%AD%B0%E4%BA%86/"/>
+    <updated>2010-03-31T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/03/31/終於可以關掉-chrome-的翻譯建議了</id>
+    <content type="html"><![CDATA[<p>http://www.google.com/support/chrome/bin/answer.py?hl=en&amp;answer=173424</p>
+
+<p>我覺得有時翻譯也是挺必要，<br />
+不過每一頁英文都要跑出那個翻譯 Bar 把內容統統往下擠，<br />
+害使用者按錯按鈕，感覺就會有點幹。</p>
+
+<p>Google 人員表示聽到了我們的心聲，<br />
+在最近版本的進階選項加入了<br />
+「Offer to translate pages that aren&#8217;t in a language I read」<br />
+這個貼心的東西，<br />
+以後就不怕因為他把內容擠下來而按錯連結或按鈕啦～</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[讓 screen 停止閃爍]]></title>
+    <link href="http://bonau.github.com/blog/2010/03/10/%E8%AE%93-screen-%E5%81%9C%E6%AD%A2%E9%96%83%E7%88%8D/"/>
+    <updated>2010-03-10T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/03/10/讓-screen-停止閃爍</id>
+    <content type="html"><![CDATA[<p>本來以為是 PuTTY 對 flashing bell 的設定有 bug<br />
+後來才發現是 screen 的問題 囧<br />
+在 ~/.screenrc 加上
+<pre>
+vbell off
+</pre>
+就可以了<br />
+或是在 screen 中按 Ctrl+A Ctrl+: 然後輸入 vbell off 也是可行的</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[職業倦怠]]></title>
+    <link href="http://bonau.github.com/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/"/>
+    <updated>2009-12-27T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2009/12/27/職業倦怠</id>
+    <content type="html"><![CDATA[<p>寫程式寫得好累了，<br />
+不是說想睡那種，而是想不要再寫了。</p>
+
+<p>「你還年輕耶，gan 真是草莓族！」<br />
+可是其實為了我爸媽的公司記帳數位化，<br />
+家裡很久以前就有了電腦<br />
+因此我小學一年級就在寫程式，<br />
+寫到現在應該也有 18 年惹<br />
+就算考高中考大學的時候還是一直在寫程式，<br />
+這 18 年可不是灌水灌出來的。</p>
+
+<p>小時候不知道為什麼很喜歡買電話簿這種東西，<br />
+把班上所有同學電話都放在裡面就會覺得人生好充實，<br />
+直到有天表姐教我用資料庫 dBASE，<br />
+(現在想想她其實是想叫我當打字童工吧)<br />
+那時候我只覺得資料庫這種東西真是太神奇了，<br />
+一定是人類前三大偉大發明之一！<br />
+於是我就想要用這資料庫設計世界上最好用的電話簿 XD</p>
+
+<p>但是小學腦還沒長齊，<br />
+看著電腦書上別人寫得比我好用三百萬倍的電話簿，<br />
+就有一種很灰心的感覺。</p>
+
+<p>好吧，那至少也學學別人怎麼做的，<br />
+改改範例磁片裡面的程式、照本宣科，<br />
+改一下介面，<br />
+那時候光是做出一個「選單移動光棒」就開心得要死，<br />
+真是腦子裡面裝大便。</p>
+
+<p>後來電腦遊戲開始盛行，<br />
+我也沈迷了一段時間，<br />
+目標就轉往電腦遊戲，<br />
+說到遊戲當然要有畫面，<br />
+無奈那時候只有 Windows 3.1 小畫家，<br />
+我連個小叮噹都畫不好。</p>
+
+<p>於是我就只好寫一些文字遊戲，<br />
+聽說 QBasic 很好用我就學了，<br />
+雖然沒有畫面但是放點音樂我還是辦得到的，<br />
+於是我用蜂鳴器函式寫音樂，結果因為太吵被罵，<br />
+此時設計數位電話簿我已經完全放棄了，<br />
+甚至回到手寫的階段 XD</p>
+
+<p>小學高年級的時候，巨集病毒正夯，<br />
+我媽中 Taiwan No.1 的時候我真是超興奮的，<br />
+很快的幫他重置 template，←也不知道那時候為什麼那麼聰明知道怎麼解毒<br />
+看了一下程式碼，我也寫了幾隻來玩玩，<br />
+但是後來把我媽同事的電腦搞爆了，<br />
+我就從此隱退 XDrz</p>
+
+<p>那時候網路也開始發達了，<br />
+56kB/s 的細水長流讓我對網路有很多遐想，<br />
+也開始學了怎麼寫網頁。</p>
+
+<p>小學六年級，(時間點應該沒記錯)<br />
+因為聽說業界軟體都用 C/C++ 寫的，<br />
+結果去資訊展的時候就吵著要我媽買 Visual C++，<br />
+於是我人生第一個正版軟體就是 Microsoft Visual C++ 6.0 教育版了，<br />
+想起來真是浪費，我根本就是到高中才學會 C 的。</p>
+
+<p>小學就這樣用了一些鱉腳的程式幫助一些人解決了生活上的問題，<br />
+國中的時候迷上 VBA，用 Excel 幫導師寫了一個統計成績的系統，<br />
+結果 Excel bug 超多，<br />
+造成大家很多不必要的麻煩 XD<br />
+現在想想成績不好的同學一定恨死我了，幹嘛方便老師統計成績啊&#8230;</p>
+
+<p>國中時也發生了著名的 CIH 事件，<br />
+我那時候看了別人深入的介紹，<br />
+(CleanCIH 的作者，好像是 sscan 吧)<br />
+才知道原來有組合語言這種東西 (爆)<br />
+難怪以前買病毒的書都看不懂程式碼。</p>
+
+<p>國三終於用 VB 寫了自己第一套遊戲，<br />
+是個 3x3 的拉霸，<br />
+用了物件導向、用了 WinAPI、用了 double buffer 畫面不會閃爍，<br />
+這些是我最得意的地方 XD</p>
+
+<p>國三時也道聽塗說，「聽說 linux 都不會當機」，<br />
+買了 Redhat Linux 6 + CLE，還很開心自己用兩三百塊就買了個作業系統，<br />
+結果灌進去不小心把硬碟資料弄光了，<br />
+裡面有很多自己的程式，<br />
+很懊悔難過了好幾天，<br />
+不過也因此寫了第一個偏向系統而非應用的程式，<br />
+是 undelete 的加強版。<br />
+但是畢竟還嫩著，只救回了一些沒用的東西，<br />
+Linux 最後還是架起來了，也學寫了一些 PHP。</p>
+
+<p>上了高中，高手雲集，<br />
+不過高一的我還沒發現自己的渺小，<br />
+那時候我都在樂隊、樂團、打零工，<br />
+快高二的時候，受到 ychia 慫恿(?)去考了資訊社幹部，<br />
+才發現裡面都是怪物啊，<br />
+騎著我無法駕馭的 Unix 系統，<br />
+寫著我看不懂的 C，<br />
+寫 VB 的人雖然不討人喜歡但他真的也是頗厲害的。</p>
+
+<p>那我怎麼辦呢？<br />
+從小寫到大的程式，<br />
+最後只能吃屎嗎？<br />
+沒關係我還有 PHP&#8230;<br />
+結果一上任幹部改掉資訊社首頁就被人發現有大漏洞 XD<br />
+那時候我才知道什麼叫做資訊安全。</p>
+
+<p>之後我寫 PHP 變得比較嚴謹，<br />
+該做的措施我也都會作，<br />
+從此我寫的東西大概都是網頁、client、user interface 等等。</p>
+
+<p>高三因為要練習看英文，<br />
+無意間接觸了 Ruby，給了我很多想法跟靈感，<br />
+對於物件導向的概念，我已經陳腐了 5~6 年，<br />
+這時候我覺得我寫程式才終於有在用心思考了，<br />
+「怎麼讓程式變得漂亮、穩定、安全」</p>
+
+<p>就這樣十幾年過去了，<br />
+然而我寫的依舊是那些東西，<br />
+程度說到底也只能寫出「電話簿 Deluxe」<br />
+上大學我才正式學到物件導向的全貌，<br />
+也是上大學後才知道 MVC 的重要，<br />
+雖然從小寫程式讓我學習新的東西速度變快，<br />
+但也真是花了太多無謂的時間了。</p>
+
+<p>其實還有好多東西是等著我去學的，<br />
+什麼 graphics 啦、audio system 啦、driver 啦，<br />
+可是我好累。</p>
+
+<p>無論怎麼在網頁裡面加入好玩的東西，<br />
+無論怎麼在 GUI Applications 加入方便的 UI 設計，<br />
+我都無法提起精神。</p>
+
+<p>你能想像除了出去旅遊，<br />
+幾乎每天都寫程式的日子嗎？<br />
+你能明白寫程式寫了十八年，<br />
+卻要眼睜睜看著有人大學唸四年就能趕上的心情嗎？<br />
+(雖然很多人還嫩著，哈哈哈)<br />
+你能知道我所追求的穩定與安全，<br />
+在業界大部分情況都被當成屁的感覺嗎？<br />
+你能想像自己一直以來以為可以長相廝守的興趣，<br />
+十八年後不再能夠那麼喜歡了嗎？</p>
+
+<p>要是 18 歲開始寫程式，<br />
+寫了 18 年等於是 36 歲，<br />
+我想我現在就是 36 歲的心態了。</p>
+
+<p>以前怎麼想像得到呢。<br />
+寫程式對我來講已經像是玩膩了的電玩一樣，<br />
+很喜歡，玩的時候很快樂，不過就是沒辦法了。<br />
+太一成不變了。</p>
+
+<p>然而我還是會繼續寫程式，<br />
+畢竟以後能賺錢的就是程式了，<br />
+至於怎麼去調適自己看待程式的心情，<br />
+目前還沒有什麼想法，<br />
+也許以後有了心得，再來分享吧。</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Reactivate notify-osd instead of notification-daemon]]></title>
     <link href="http://bonau.github.com/2009/12/reactivate-notify-osd-instead-of.html"/>
     <updated>2009-12-01T18:28:00+08:00</updated>
@@ -127,42 +654,6 @@
     <updated>2009-09-19T09:49:00+08:00</updated>
     <id>http://bonau.github.com/2009/09/blog-post</id>
     <content type="html"><![CDATA[> sudo modprobe -r pcspkr<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-8216572577240283835?l=polar-dev.blogspot.com' alt='' /></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[有關 Google Chrome/Chromium 使用太多記憶體]]></title>
-    <link href="http://bonau.github.com/2009/08/google-chromechromium_14.html"/>
-    <updated>2009-08-14T20:55:00+08:00</updated>
-    <id>http://bonau.github.com/2009/08/google-chromechromium_14</id>
-    <content type="html"><![CDATA[<a href="http://www.google.com/support/forum/p/Chrome/thread?tid=7503e986d7037c43&amp;hl=en">http://www.google.com/support/forum/p/Chrome/thread?tid=7503e986d7037c43&amp;hl=en</a><div><br /></div><div>似乎沒有什麼好的解答。</div><div>關掉卡巴之後，記憶體的用量反而攀升了……</div><div><br /></div><div>後來使用 &#8211;memory-model=high 倒是解了這個問題，</div><div>雖然 Physical memory 用得比較多，</div><div>但總比一直 page fault 來得好。</div><div><br /></div><div>記憶體少的用戶該怎麼辦呢……</div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7853350203470300382?l=polar-dev.blogspot.com' alt='' /></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Google Chrome/Chromium 的啟動參數]]></title>
-    <link href="http://bonau.github.com/2009/08/google-chromechromium.html"/>
-    <updated>2009-08-14T15:50:00+08:00</updated>
-    <id>http://bonau.github.com/2009/08/google-chromechromium</id>
-    <content type="html"><![CDATA[本文是參考 Chromium Build 23135<br />不同版本也許會有些選項不能使用。<br /><br />使用的方式：在 Chrome 捷徑裡的「目標」欄位填入<br />Chrome.exe &#8211;option-1 &#8211;option-2<br />例如<br />C:\xxx\chrome.exe &#8211;enable-udd-profiles &#8211;start-maximized<br />代表「使用多使用者設定檔模式」及「啟動時最大化」<br /><br />常用的選項：<br /><br /><table><tbody><tr><td>allow-all-activex</td><td>預設讓各種附加元件可以使用</td></tr><tr><td>auto-spell-correct</td><td>輸入文字時自動修正錯字</td></tr><tr><td>bookmark-menu</td><td>在網址列的右側多加一個書籤按鈕</td></tr><tr><td>disable-audio</td><td>不啟用背景音效音樂</td></tr><tr><td>disable-images</td><td>不載入圖案</td></tr><tr><td>disable-java</td><td>不啟用 JAVA</td></tr><tr><td>disable-javascript</td><td>不啟用 JavaScript</td></tr><tr><td>disable-logging</td><td>不啟用事件紀錄</td></tr><tr><td>disable-plugins</td><td>不啟用任何附加元件</td></tr><tr><td>disable-popup-blocking</td><td>不阻止彈出式視窗</td></tr><tr><td>disk-cache-dir=xxx</td><td>手動設定硬碟快取的目錄</td></tr><tr><td>disk-cache-size=xxx</td><td>限制硬碟快取大小</td></tr><tr><td>enable-udd-profiles</td><td>啟用多使用者設定檔，可在瀏覽時按 Ctrl+M 管理使用者</td></tr><tr><td>enable-sync</td><td>允許網路同步書籤</td></tr><tr><td>enable-user-scripts</td><td>啟用使用者自訂 Scripts<span class="Apple-tab-span" style="white-space:pre"> </span></td></tr><tr><td>memory-model=xxx</td><td>記憶體模型，xxx 可為 high, medium, low<br />如果電腦有配備 1.5GB 以上記憶體，<br />使用 Chrome 切換分頁時卻常會讀取硬碟，<br />就可以使用 high 來解決這個問題。<br />根據 Chrome 原始碼，原理似乎不是配給記憶體，<br />而是很多 Chorme 的元件會依據你給予的 Memory Model，<br />決定是否要限制每個 Process 的 Working Set</td></tr><tr><td>no-default-browser-check</td><td>不檢查預設瀏覽器是否為 Chrome</td></tr><tr><td>old-new-tab-page</td><td>使用 2.0 時代的新頁籤預設版面</td></tr><tr><td>process-per-site</td><td>每個網站使用一個 Process</td></tr><tr><td>process-per-tab</td><td>每個網頁各使用一個 Process</td></tr><tr><td>user-scripts-dir=xxx</td><td>如果有 &#8211;enable-user-scripts 這個啟動選項的話，<br />則會在開啟新網頁的時候，將指定目錄的 JavaScript 都執行一遍，<br />跟 Opera 的 User Scripts 功能類似。</td></tr></tbody></table><br /><br />全部的選項：<br /><br />allow-all-activex<br />allow-sandbox-debugging<br />always-enable-dev-tools<br />app<br />assert-test<br />auto-spell-correct<br />automation-channel<br />bookmark-menu<br />browser-subprocess-path<br />country<br />crash-test<br />debug-print<br />diagnostics<br />disable-audio<br />disable-custom-jumplist<br />disable-dev-tools<br />disable-hang-monitor<br />disable-images<br />disable-java<br />disable-javascript<br />disable-logging<br />disable-metrics<br />disable-new-tab-first-run<br />disable-plugins<br />disable-popup-blocking<br />disable-prompt-on-repost<br />disable-web-security<br />disable-winsta<br />disk-cache-dir=xxx<br />disk-cache-size=xxx<br />dns-log-details<br />dns-prefetch-disable<br />dom-automation<br />dump-histograms-on-exit<br />enable-application-cache<br />enable-benchmarking<br />enable-databases<br />enable-extensions<br />enable-fastback<br />enable-file-cookies<br />enable-local-storage<br />enable-logging<br />enable-monitor-profile<br />enable-native-web-workers<br />enable-plugins<br />enable-remote-fonts<br />enable-renderer-accessibility<br />enable-sdch<br />enable-seccomp-sandbox<br />enable-session-storage<br />enable-stats-table<br />enable-sync<br />enable-tabtastic2<br />enable-udd-profiles<br />enable-user-scripts<br />enable-watchdog<br />enable-web-resources<br />enable-xss-auditor<br />extensions-update-frequency<br />file-descriptor-limit<br />first-run<br />force-fieldtest<br />gears-plugin-path<br />google-internal-crash-reporting<br />hide-icons<br />homepage<br />import<br />in-process-plugins<br />incognito<br />install-extension<br />js-flags<br />load-extension<br />load-plugin<br />log-filter-prefix<br />log-level<br />log-plugin-messages<br />make-default-browser<br />media-cache-size<br />memory-model=xxx<br />memory-profile<br />message-loop-histogrammer<br />metrics-recording-only<br />new-ftp<br />new-tab-page<br />no-default-browser-check<br />no-events<br />no-first-run<br />no-js-randomness<br />no-proxy-server<br />no-sandbox<br />old-new-tab-page<br />omnibox-popup-count<br />pack-extension<br />pack-extension-key<br />parent-profile<br />pinned-tab-count<br />playback-mode<br />plugin<br />plugin-data-dir<br />plugin-launcher<br />plugin-path<br />plugin-startup-dialog<br />print<br />privacy-blacklist<br />process-per-site<br />process-per-tab<br />proxy-auto-detect<br />proxy-bypass-list<br />proxy-pac-url<br />proxy-server<br />record-mode<br />remote-shell-port<br />renderer<br />renderer-assert-test<br />renderer-cmd-prefix<br />renderer-crash-dumping<br />renderer-crash-test<br />renderer-startup-dialog<br />restore-last-session<br />safe-plugins<br />search-in-omnibox-hint<br />show-icons<br />silent-dump-on-dcheck<br />simple-data-source<br />single-process<br />start-maximized<br />tab-count-to-load-on-session-restore<br />test-name<br />test-sandbox<br />testing-channel<br />thumbnail-store<br />trusted-plugins<br />try-chrome-again<br />uninstall<br />use-lf-heap<br />user-agent<br />user-data-dir<br />user-scripts-dir<br />utility<br />utility-cmd-prefix<br />wait-for-debugger-children<br />web-worker-process-per-core<br />web-worker-share-processes<br />winhttp-proxy-resolver<br />worker<br />zygote<br />zygote-cmd-prefix<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-4619864317918659032?l=polar-dev.blogspot.com' alt='' /></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在 Chrome 使用 Firebug Lite]]></title>
-    <link href="http://bonau.github.com/2009/08/chrome-firebug-lite.html"/>
-    <updated>2009-08-13T05:58:00+08:00</updated>
-    <id>http://bonau.github.com/2009/08/chrome-firebug-lite</id>
-    <content type="html"><![CDATA[<div>Firebug 很好用，但是 Firefox 效能真的不好，<div>即使到了 3.5 還是一樣。</div><div><br /></div><div>而由於 Firefox 的套件多半是 JavaScript + XUI 製作的，</div><div>所以要跟別套瀏覽器相容也並不是那麼樣的困難，</div><div>Firebug 自己出了一套 Lite 給其他瀏覽器使用：</div><div><a href="http://getfirebug.com/lite.html">http://getfirebug.com/lite.html</a></div><div>而這個也可以用在 Chrome 上。</div><h3>安裝</h3><div>在上面的網址找到 &#8220;Firebug Lite as bookmarklet&#8221;</div><div><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s1600-h/screenshot.13-08-2009+06.05.44.png"><img src="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s320/screenshot.13-08-2009+06.05.44.png" border="0" alt="" id="BLOGGER_PHOTO_ID_5369202538405556946" style="cursor: pointer; width: 295px; height: 241px; " /></a></div><div><div><br /></div><div>然後把底下 &#8220;Firebug Lite&#8221; 的連結用拖曳的方式拉到書籤工具列上，</div><div>這樣就可以在 Chrome 使用 Firebug Lite 了哦 A_A</div><h3>原理</h3><div>原理是他會 require 一個遠端的 JavaScript 檔案，</div><div>用那個檔案來啟動 Firebug，所以只要有連上網路，就可以隨時用到最新的 Firebug 了。</div><div>離線使用的方法日後有空再補上。</div><h3>已知問題</h3><div>HTML 元素檢視會有些問題 ( 可能是因為 Firebug 也是元素之一吧 )，</div><div>不過好在 Chrome 有自己還不錯用的元素檢視器，</div><div>可以先擋著用。</div></div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-792029656646164883?l=polar-dev.blogspot.com' alt='' /></div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Chrome/Chromium 藍白畫面]]></title>
-    <link href="http://bonau.github.com/2009/08/chromechromium.html"/>
-    <updated>2009-08-13T05:07:00+08:00</updated>
-    <id>http://bonau.github.com/2009/08/chromechromium</id>
-    <content type="html"><![CDATA[Chrome 的使用經驗大致上是不錯的，<br />除了目前缺了些好用的 hack tool 跟 web development 工具，<br />還有吃掉大量記憶體之外。<br /><br />( 別說些什麼記憶體很便宜之類的屁話啦，我家有台電腦是用 Rambus 的&#8230; )<br /><br />不過最近我還發現他另外一個奇妙的 Bug，<br />就是我常常在用 Chrome 切換分頁的時候讓 Windows XP 整個當掉，<br />而且是藍白畫面那種。<br />細看之後發現錯誤是出在 win32k.sys<br />其實 XP 還算穩定，我已經很久沒有碰到藍白畫面了，<br />而且我從未碰過 win32k.sys 這東西引發的當機，<br />所以就用這個去 Chromium 查了一下，<br />看到這篇：<br /><a href="http://code.google.com/p/chromium/issues/detail?id=10011">Issue 10011: BSOD in win32k.sys on XP SP3</a><br />http://code.google.com/p/chromium/issues/detail?id=10011<br /><br />開發者很快的回答了問題，<br />指出似乎是 win32k.sys 在 page fault 時產生的錯誤，<br />這個回答是可信的，因為我常常在切換分頁的時候，產生大量 I/O，<br />而每個分頁又是不同的 Process，切換起來有時候還比 Firefox 2.x 更慢。<div><br /></div><div>結果問題還是出在 Windows XP 身上，唉。<br /><br />解決方式是更新到 Windows XP SP3 之後再套用 <a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718">KB959252</a> 更新<br />http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718<br />這個更新是有語言限制的，<br />像我安裝的是英文版 XP 就用英文版的，<br />如果安裝的是中文版 XP 就要改選正體中文頁面來下載。<br /><div><br /></div><div>希望此後不會再因為 Chrome 瀏覽器引發藍白當機 ˊˋ</div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-3109891721055068366?l=polar-dev.blogspot.com' alt='' /></div>
 ]]></content>
   </entry>
   

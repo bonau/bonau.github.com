@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 主機環境 | Munou Diagram 2]]></title>
+  <link href="http://bonau.github.com/blog/categories/主機環境/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:59:52+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[munouzin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu custom DNS for PPPoE]]></title>
+    <link href="http://bonau.github.com/blog/2010/04/07/ubuntu-custom-dns-for-pppoe/"/>
+    <updated>2010-04-07T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/04/07/ubuntu-custom-dns-for-pppoe</id>
+    <content type="html"><![CDATA[<p>I've found that whenever I dial up PPPoE<br />
+the /etc/resolv.conf will be rewritten<br />
+so that name server is always set as ISP's default DNS.<br />
+However, it's affected by the configuration of PPPoE.<br />
+Now we'll try to solve this.</p>
+
+
+
+
+<p><pre>
+$ sudoedit /etc/ppp/peers/dsl-provider
+</pre>
+find:
+<pre>
+usepeerdns
+</pre>
+change it to:
+<pre>
+#usepeerdns
+</pre></p>
+
+
+
+
+<p>Then feel free to edit /etc/resolv.conf.<br />
+PPPoE will not overwrite your settings anymore.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[讓 screen 停止閃爍]]></title>
+    <link href="http://bonau.github.com/blog/2010/03/10/%E8%AE%93-screen-%E5%81%9C%E6%AD%A2%E9%96%83%E7%88%8D/"/>
+    <updated>2010-03-10T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/03/10/讓-screen-停止閃爍</id>
+    <content type="html"><![CDATA[<p>本來以為是 PuTTY 對 flashing bell 的設定有 bug<br />
+後來才發現是 screen 的問題 囧<br />
+在 ~/.screenrc 加上
+<pre>
+vbell off
+</pre>
+就可以了<br />
+或是在 screen 中按 Ctrl+A Ctrl+: 然後輸入 vbell off 也是可行的</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在 Win32 把 VMware 硬碟掛載起來！]]></title>
+    <link href="http://bonau.github.com/blog/2008/09/08/%E5%9C%A8-win32-%E6%8A%8A-vmware-%E7%A1%AC%E7%A2%9F%E6%8E%9B%E8%BC%89%E8%B5%B7%E4%BE%86%EF%BC%81/"/>
+    <updated>2008-09-08T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2008/09/08/在-win32-把-vmware-硬碟掛載起來！</id>
+    <content type="html"><![CDATA[<p><p>這是 VMware 官方的軟體，叫 VMware DiskMount Utilities，目前出到 5.5.0 版，不過我不知道他能不能掛載 6.0 的硬碟，因為我現在也還在用 VMware Workstation 5.5。那麼首先就先去下載 VMware DiskMount Utilities 吧，官網上我目前還找不到連結可以連過去，是後來才拿掉的，不知道原因為何，可能真的不支援 6.0 吧。</p> <blockquote> <p><a title="http://www.vmware.com/download/eula/diskmount_ws_v55.html" href="http://www.vmware.com/download/eula/diskmount_ws_v55.html">http://www.vmware.com/download/eula/diskmount_ws_v55.html</a></p></blockquote> <p>安裝之後按「開始 / 執行 / 輸入 cmd」後執行下列語法：</p> <blockquote> <p>C:\&gt; cd "C:\Program Files\VMware\VMware DiskMount Utility\"<br />C:\&gt; vmware-mount x: D:\vmware硬碟路徑.vmdk</p></blockquote> <p>就可以看到多了一個 X 槽，裡面就是你 vmdk 檔案的第一個 Volume 啦，如果還要掛載其他 Volume 可以在 x: 前面加上 /v:2 或 /v:3 依此類推。</p> <p>也是有 GUI 的介面啦，不過我沒用過，不知道會不會有版本相容問題，可以到這裡下載：<a title="http://petruska.stardock.net/Software/VMware.html" href="http://petruska.stardock.net/Software/VMware.html">http://petruska.stardock.net/Software/VMware.html</a></p></p>
+
+]]></content>
+  </entry>
+  
+</feed>

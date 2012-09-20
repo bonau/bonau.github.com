@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 不斷開發 | Munou Diagram 2]]></title>
+  <link href="http://bonau.github.com/blog/categories/不斷開發/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:59:52+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[munouzin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在 Win32 把 VMware 硬碟掛載起來！]]></title>
+    <link href="http://bonau.github.com/blog/2008/09/08/%E5%9C%A8-win32-%E6%8A%8A-vmware-%E7%A1%AC%E7%A2%9F%E6%8E%9B%E8%BC%89%E8%B5%B7%E4%BE%86%EF%BC%81/"/>
+    <updated>2008-09-08T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2008/09/08/在-win32-把-vmware-硬碟掛載起來！</id>
+    <content type="html"><![CDATA[<p><p>這是 VMware 官方的軟體，叫 VMware DiskMount Utilities，目前出到 5.5.0 版，不過我不知道他能不能掛載 6.0 的硬碟，因為我現在也還在用 VMware Workstation 5.5。那麼首先就先去下載 VMware DiskMount Utilities 吧，官網上我目前還找不到連結可以連過去，是後來才拿掉的，不知道原因為何，可能真的不支援 6.0 吧。</p> <blockquote> <p><a title="http://www.vmware.com/download/eula/diskmount_ws_v55.html" href="http://www.vmware.com/download/eula/diskmount_ws_v55.html">http://www.vmware.com/download/eula/diskmount_ws_v55.html</a></p></blockquote> <p>安裝之後按「開始 / 執行 / 輸入 cmd」後執行下列語法：</p> <blockquote> <p>C:\&gt; cd "C:\Program Files\VMware\VMware DiskMount Utility\"<br />C:\&gt; vmware-mount x: D:\vmware硬碟路徑.vmdk</p></blockquote> <p>就可以看到多了一個 X 槽，裡面就是你 vmdk 檔案的第一個 Volume 啦，如果還要掛載其他 Volume 可以在 x: 前面加上 /v:2 或 /v:3 依此類推。</p> <p>也是有 GUI 的介面啦，不過我沒用過，不知道會不會有版本相容問題，可以到這裡下載：<a title="http://petruska.stardock.net/Software/VMware.html" href="http://petruska.stardock.net/Software/VMware.html">http://petruska.stardock.net/Software/VMware.html</a></p></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby-GNOME2 0.17.0 發佈]]></title>
+    <link href="http://bonau.github.com/blog/2008/09/08/ruby-gnome2-0170-release/"/>
+    <updated>2008-09-08T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2008/09/08/ruby-gnome2-0170-release</id>
+    <content type="html"><![CDATA[<p><p><a href="http://munouzin.files.wordpress.com/2008/09/logo-gy1.png"><img style="border-width:0;margin:0 10px 0 0;" height="136" alt="logo-gy" src="http://munouzin.files.wordpress.com/2008/09/logo-gy-thumb1.png" width="136" align="right" border="0" /></a> </p> <p><a title="http://ruby-gnome2.sourceforge.jp/?News_20080907_1" href="http://ruby-gnome2.sourceforge.jp/?News_20080907_1">http://ruby-gnome2.sourceforge.jp/?News_20080907_1</a></p> <p>主要更新：</p> <ul> <li>支援 Ruby 1.8.7  </li><li>支援 Glib 2.14 與 2.16  </li><li>支援部份 GTK+ 2.12 函式  </li><li>支援整合 GStreamer 0.10.x  </li><li>增強 main loop polling</li></ul> <p>不過 Win32 的版本就真的這樣石沉大海了嗎 囧<br />我覺得 GNOME 最大的優勢就在於跨平台的 cost 比較小，<br />否則速度這麼慢，實在不是很能吸引我去使用他。</p></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[(HABTM) has_and_belongs_to_many Bug in Ruby On Rails]]></title>
+    <link href="http://bonau.github.com/blog/2007/08/08/habtm-problem-and-solution/"/>
+    <updated>2007-08-08T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2007/08/08/habtm-problem-and-solution</id>
+    <content type="html"><![CDATA[<p>Once the HABTM relation was made, for example:
+<pre><code>class Song &lt; ActiveRecord::Base
+  has_and_belongs_to_many :artists
+end
+</code></pre>
+The operation shown below is valid:
+<pre><code>song.artists &lt;&lt; Artist.new(:name =&gt; 'Barbra Streisand')
+</code></pre>
+But this may make a BIG problem:
+<pre><code>song.artists &lt;&lt; Artist.find(:name =&gt; 'Barbra Streisand')</code></pre></p>
+
+
+
+
+<p>Mysql::Error: Duplicate entry '1' for key 1: INSERT INTO artists_songs (`artist_id`, `id`, `song_id`) VALUES (1, 1, 3)
+
+The <code>id</code> field should be "autoincrement". Why pass a Fixnum to it? That is the question. I find out that when we push(&lt;&lt;) an artist to a song, whole the attributes on this artist will  be expanded as arguments of the SQL query. And then duplicate :id to :artist_id.</p>
+
+
+
+
+<p>Hum, it sounds great. There is no problem. <em>But</em> the :id key-value pair is still. That means <strong>we will establish a HABTM relation with a given key</strong>. So we sometimes get error from here. Try the tricky way:
+<pre><code>class Song &lt; ActiveRecord::Base
+  has_and_belongs_to_many :artists,
+  :insert_sql =&gt; 'INSERT INTO `artists_songs` ( `song_id`, `artist_id` )
+                  VALUES (#{id}, #{record.id})'
+end
+</code></pre>
+How awful the code!</p>
+
+]]></content>
+  </entry>
+  
+</feed>

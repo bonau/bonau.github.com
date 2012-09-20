@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>終極筆記系統 - Munou Diagram 2</title>
+  <meta name="author" content="munouzin">
+
+  
+  <meta name="description" content="Ultimate Note 此專案尚未 Materialize，可能的實作方式是寫成 Web Service，
+然後提供 API 方便其他 Application 使用. 累加形容詞 =&gt; :
+指定形容詞 =&gt; = Basic Description user1# polarpolar &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bonau.github.com/blog/2007/07/28/ultimate-note-system/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Munou Diagram 2" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Munou Diagram 2</a></h1>
+  
+    <h2>Let's munou!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bonau.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">終極筆記系統</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-28T00:00:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><h1>Ultimate Note</h1></p>
+
+<p><p>此專案尚未 Materialize，可能的實作方式是寫成 Web Service，<br />
+然後提供 API 方便其他 Application 使用.</p></p>
+
+<p><p>累加形容詞 =&gt; :<br />
+指定形容詞 =&gt; =</p></p>
+
+<p><h2>Basic Description</h2></p>
+
+<p><pre><code>user1# polarpolar:munou   ←提示字元# input
+polarpolar: munou         ←Output
+user1# pc035860:munou
+pc035860: munou
+user1# Almond:munou
+Almond: munou
+user1# .find munou
+polarpolar, pc035860, Almond</code></pre></p>
+
+<p>user1# pc035860:superman<br />
+pc035860: munou, superman<br />
+user1# .find munou<br />
+polarpolar, pc035860, Almond</p>
+
+<p>user1# polarpolar=smart<br />
+polarpolar: smart ←munou 屬性不見了
+</p>
+
+<p><h2>Detail Description 1</h2></p>
+
+<p><pre><code>user1# polarpolar university=NCCU
+polarpolar: smart
+  university: NCCU
+user1# polarpolar university id=0806449
+polarpolar: smart
+  university: NCCU
+    id: 0806449</code></pre></p>
+
+<p>; ←註解符號 (MASM？！)<br />
+; 這時候發現 NCCU 錯了，應該是 FJU 才對<br />
+; 不過我們很可能忘記曾經輸入 NCCU 的紀錄<br />
+; 結果學號會 Lost 掉<br />
+user1# polarpolar university=FJU<br />
+polarpoalr: smart<br />
+  university: FJU</p>
+
+<p>; 若改成這樣<br />
+user1# polarpolar university==FJU<br />
+polarpoalr: smart<br />
+  university: FJU<br />
+    id: 0806449</p>
+
+<p>; 嘖嘖，好像很奇怪，上課想一下好了 XD
+</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">munouzin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-28T00:00:00+08:00" pubdate data-updated="true">Jul 28<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/頭殼壞去/'>頭殼壞去</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bonau.github.com/blog/2007/07/28/ultimate-note-system/" data-via="munouzin" data-counturl="http://bonau.github.com/blog/2007/07/28/ultimate-note-system/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/07/28/information-lost/" title="Previous Post: 資訊網路無頭公案">&laquo; 資訊網路無頭公案</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/07/29/google-gadgetawards-postpone/" title="Next Post: Google 小工具設計甄選又延期囉！">Google 小工具設計甄選又延期囉！ &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bonau">@bonau</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bonau',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("munouzin", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/munouzin" class="twitter-follow-button" data-show-count="false">Follow @munouzin</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - munouzin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

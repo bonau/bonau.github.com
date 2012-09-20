@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>PolarLog Dev 開工啦 - Munou Diagram 2</title>
+  <meta name="author" content="munouzin">
+
+  
+  <meta name="description" content="以下看看就好,
+因為當時打完這篇之後沒多久就接觸到了 RoR,
+我立刻就把這個專案給遺棄了. 寫這麼久的程式好像笨蛋一樣,
+別人早就有一套超棒的 Framework 給我用了&#8230; 一直希望做個能夠個人化又易維護的日誌工具,
+用來紀錄我碰到的各種問題以及解決方式,
+接觸 Ruby &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bonau.github.com/blog/2004/09/11/polarlog-project-begin/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Munou Diagram 2" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Munou Diagram 2</a></h1>
+  
+    <h2>Let's munou!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bonau.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">PolarLog Dev 開工啦</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-09-11T00:00:00+08:00" pubdate data-updated="true">Sep 11<span>th</span>, 2004</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><p>以下看看就好,<br />
+因為當時打完這篇之後沒多久就接觸到了 RoR,<br />
+我立刻就把這個專案給遺棄了.</p></p>
+
+<p><p>寫這麼久的程式好像笨蛋一樣,<br />
+別人早就有一套超棒的 Framework 給我用了&#8230;</p></p>
+
+<p><p>一直希望做個能夠個人化又易維護的日誌工具,<br />
+用來紀錄我碰到的各種問題以及解決方式,<br />
+接觸 Ruby 之後終於不會覺得鬥志全無了了 ._.</p></p>
+
+<p><h2>選用工具</h2></p>
+
+<p><p>為了學習 Ruby 以及之前所說的易於維護的特性,<br />
+所以我在文件語言方面選擇了 YAML.<br />
+之所以沒有使用 XML 的原因在於他太麻煩了!<br />
+想想看,<br />
+光是要輸入標籤就要比平常多按數百次的 Shift,<br />
+加上除了空標籤以外的每個標籤都要關閉,<br />
+還要定義 DTD, 實在浪費太多時間了.</p></p>
+
+<p><p>然而 Ruby 從 1.8 之後開始直接支援 YAML,<br />
+對我來說真是一大福音啊!<br />
+所以當然程式語言就選擇用 Ruby 囉.</p></p>
+
+<p><h2>圖形製作</h2></p>
+
+<p><p>顧內在也要顧門面,<br />
+醜得要死的網頁別說別人,<br />
+自己怎麼看得下去呢?<br />
+我選擇使用 GIMP ( ver 2.0.2 ) 來製作,<br />
+反正有朝一日要是 Unix 平台突然變得好用的話,<br />
+要轉移平台也容易就多啦.</p></p>
+
+<p><h2>GIMP 的美麗與哀愁</h2></p>
+
+<p><p>優點</p></p>
+
+<p><ul>
+<li>轉換平台方便</li>
+<li>功能堪稱完整</li>
+<li>可擴充性強</li>
+<li>It&#8217;s FREE !</li>
+</ul></p>
+
+<p><p>缺點</p></p>
+
+<p><ul>
+<li>沒有 MDI 介面</li>
+<li>速度非常緩慢</li>
+<li>似乎沒有內建簡單幾何圖形的繪製工具</li>
+</ul></p>
+
+<p><h2>YAML 文件格式</h2></p>
+
+<p><p>既然是日誌,<br />
+那麼第一層就不免要有日期、時間,<br />
+主題當然也是不可或缺,<br />
+還有為了以後的方便特別加了「類別」這樣的屬性,<br />
+如此一來就算以碰到不同類型的問題也好整理.</p></p>
+
+<p><p>再來就是內文的部分了，由於我認為裡面應該還會再分層，於是我採用一個標題一段內文這樣的概念來著手，後來決定使用樹狀延伸的方式達到延伸文件的效果，不過這樣埋下了兩個問題：HTML 所定義的標題最多只到六層，我能夠順利做到無限延伸嗎？還有，無限延伸的排版做得到嗎？我決定使用 DL 標籤來排版，而捨棄使用 Hn，因為 DL 可以做到無限階層排版，而且還會自動縮排，真是一舉數得。</p></p>
+
+<p><p>先不談排版，就 YAML 而言還是有一些必須克服的地方，第一個就是：我看不懂 YAML 的規格說明書，很正式，講得白話一點就是，很鳥。為此我決定去找替代的說明書，我把腦筋動到了 Ruby 上面，既然有 YAML for Ruby，那麼應該就會有 for Ruby 的說明書吧，果不其然，到股溝搜尋「YAML Ruby」兩個關鍵字就找到了官方網頁，下載的說明書也附有「YAML Cookbook for Ruby」，哈！我正好愛看 Cookbook，真是合我胃口啊！ XD</p></p>
+
+<p><h2>YAML 解析</h2></p>
+
+<p><p>光說不練可就不行了，立刻來撰寫解析我的 YAML 的函式。首先用 YAML::load 方法將它開啟，一直到解析日期時間、主題都沒有問題，可是一到了內文，惡夢就來了，怎麼說呢？先看解析部分的程式碼：</p></p>
+
+<p><pre><code> #!/usr/local/bin/ruby
+ require "cgi"
+ require "yaml"</code></pre></p>
+
+<p> f = File.open( &#8220;yaml.txt&#8221; )<br />
+ y = YAML::load( f )</p>
+
+<p> print &#8220;Content-Type: text/plain; charset=big5\r\n\r\n&#8221;<br />
+ y.each do |diary|<br />
+   puts &#8220;撰寫時間：&#8221;+diary[&#8220;time&#8221;].strftime( &#8220;%m/%d/%Y %I:%M %p&#8221; )<br />
+   puts &#8220;類別：&#8221;+diary[&#8220;class&#8221;]<br />
+   puts &#8220;主題：&#8221;+diary[&#8220;subject&#8221;]<br />
+   puts diary[&#8220;content&#8221;]<br />
+ end
+</p>
+
+<p><p>首先載入檔案，再印出標頭，然後開始輸出，一切都很美好，直到內文出現。對啊！內文怎麼辦，裡面是無限層的內文，迴圈總不能無限層的寫下去吧！</p></p>
+
+<p><p>於是，我得試著寫出我生命中的第一個遞迴 ￣▽￣</p></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">munouzin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-09-11T00:00:00+08:00" pubdate data-updated="true">Sep 11<span>th</span>, 2004</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/頭殼壞去/'>頭殼壞去</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bonau.github.com/blog/2004/09/11/polarlog-project-begin/" data-via="munouzin" data-counturl="http://bonau.github.com/blog/2004/09/11/polarlog-project-begin/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2004/07/15/wxwindow-versus-foxtk/" title="Previous Post: wxWindow V.S. Fox-TK">&laquo; wxWindow V.S. Fox-TK</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2004/09/20/fju-my-data/" title="Next Post: 填輔大資料卡">填輔大資料卡 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bonau">@bonau</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bonau',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("munouzin", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/munouzin" class="twitter-follow-button" data-show-count="false">Follow @munouzin</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - munouzin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

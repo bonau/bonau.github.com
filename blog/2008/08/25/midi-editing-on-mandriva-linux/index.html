@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mandriva Linux 編輯 MIDI 攻略 - Munou Diagram 2</title>
+  <meta name="author" content="munouzin">
+
+  
+  <meta name="description" content="# [懶人快速安裝法] # (註：我用的是 cooker 套件庫) # # 先下載 http://www.alsa-project.org/~james/sound-fonts/8MBGMSFX.SF2 sudo urpmi fluidsynth jackit qsynth rosegarden &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bonau.github.com/blog/2008/08/25/midi-editing-on-mandriva-linux/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Munou Diagram 2" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Munou Diagram 2</a></h1>
+  
+    <h2>Let's munou!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bonau.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Mandriva Linux 編輯 MIDI 攻略</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-08-25T00:00:00+08:00" pubdate data-updated="true">Aug 25<span>th</span>, 2008</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><pre>  # [懶人快速安裝法]
+  # (註：我用的是 cooker 套件庫)
+  #
+  # 先下載 http://www.alsa-project.org/~james/sound-fonts/8MBGMSFX.SF2
+  sudo urpmi fluidsynth jackit qsynth rosegarden
+  jackd -d alsa # 啟動 jack audio server</pre></p>
+
+<p>  qsynth        # Setup / 進入 Soundfonts 頁面 / 開啟 8MBGMSFX.SF2 / 按下 OK<br />
+  rosegarden    # 做音樂囉！
+Rosegarden 是一款不錯的 MIDI Sequencer 軟體，不過之前在使用 Linux 的時候 MIDI 的設定可說是相當的麻煩，而且又缺少好的音源，實在有點可惜。在這裡要分享一下如何在 Mandriva Linux 編輯 MIDI 又可以即時播放的撇步。</p>
+
+<p>要安裝軟體音源則要安裝 fluidsynth：
+<pre>sudo urpmi fluidsynth</pre>
+這套軟體是管理 SoundFont 的 client command 軟體，<br />
+他需要透過 jack audio server 來運作，<br />
+而由於 Mandriva One 預設有安裝 jackd，<br />
+所以就可以不用裝了。<br />
+如果您的系統沒有 jack audio server 的話，<br />
+請用下列指令安裝：
+<pre>sudo urpmi jackit</pre>
+注意喔，不是 jack，那是一個 Python 的音效相關介面，<br />
+裝了也沒用的啊，哈哈哈。</p>
+
+<p>為了方便，再安裝一個 GUI frontend 叫做 Qsynth：
+<pre>sudo urpmi qsynth</pre>
+要使用 fluidsynth 或 Qsynth 來為您的系統增加 SoundFont 音源之前，<br />
+必須先啟動 jackd，假設使用者的系統使用的音效驅動為 ALSA：
+<pre>jackd -d alsa</pre>
+選項 -d 後面也可以加上 oss, dummy, etc.<br />
+不過我跟這些 driver 沒有很熟，<br />
+所以聲音都播不出來 囧，<br />
+建議先用 ALSA 試試看吧，<br />
+其他的我改天研究。</p>
+
+<p>然後啟動 Qsynth，看是你要用 Application Menu 還是要用終端機輸入 qsynth 都可以，正常的話應該會出現一個控制面板，過了兩三秒之後他就會自己啟動一個 Qsynth1 的元件。</p>
+
+<p>這時候按下視窗左方的 Setup 按鈕，又跳出一個視窗，切換到 Soundfonts 那一頁，按下 &#8220;Open&#8230;&#8221; 打開你要的 *.sf2 檔案，如此即可讓 Rosegarden 發出動人的 MIDI 聲音，<span style="color:red;">若您沒有適當的 SoundFont 檔案，可以使用 ALSA Wiki 網站的<a href="http://www.alsa-project.org/~james/sound-fonts/8MBGMSFX.SF2" target="_blank">免費 8MB SoundFont</a></span>(雖然版權好像是 Creative 公司的，哈！)，最後再按下 OK 就可以了。</p>
+
+<p>最後當然就是安裝 MIDI 編輯軟體&#8211;Rosegarden：
+<pre>sudo urpmi rosegarden</pre></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">munouzin</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-08-25T00:00:00+08:00" pubdate data-updated="true">Aug 25<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/我愛音樂/'>我愛音樂</a>, <a class='category' href='/blog/categories/有腦世界/'>有腦世界</a>, <a class='category' href='/blog/categories/桌面環境/'>桌面環境</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bonau.github.com/blog/2008/08/25/midi-editing-on-mandriva-linux/" data-via="munouzin" data-counturl="http://bonau.github.com/blog/2008/08/25/midi-editing-on-mandriva-linux/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/07/21/windows-live-writer-%E6%84%9F%E8%A6%BA%E5%A5%BD%E5%83%8F%E4%B8%8D%E9%8C%AF%E3%80%82/" title="Previous Post: Windows Live Writer 感覺好像不錯。">&laquo; Windows Live Writer 感覺好像不錯。</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/08/25/%E5%B7%A5%E4%BD%9C%E5%B9%B3%E5%8F%B0%E8%BD%89%E7%A7%BB%E8%87%B3-mandriva-linux/" title="Next Post: 工作平台轉移至 Mandriva Linux">工作平台轉移至 Mandriva Linux &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/bonau">@bonau</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bonau',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("munouzin", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/munouzin" class="twitter-follow-button" data-show-count="false">Follow @munouzin</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - munouzin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'munou-diagram';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://bonau.github.com/blog/2008/08/25/midi-editing-on-mandriva-linux/';
+        var disqus_url = 'http://bonau.github.com/blog/2008/08/25/midi-editing-on-mandriva-linux/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

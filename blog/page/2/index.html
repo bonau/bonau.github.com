@@ -9,7 +9,9 @@
   <meta name="author" content="munouzin">
 
   
-  <meta name="description" content="Recently, whenever I run jackd, it gives me the following message$ jackd -d alsa -d hw:0no message buffer overrunsjackd 0.116.1Copyright 2001-2005 &hellip;">
+  <meta name="description" content="I&#8217;ve found that whenever I dial up PPPoE
+the /etc/resolv.conf will be rewritten
+so that name server is always set as ISP&#8217;s default DNS. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +66,460 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/04/07/ubuntu-custom-dns-for-pppoe/">Ubuntu Custom DNS for PPPoE</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-07T00:00:00+08:00" pubdate data-updated="true">Apr 7<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/04/07/ubuntu-custom-dns-for-pppoe/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve found that whenever I dial up PPPoE<br />
+the /etc/resolv.conf will be rewritten<br />
+so that name server is always set as ISP&#8217;s default DNS.<br />
+However, it&#8217;s affected by the configuration of PPPoE.<br />
+Now we&#8217;ll try to solve this.</p>
+
+<p><pre>
+$ sudoedit /etc/ppp/peers/dsl-provider
+</pre>
+find:
+<pre>
+usepeerdns
+</pre>
+change it to:
+<pre>
+#usepeerdns
+</pre></p>
+
+<p>Then feel free to edit /etc/resolv.conf.<br />
+PPPoE will not overwrite your settings anymore.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/03/31/%E7%B5%82%E6%96%BC%E5%8F%AF%E4%BB%A5%E9%97%9C%E6%8E%89-chrome-%E7%9A%84%E7%BF%BB%E8%AD%AF%E5%BB%BA%E8%AD%B0%E4%BA%86/">終於可以關掉 Chrome 的翻譯建議了</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-31T00:00:00+08:00" pubdate data-updated="true">Mar 31<span>st</span>, 2010</time>
+        
+         | <a href="/blog/2010/03/31/%E7%B5%82%E6%96%BC%E5%8F%AF%E4%BB%A5%E9%97%9C%E6%8E%89-chrome-%E7%9A%84%E7%BF%BB%E8%AD%AF%E5%BB%BA%E8%AD%B0%E4%BA%86/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>http://www.google.com/support/chrome/bin/answer.py?hl=en&amp;answer=173424</p>
+
+<p>我覺得有時翻譯也是挺必要，<br />
+不過每一頁英文都要跑出那個翻譯 Bar 把內容統統往下擠，<br />
+害使用者按錯按鈕，感覺就會有點幹。</p>
+
+<p>Google 人員表示聽到了我們的心聲，<br />
+在最近版本的進階選項加入了<br />
+「Offer to translate pages that aren&#8217;t in a language I read」<br />
+這個貼心的東西，<br />
+以後就不怕因為他把內容擠下來而按錯連結或按鈕啦～</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/03/10/%E8%AE%93-screen-%E5%81%9C%E6%AD%A2%E9%96%83%E7%88%8D/">讓 Screen 停止閃爍</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-10T00:00:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2010</time>
+        
+         | <a href="/blog/2010/03/10/%E8%AE%93-screen-%E5%81%9C%E6%AD%A2%E9%96%83%E7%88%8D/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>本來以為是 PuTTY 對 flashing bell 的設定有 bug<br />
+後來才發現是 screen 的問題 囧<br />
+在 ~/.screenrc 加上
+<pre>
+vbell off
+</pre>
+就可以了<br />
+或是在 screen 中按 Ctrl+A Ctrl+: 然後輸入 vbell off 也是可行的</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/">職業倦怠</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-27T00:00:00+08:00" pubdate data-updated="true">Dec 27<span>th</span>, 2009</time>
+        
+         | <a href="/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>寫程式寫得好累了，<br />
+不是說想睡那種，而是想不要再寫了。</p>
+
+<p>「你還年輕耶，gan 真是草莓族！」<br />
+可是其實為了我爸媽的公司記帳數位化，<br />
+家裡很久以前就有了電腦<br />
+因此我小學一年級就在寫程式，<br />
+寫到現在應該也有 18 年惹<br />
+就算考高中考大學的時候還是一直在寫程式，<br />
+這 18 年可不是灌水灌出來的。</p>
+
+<p>小時候不知道為什麼很喜歡買電話簿這種東西，<br />
+把班上所有同學電話都放在裡面就會覺得人生好充實，<br />
+直到有天表姐教我用資料庫 dBASE，<br />
+(現在想想她其實是想叫我當打字童工吧)<br />
+那時候我只覺得資料庫這種東西真是太神奇了，<br />
+一定是人類前三大偉大發明之一！<br />
+於是我就想要用這資料庫設計世界上最好用的電話簿 XD</p>
+
+<p>但是小學腦還沒長齊，<br />
+看著電腦書上別人寫得比我好用三百萬倍的電話簿，<br />
+就有一種很灰心的感覺。</p>
+
+<p>好吧，那至少也學學別人怎麼做的，<br />
+改改範例磁片裡面的程式、照本宣科，<br />
+改一下介面，<br />
+那時候光是做出一個「選單移動光棒」就開心得要死，<br />
+真是腦子裡面裝大便。</p>
+
+<p>後來電腦遊戲開始盛行，<br />
+我也沈迷了一段時間，<br />
+目標就轉往電腦遊戲，<br />
+說到遊戲當然要有畫面，<br />
+無奈那時候只有 Windows 3.1 小畫家，<br />
+我連個小叮噹都畫不好。</p>
+
+<p>於是我就只好寫一些文字遊戲，<br />
+聽說 QBasic 很好用我就學了，<br />
+雖然沒有畫面但是放點音樂我還是辦得到的，<br />
+於是我用蜂鳴器函式寫音樂，結果因為太吵被罵，<br />
+此時設計數位電話簿我已經完全放棄了，<br />
+甚至回到手寫的階段 XD</p>
+
+<p>小學高年級的時候，巨集病毒正夯，<br />
+我媽中 Taiwan No.1 的時候我真是超興奮的，<br />
+很快的幫他重置 template，←也不知道那時候為什麼那麼聰明知道怎麼解毒<br />
+看了一下程式碼，我也寫了幾隻來玩玩，<br />
+但是後來把我媽同事的電腦搞爆了，<br />
+我就從此隱退 XDrz</p>
+
+<p>那時候網路也開始發達了，<br />
+56kB/s 的細水長流讓我對網路有很多遐想，<br />
+也開始學了怎麼寫網頁。</p>
+
+<p>小學六年級，(時間點應該沒記錯)<br />
+因為聽說業界軟體都用 C/C++ 寫的，<br />
+結果去資訊展的時候就吵著要我媽買 Visual C++，<br />
+於是我人生第一個正版軟體就是 Microsoft Visual C++ 6.0 教育版了，<br />
+想起來真是浪費，我根本就是到高中才學會 C 的。</p>
+
+<p>小學就這樣用了一些鱉腳的程式幫助一些人解決了生活上的問題，<br />
+國中的時候迷上 VBA，用 Excel 幫導師寫了一個統計成績的系統，<br />
+結果 Excel bug 超多，<br />
+造成大家很多不必要的麻煩 XD<br />
+現在想想成績不好的同學一定恨死我了，幹嘛方便老師統計成績啊&#8230;</p>
+
+<p>國中時也發生了著名的 CIH 事件，<br />
+我那時候看了別人深入的介紹，<br />
+(CleanCIH 的作者，好像是 sscan 吧)<br />
+才知道原來有組合語言這種東西 (爆)<br />
+難怪以前買病毒的書都看不懂程式碼。</p>
+
+<p>國三終於用 VB 寫了自己第一套遊戲，<br />
+是個 3x3 的拉霸，<br />
+用了物件導向、用了 WinAPI、用了 double buffer 畫面不會閃爍，<br />
+這些是我最得意的地方 XD</p>
+
+<p>國三時也道聽塗說，「聽說 linux 都不會當機」，<br />
+買了 Redhat Linux 6 + CLE，還很開心自己用兩三百塊就買了個作業系統，<br />
+結果灌進去不小心把硬碟資料弄光了，<br />
+裡面有很多自己的程式，<br />
+很懊悔難過了好幾天，<br />
+不過也因此寫了第一個偏向系統而非應用的程式，<br />
+是 undelete 的加強版。<br />
+但是畢竟還嫩著，只救回了一些沒用的東西，<br />
+Linux 最後還是架起來了，也學寫了一些 PHP。</p>
+
+<p>上了高中，高手雲集，<br />
+不過高一的我還沒發現自己的渺小，<br />
+那時候我都在樂隊、樂團、打零工，<br />
+快高二的時候，受到 ychia 慫恿(?)去考了資訊社幹部，<br />
+才發現裡面都是怪物啊，<br />
+騎著我無法駕馭的 Unix 系統，<br />
+寫著我看不懂的 C，<br />
+寫 VB 的人雖然不討人喜歡但他真的也是頗厲害的。</p>
+
+<p>那我怎麼辦呢？<br />
+從小寫到大的程式，<br />
+最後只能吃屎嗎？<br />
+沒關係我還有 PHP&#8230;<br />
+結果一上任幹部改掉資訊社首頁就被人發現有大漏洞 XD<br />
+那時候我才知道什麼叫做資訊安全。</p>
+
+<p>之後我寫 PHP 變得比較嚴謹，<br />
+該做的措施我也都會作，<br />
+從此我寫的東西大概都是網頁、client、user interface 等等。</p>
+
+<p>高三因為要練習看英文，<br />
+無意間接觸了 Ruby，給了我很多想法跟靈感，<br />
+對於物件導向的概念，我已經陳腐了 5~6 年，<br />
+這時候我覺得我寫程式才終於有在用心思考了，<br />
+「怎麼讓程式變得漂亮、穩定、安全」</p>
+
+<p>就這樣十幾年過去了，<br />
+然而我寫的依舊是那些東西，<br />
+程度說到底也只能寫出「電話簿 Deluxe」<br />
+上大學我才正式學到物件導向的全貌，<br />
+也是上大學後才知道 MVC 的重要，<br />
+雖然從小寫程式讓我學習新的東西速度變快，<br />
+但也真是花了太多無謂的時間了。</p>
+
+<p>其實還有好多東西是等著我去學的，<br />
+什麼 graphics 啦、audio system 啦、driver 啦，<br />
+可是我好累。</p>
+
+<p>無論怎麼在網頁裡面加入好玩的東西，<br />
+無論怎麼在 GUI Applications 加入方便的 UI 設計，<br />
+我都無法提起精神。</p>
+
+<p>你能想像除了出去旅遊，<br />
+幾乎每天都寫程式的日子嗎？<br />
+你能明白寫程式寫了十八年，<br />
+卻要眼睜睜看著有人大學唸四年就能趕上的心情嗎？<br />
+(雖然很多人還嫩著，哈哈哈)<br />
+你能知道我所追求的穩定與安全，<br />
+在業界大部分情況都被當成屁的感覺嗎？<br />
+你能想像自己一直以來以為可以長相廝守的興趣，<br />
+十八年後不再能夠那麼喜歡了嗎？</p>
+
+<p>要是 18 歲開始寫程式，<br />
+寫了 18 年等於是 36 歲，<br />
+我想我現在就是 36 歲的心態了。</p>
+
+<p>以前怎麼想像得到呢。<br />
+寫程式對我來講已經像是玩膩了的電玩一樣，<br />
+很喜歡，玩的時候很快樂，不過就是沒辦法了。<br />
+太一成不變了。</p>
+
+<p>然而我還是會繼續寫程式，<br />
+畢竟以後能賺錢的就是程式了，<br />
+至於怎麼去調適自己看待程式的心情，<br />
+目前還沒有什麼想法，<br />
+也許以後有了心得，再來分享吧。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/12/reactivate-notify-osd-instead-of.html">Reactivate Notify-osd Instead of Notification-daemon</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-01T18:28:00+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2009</time>
+        
+         | <a href="/2009/12/reactivate-notify-osd-instead-of.html#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"># killall notification-daemon<br /># /usr/lib/notify-osd/notify-osd > /dev/null &<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7326950602372682896?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/11/opera-1010-qt4-build-version-for-ubuntu.html">Opera 10.10 QT4 Build Version for Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-30T21:32:00+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+        
+         | <a href="/2009/11/opera-1010-qt4-build-version-for-ubuntu.html#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">It seems like it only has QT3 version for Opera official site.<br />However, there&#8217;s an official QT4 build indeed.<br /><br />When downloading Opera,<br />click cancel and change &#8220;qt3&#8221; in the URL to &#8220;qt4&#8221;,<br />or in general you may browse the directory where the file lays on, in order to get compressed files instead of packages.<br /><br />For example,<br />Opera 10.10 for debian/Ubuntu builds in QT4 (AMD64):<br /><a href="http://snapshot.opera.com/unix/rc-4742/x86_64-linux/opera_10.10.4742.gcc4.qt4_amd64.deb">http://snapshot.opera.com/unix/rc-4742/x86_64-linux/opera_10.10.4742.gcc4.qt4_amd64.deb</a><br /><br />The directory:<br /><a href="http://snapshot.opera.com/unix/rc-4742/">http://snapshot.opera.com/unix/rc-4742/</a><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-6787806418766216386?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/11/opera-unite.html">Opera Unite 讓個人電腦也能成為小雲端</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-30T08:26:00+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+        
+         | <a href="/2009/11/opera-unite.html#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">Opera 10.10 於數日前推出，<br />一項從 Beta 時就備受矚目的新功能 Opera Unite，<br />現在也內建在 Opera 10.10 了。<br /><br />簡單來說 Opera Unite 提供了 Opera 瀏覽器一個架設 Server 的功能，<br />讓 Opera 不只是 WWW Client，也是 WWW Server。<br />也就是說，在打開 Opera 10.10 的時候，<br />你的電腦也擁有了小型的雲端功能，<br />區域網路中其他的電腦通通連接到你這朵雲就可以做很多事情了。<br /><br />咦？那我用 HFS 跟 PCMan FTPd 不就好了嗎？<br />為什麼我需要 Opera Unite 呢？<br /><br />企業雲端之所以被很多人所期待，<br />是因為小企業並沒有足以支出空間、電力、硬體、人力給伺服器，<br />所以才仰賴雲端，<br />相對之下，大多數需要架設 Server 的人，自己可能也並沒有太多相關的知識，<br />設想在家中需要跟兄弟姊妹分享照片但又不想用隨身碟拔來拔去的時候，<br />要是有一個已經設定好的 Server 不是很好嗎？<br />對外的頻寬也並不重要，因為現在區網至少都有 10Mbps 嘛，<br />成本方面的話以上面這個例子來看，至少還省了一個隨身碟。<br /><br />因此相對於企業雲端運算而言，<br />Opera Unite 提供了較小單位的雲朵，<br />讓大部分家庭或辦公單位能夠提供更安全私密，<br />卻又更廉價的資訊網路應用，<br />分享的對象並不需要安裝 Opera，<br />只要用各種可以瀏覽網頁的瀏覽器即可。<br />當不想分享了，就關掉 Opera、關機，<br />一切都非常的方便，<br />如果需要跟更多人分享的話，<br />也可以連接到更大朵的雲(例如 Google, Zoho)去。<br /><br />大致上的分享流程如下：<br /><br />1. 申請 Opera ID，得到你的個人網址，<br />例如 munou.operaunite.com<br />2. 打開 Opera 並設定電腦名稱，得到這台電腦的網址<br />例如 home.munou.operaunite.com<br />3. 開啟 Opera Unite 應用程式，<br />例如音樂分享程式 Music Player<br />4. 把密碼給予要分享的第二者，<br />例如 &#8220;EdJ3&#8221;，或是也可以公開不設定密碼。<br />5. 第二者連到網址進行分享，<br />例如連線到 home.munou.operaunite.com，選擇音樂程式並輸入密碼 &#8220;EdJ3&#8221;。<br /><br />而比較令我在意的是，<br />Opera 從 9 開始就內建 BitTorrent 與 Widget 等令人疑惑的功能，<br />隨著小雲端 Opera Unite 的推出，一切似乎漸漸有了眉目。<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7262037519453588053?l=polar-dev.blogspot.com' alt='' /></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -179,159 +635,9 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/08/google-chromechromium_14.html">有關 Google Chrome/Chromium 使用太多記憶體</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-14T20:55:00+08:00" pubdate data-updated="true">Aug 14<span>th</span>, 2009</time>
-        
-         | <a href="/2009/08/google-chromechromium_14.html#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><a href="http://www.google.com/support/forum/p/Chrome/thread?tid=7503e986d7037c43&amp;hl=en">http://www.google.com/support/forum/p/Chrome/thread?tid=7503e986d7037c43&amp;hl=en</a><div><br /></div><div>似乎沒有什麼好的解答。</div><div>關掉卡巴之後，記憶體的用量反而攀升了……</div><div><br /></div><div>後來使用 &#8211;memory-model=high 倒是解了這個問題，</div><div>雖然 Physical memory 用得比較多，</div><div>但總比一直 page fault 來得好。</div><div><br /></div><div>記憶體少的用戶該怎麼辦呢……</div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-7853350203470300382?l=polar-dev.blogspot.com' alt='' /></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/08/google-chromechromium.html">Google Chrome/Chromium 的啟動參數</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-14T15:50:00+08:00" pubdate data-updated="true">Aug 14<span>th</span>, 2009</time>
-        
-         | <a href="/2009/08/google-chromechromium.html#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">本文是參考 Chromium Build 23135<br />不同版本也許會有些選項不能使用。<br /><br />使用的方式：在 Chrome 捷徑裡的「目標」欄位填入<br />Chrome.exe &#8211;option-1 &#8211;option-2<br />例如<br />C:\xxx\chrome.exe &#8211;enable-udd-profiles &#8211;start-maximized<br />代表「使用多使用者設定檔模式」及「啟動時最大化」<br /><br />常用的選項：<br /><br /><table><tbody><tr><td>allow-all-activex</td><td>預設讓各種附加元件可以使用</td></tr><tr><td>auto-spell-correct</td><td>輸入文字時自動修正錯字</td></tr><tr><td>bookmark-menu</td><td>在網址列的右側多加一個書籤按鈕</td></tr><tr><td>disable-audio</td><td>不啟用背景音效音樂</td></tr><tr><td>disable-images</td><td>不載入圖案</td></tr><tr><td>disable-java</td><td>不啟用 JAVA</td></tr><tr><td>disable-javascript</td><td>不啟用 JavaScript</td></tr><tr><td>disable-logging</td><td>不啟用事件紀錄</td></tr><tr><td>disable-plugins</td><td>不啟用任何附加元件</td></tr><tr><td>disable-popup-blocking</td><td>不阻止彈出式視窗</td></tr><tr><td>disk-cache-dir=xxx</td><td>手動設定硬碟快取的目錄</td></tr><tr><td>disk-cache-size=xxx</td><td>限制硬碟快取大小</td></tr><tr><td>enable-udd-profiles</td><td>啟用多使用者設定檔，可在瀏覽時按 Ctrl+M 管理使用者</td></tr><tr><td>enable-sync</td><td>允許網路同步書籤</td></tr><tr><td>enable-user-scripts</td><td>啟用使用者自訂 Scripts<span class="Apple-tab-span" style="white-space:pre"> </span></td></tr><tr><td>memory-model=xxx</td><td>記憶體模型，xxx 可為 high, medium, low<br />如果電腦有配備 1.5GB 以上記憶體，<br />使用 Chrome 切換分頁時卻常會讀取硬碟，<br />就可以使用 high 來解決這個問題。<br />根據 Chrome 原始碼，原理似乎不是配給記憶體，<br />而是很多 Chorme 的元件會依據你給予的 Memory Model，<br />決定是否要限制每個 Process 的 Working Set</td></tr><tr><td>no-default-browser-check</td><td>不檢查預設瀏覽器是否為 Chrome</td></tr><tr><td>old-new-tab-page</td><td>使用 2.0 時代的新頁籤預設版面</td></tr><tr><td>process-per-site</td><td>每個網站使用一個 Process</td></tr><tr><td>process-per-tab</td><td>每個網頁各使用一個 Process</td></tr><tr><td>user-scripts-dir=xxx</td><td>如果有 &#8211;enable-user-scripts 這個啟動選項的話，<br />則會在開啟新網頁的時候，將指定目錄的 JavaScript 都執行一遍，<br />跟 Opera 的 User Scripts 功能類似。</td></tr></tbody></table><br /><br />全部的選項：<br /><br />allow-all-activex<br />allow-sandbox-debugging<br />always-enable-dev-tools<br />app<br />assert-test<br />auto-spell-correct<br />automation-channel<br />bookmark-menu<br />browser-subprocess-path<br />country<br />crash-test<br />debug-print<br />diagnostics<br />disable-audio<br />disable-custom-jumplist<br />disable-dev-tools<br />disable-hang-monitor<br />disable-images<br />disable-java<br />disable-javascript<br />disable-logging<br />disable-metrics<br />disable-new-tab-first-run<br />disable-plugins<br />disable-popup-blocking<br />disable-prompt-on-repost<br />disable-web-security<br />disable-winsta<br />disk-cache-dir=xxx<br />disk-cache-size=xxx<br />dns-log-details<br />dns-prefetch-disable<br />dom-automation<br />dump-histograms-on-exit<br />enable-application-cache<br />enable-benchmarking<br />enable-databases<br />enable-extensions<br />enable-fastback<br />enable-file-cookies<br />enable-local-storage<br />enable-logging<br />enable-monitor-profile<br />enable-native-web-workers<br />enable-plugins<br />enable-remote-fonts<br />enable-renderer-accessibility<br />enable-sdch<br />enable-seccomp-sandbox<br />enable-session-storage<br />enable-stats-table<br />enable-sync<br />enable-tabtastic2<br />enable-udd-profiles<br />enable-user-scripts<br />enable-watchdog<br />enable-web-resources<br />enable-xss-auditor<br />extensions-update-frequency<br />file-descriptor-limit<br />first-run<br />force-fieldtest<br />gears-plugin-path<br />google-internal-crash-reporting<br />hide-icons<br />homepage<br />import<br />in-process-plugins<br />incognito<br />install-extension<br />js-flags<br />load-extension<br />load-plugin<br />log-filter-prefix<br />log-level<br />log-plugin-messages<br />make-default-browser<br />media-cache-size<br />memory-model=xxx<br />memory-profile<br />message-loop-histogrammer<br />metrics-recording-only<br />new-ftp<br />new-tab-page<br />no-default-browser-check<br />no-events<br />no-first-run<br />no-js-randomness<br />no-proxy-server<br />no-sandbox<br />old-new-tab-page<br />omnibox-popup-count<br />pack-extension<br />pack-extension-key<br />parent-profile<br />pinned-tab-count<br />playback-mode<br />plugin<br />plugin-data-dir<br />plugin-launcher<br />plugin-path<br />plugin-startup-dialog<br />print<br />privacy-blacklist<br />process-per-site<br />process-per-tab<br />proxy-auto-detect<br />proxy-bypass-list<br />proxy-pac-url<br />proxy-server<br />record-mode<br />remote-shell-port<br />renderer<br />renderer-assert-test<br />renderer-cmd-prefix<br />renderer-crash-dumping<br />renderer-crash-test<br />renderer-startup-dialog<br />restore-last-session<br />safe-plugins<br />search-in-omnibox-hint<br />show-icons<br />silent-dump-on-dcheck<br />simple-data-source<br />single-process<br />start-maximized<br />tab-count-to-load-on-session-restore<br />test-name<br />test-sandbox<br />testing-channel<br />thumbnail-store<br />trusted-plugins<br />try-chrome-again<br />uninstall<br />use-lf-heap<br />user-agent<br />user-data-dir<br />user-scripts-dir<br />utility<br />utility-cmd-prefix<br />wait-for-debugger-children<br />web-worker-process-per-core<br />web-worker-share-processes<br />winhttp-proxy-resolver<br />worker<br />zygote<br />zygote-cmd-prefix<div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-4619864317918659032?l=polar-dev.blogspot.com' alt='' /></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/08/chrome-firebug-lite.html">在 Chrome 使用 Firebug Lite</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-13T05:58:00+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2009</time>
-        
-         | <a href="/2009/08/chrome-firebug-lite.html#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div>Firebug 很好用，但是 Firefox 效能真的不好，<div>即使到了 3.5 還是一樣。</div><div><br /></div><div>而由於 Firefox 的套件多半是 JavaScript + XUI 製作的，</div><div>所以要跟別套瀏覽器相容也並不是那麼樣的困難，</div><div>Firebug 自己出了一套 Lite 給其他瀏覽器使用：</div><div><a href="http://getfirebug.com/lite.html">http://getfirebug.com/lite.html</a></div><div>而這個也可以用在 Chrome 上。</div><h3>安裝</h3><div>在上面的網址找到 &#8220;Firebug Lite as bookmarklet&#8221;</div><div><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s1600-h/screenshot.13-08-2009+06.05.44.png"><img src="http://1.bp.blogspot.com/_zHa-oPxlhTU/SoM9QuzJ8tI/AAAAAAAABcg/LarOsYraH8U/s320/screenshot.13-08-2009+06.05.44.png" border="0" alt="" id="BLOGGER_PHOTO_ID_5369202538405556946" style="cursor: pointer; width: 295px; height: 241px; " /></a></div><div><div><br /></div><div>然後把底下 &#8220;Firebug Lite&#8221; 的連結用拖曳的方式拉到書籤工具列上，</div><div>這樣就可以在 Chrome 使用 Firebug Lite 了哦 A_A</div><h3>原理</h3><div>原理是他會 require 一個遠端的 JavaScript 檔案，</div><div>用那個檔案來啟動 Firebug，所以只要有連上網路，就可以隨時用到最新的 Firebug 了。</div><div>離線使用的方法日後有空再補上。</div><h3>已知問題</h3><div>HTML 元素檢視會有些問題 ( 可能是因為 Firebug 也是元素之一吧 )，</div><div>不過好在 Chrome 有自己還不錯用的元素檢視器，</div><div>可以先擋著用。</div></div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-792029656646164883?l=polar-dev.blogspot.com' alt='' /></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/08/chromechromium.html">Chrome/Chromium 藍白畫面</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-13T05:07:00+08:00" pubdate data-updated="true">Aug 13<span>th</span>, 2009</time>
-        
-         | <a href="/2009/08/chromechromium.html#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">Chrome 的使用經驗大致上是不錯的，<br />除了目前缺了些好用的 hack tool 跟 web development 工具，<br />還有吃掉大量記憶體之外。<br /><br />( 別說些什麼記憶體很便宜之類的屁話啦，我家有台電腦是用 Rambus 的&#8230; )<br /><br />不過最近我還發現他另外一個奇妙的 Bug，<br />就是我常常在用 Chrome 切換分頁的時候讓 Windows XP 整個當掉，<br />而且是藍白畫面那種。<br />細看之後發現錯誤是出在 win32k.sys<br />其實 XP 還算穩定，我已經很久沒有碰到藍白畫面了，<br />而且我從未碰過 win32k.sys 這東西引發的當機，<br />所以就用這個去 Chromium 查了一下，<br />看到這篇：<br /><a href="http://code.google.com/p/chromium/issues/detail?id=10011">Issue 10011: BSOD in win32k.sys on XP SP3</a><br />http://code.google.com/p/chromium/issues/detail?id=10011<br /><br />開發者很快的回答了問題，<br />指出似乎是 win32k.sys 在 page fault 時產生的錯誤，<br />這個回答是可信的，因為我常常在切換分頁的時候，產生大量 I/O，<br />而每個分頁又是不同的 Process，切換起來有時候還比 Firefox 2.x 更慢。<div><br /></div><div>結果問題還是出在 Windows XP 身上，唉。<br /><br />解決方式是更新到 Windows XP SP3 之後再套用 <a href="http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718">KB959252</a> 更新<br />http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=ec4b7d80-79b6-4035-92a3-3992a9e09718<br />這個更新是有語言限制的，<br />像我安裝的是英文版 XP 就用英文版的，<br />如果安裝的是中文版 XP 就要改選正體中文頁面來下載。<br /><div><br /></div><div>希望此後不會再因為 Chrome 瀏覽器引發藍白當機 ˊˋ</div></div><div class="blogger-post-footer"><img width='1' height='1' src='https://blogger.googleusercontent.com/tracker/7273332692755259172-3109891721055068366?l=polar-dev.blogspot.com' alt='' /></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     

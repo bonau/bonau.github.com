@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 頭殼壞去 | Munou Diagram 2]]></title>
+  <link href="http://bonau.github.com/blog/categories/頭殼壞去/atom.xml" rel="self"/>
+  <link href="http://bonau.github.com/"/>
+  <updated>2012-09-20T12:59:52+08:00</updated>
+  <id>http://bonau.github.com/</id>
+  <author>
+    <name><![CDATA[munouzin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[目前的 Debian Linux Desktop]]></title>
+    <link href="http://bonau.github.com/blog/2010/12/12/%E7%9B%AE%E5%89%8D%E7%9A%84-debian-linux-desktop/"/>
+    <updated>2010-12-12T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/12/12/目前的-debian-linux-desktop</id>
+    <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/munouzin/5254386252/"><img src="http://z.nisra.net/~hhwang/5254386252_1e6ed8ecd9_m.jpg" alt="My Debian Screenshot" /></a> <br />
+哇哈哈，把 Debian 弄得賞心悅目真的是超 geek 。不過右上角的那些 Systray icon 還是挺礙眼的，雖然 GTK Theme 好像可以連 icon 一起換，但我得找到 Debian way 才不會把系統弄得一團糟......</p>
+
+
+
+
+<p>目前調校過介面的軟體有 gdm3, wine, pulseaudio, openjdk 等，等到一切都調校完畢之後，再 release 一份完整的美化過程吧，長程目標是建構一套讓藝術工作者用得很爽看得也很爽的 Linux。感謝 <a href="http://debug.tw/">Debug.tw</a> 提供很美的網站讓我的 Screenshot 加分 XD</p>
+
+
+
+
+<p></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[隱藏 GNOME 桌面上掛載的儲存媒體圖示]]></title>
+    <link href="http://bonau.github.com/blog/2010/04/10/%E9%9A%B1%E8%97%8F-gnome-%E6%A1%8C%E9%9D%A2%E4%B8%8A%E6%8E%9B%E8%BC%89%E7%9A%84%E5%84%B2%E5%AD%98%E5%AA%92%E9%AB%94%E5%9C%96%E7%A4%BA/"/>
+    <updated>2010-04-10T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/04/10/隱藏-gnome-桌面上掛載的儲存媒體圖示</id>
+    <content type="html"><![CDATA[<p>執行 gconf-editor<br />
+找到 /apps/nautilus/desktop/volumes_visible<br />
+然後不要打勾→完成了。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[終於可以關掉 Chrome 的翻譯建議了]]></title>
+    <link href="http://bonau.github.com/blog/2010/03/31/%E7%B5%82%E6%96%BC%E5%8F%AF%E4%BB%A5%E9%97%9C%E6%8E%89-chrome-%E7%9A%84%E7%BF%BB%E8%AD%AF%E5%BB%BA%E8%AD%B0%E4%BA%86/"/>
+    <updated>2010-03-31T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2010/03/31/終於可以關掉-chrome-的翻譯建議了</id>
+    <content type="html"><![CDATA[<p>http://www.google.com/support/chrome/bin/answer.py?hl=en&amp;answer=173424</p>
+
+
+
+
+<p>我覺得有時翻譯也是挺必要，<br />
+不過每一頁英文都要跑出那個翻譯 Bar 把內容統統往下擠，<br />
+害使用者按錯按鈕，感覺就會有點幹。</p>
+
+
+
+
+<p>Google 人員表示聽到了我們的心聲，<br />
+在最近版本的進階選項加入了<br />
+「Offer to translate pages that aren't in a language I read」<br />
+這個貼心的東西，<br />
+以後就不怕因為他把內容擠下來而按錯連結或按鈕啦～</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[職業倦怠]]></title>
+    <link href="http://bonau.github.com/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/"/>
+    <updated>2009-12-27T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2009/12/27/職業倦怠</id>
+    <content type="html"><![CDATA[<p>寫程式寫得好累了，<br />
+不是說想睡那種，而是想不要再寫了。</p>
+
+
+
+
+<p>「你還年輕耶，gan 真是草莓族！」<br />
+可是其實為了我爸媽的公司記帳數位化，<br />
+家裡很久以前就有了電腦<br />
+因此我小學一年級就在寫程式，<br />
+寫到現在應該也有 18 年惹<br />
+就算考高中考大學的時候還是一直在寫程式，<br />
+這 18 年可不是灌水灌出來的。</p>
+
+
+
+
+<p>小時候不知道為什麼很喜歡買電話簿這種東西，<br />
+把班上所有同學電話都放在裡面就會覺得人生好充實，<br />
+直到有天表姐教我用資料庫 dBASE，<br />
+(現在想想她其實是想叫我當打字童工吧)<br />
+那時候我只覺得資料庫這種東西真是太神奇了，<br />
+一定是人類前三大偉大發明之一！<br />
+於是我就想要用這資料庫設計世界上最好用的電話簿 XD</p>
+
+
+
+
+<p>但是小學腦還沒長齊，<br />
+看著電腦書上別人寫得比我好用三百萬倍的電話簿，<br />
+就有一種很灰心的感覺。</p>
+
+
+
+
+<p>好吧，那至少也學學別人怎麼做的，<br />
+改改範例磁片裡面的程式、照本宣科，<br />
+改一下介面，<br />
+那時候光是做出一個「選單移動光棒」就開心得要死，<br />
+真是腦子裡面裝大便。</p>
+
+
+
+
+<p>後來電腦遊戲開始盛行，<br />
+我也沈迷了一段時間，<br />
+目標就轉往電腦遊戲，<br />
+說到遊戲當然要有畫面，<br />
+無奈那時候只有 Windows 3.1 小畫家，<br />
+我連個小叮噹都畫不好。</p>
+
+
+
+
+<p>於是我就只好寫一些文字遊戲，<br />
+聽說 QBasic 很好用我就學了，<br />
+雖然沒有畫面但是放點音樂我還是辦得到的，<br />
+於是我用蜂鳴器函式寫音樂，結果因為太吵被罵，<br />
+此時設計數位電話簿我已經完全放棄了，<br />
+甚至回到手寫的階段 XD</p>
+
+
+
+
+<p>小學高年級的時候，巨集病毒正夯，<br />
+我媽中 Taiwan No.1 的時候我真是超興奮的，<br />
+很快的幫他重置 template，←也不知道那時候為什麼那麼聰明知道怎麼解毒<br />
+看了一下程式碼，我也寫了幾隻來玩玩，<br />
+但是後來把我媽同事的電腦搞爆了，<br />
+我就從此隱退 XDrz</p>
+
+
+
+
+<p>那時候網路也開始發達了，<br />
+56kB/s 的細水長流讓我對網路有很多遐想，<br />
+也開始學了怎麼寫網頁。</p>
+
+
+
+
+<p>小學六年級，(時間點應該沒記錯)<br />
+因為聽說業界軟體都用 C/C++ 寫的，<br />
+結果去資訊展的時候就吵著要我媽買 Visual C++，<br />
+於是我人生第一個正版軟體就是 Microsoft Visual C++ 6.0 教育版了，<br />
+想起來真是浪費，我根本就是到高中才學會 C 的。</p>
+
+
+
+
+<p>小學就這樣用了一些鱉腳的程式幫助一些人解決了生活上的問題，<br />
+國中的時候迷上 VBA，用 Excel 幫導師寫了一個統計成績的系統，<br />
+結果 Excel bug 超多，<br />
+造成大家很多不必要的麻煩 XD<br />
+現在想想成績不好的同學一定恨死我了，幹嘛方便老師統計成績啊...</p>
+
+
+
+
+<p>國中時也發生了著名的 CIH 事件，<br />
+我那時候看了別人深入的介紹，<br />
+(CleanCIH 的作者，好像是 sscan 吧)<br />
+才知道原來有組合語言這種東西 (爆)<br />
+難怪以前買病毒的書都看不懂程式碼。</p>
+
+
+
+
+<p>國三終於用 VB 寫了自己第一套遊戲，<br />
+是個 3x3 的拉霸，<br />
+用了物件導向、用了 WinAPI、用了 double buffer 畫面不會閃爍，<br />
+這些是我最得意的地方 XD</p>
+
+
+
+
+<p>國三時也道聽塗說，「聽說 linux 都不會當機」，<br />
+買了 Redhat Linux 6 + CLE，還很開心自己用兩三百塊就買了個作業系統，<br />
+結果灌進去不小心把硬碟資料弄光了，<br />
+裡面有很多自己的程式，<br />
+很懊悔難過了好幾天，<br />
+不過也因此寫了第一個偏向系統而非應用的程式，<br />
+是 undelete 的加強版。<br />
+但是畢竟還嫩著，只救回了一些沒用的東西，<br />
+Linux 最後還是架起來了，也學寫了一些 PHP。</p>
+
+
+
+
+<p>上了高中，高手雲集，<br />
+不過高一的我還沒發現自己的渺小，<br />
+那時候我都在樂隊、樂團、打零工，<br />
+快高二的時候，受到 ychia 慫恿(?)去考了資訊社幹部，<br />
+才發現裡面都是怪物啊，<br />
+騎著我無法駕馭的 Unix 系統，<br />
+寫著我看不懂的 C，<br />
+寫 VB 的人雖然不討人喜歡但他真的也是頗厲害的。</p>
+
+
+
+
+<p>那我怎麼辦呢？<br />
+從小寫到大的程式，<br />
+最後只能吃屎嗎？<br />
+沒關係我還有 PHP...<br />
+結果一上任幹部改掉資訊社首頁就被人發現有大漏洞 XD<br />
+那時候我才知道什麼叫做資訊安全。</p>
+
+
+
+
+<p>之後我寫 PHP 變得比較嚴謹，<br />
+該做的措施我也都會作，<br />
+從此我寫的東西大概都是網頁、client、user interface 等等。</p>
+
+
+
+
+<p>高三因為要練習看英文，<br />
+無意間接觸了 Ruby，給了我很多想法跟靈感，<br />
+對於物件導向的概念，我已經陳腐了 5~6 年，<br />
+這時候我覺得我寫程式才終於有在用心思考了，<br />
+「怎麼讓程式變得漂亮、穩定、安全」</p>
+
+
+
+
+<p>就這樣十幾年過去了，<br />
+然而我寫的依舊是那些東西，<br />
+程度說到底也只能寫出「電話簿 Deluxe」<br />
+上大學我才正式學到物件導向的全貌，<br />
+也是上大學後才知道 MVC 的重要，<br />
+雖然從小寫程式讓我學習新的東西速度變快，<br />
+但也真是花了太多無謂的時間了。</p>
+
+
+
+
+<p>其實還有好多東西是等著我去學的，<br />
+什麼 graphics 啦、audio system 啦、driver 啦，<br />
+可是我好累。</p>
+
+
+
+
+<p>無論怎麼在網頁裡面加入好玩的東西，<br />
+無論怎麼在 GUI Applications 加入方便的 UI 設計，<br />
+我都無法提起精神。</p>
+
+
+
+
+<p>你能想像除了出去旅遊，<br />
+幾乎每天都寫程式的日子嗎？<br />
+你能明白寫程式寫了十八年，<br />
+卻要眼睜睜看著有人大學唸四年就能趕上的心情嗎？<br />
+(雖然很多人還嫩著，哈哈哈)<br />
+你能知道我所追求的穩定與安全，<br />
+在業界大部分情況都被當成屁的感覺嗎？<br />
+你能想像自己一直以來以為可以長相廝守的興趣，<br />
+十八年後不再能夠那麼喜歡了嗎？</p>
+
+
+
+
+<p>要是 18 歲開始寫程式，<br />
+寫了 18 年等於是 36 歲，<br />
+我想我現在就是 36 歲的心態了。</p>
+
+
+
+
+<p>以前怎麼想像得到呢。<br />
+寫程式對我來講已經像是玩膩了的電玩一樣，<br />
+很喜歡，玩的時候很快樂，不過就是沒辦法了。<br />
+太一成不變了。</p>
+
+
+
+
+<p>然而我還是會繼續寫程式，<br />
+畢竟以後能賺錢的就是程式了，<br />
+至於怎麼去調適自己看待程式的心情，<br />
+目前還沒有什麼想法，<br />
+也許以後有了心得，再來分享吧。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[演歌 / 陳珊妮]]></title>
+    <link href="http://bonau.github.com/blog/2008/10/12/%E6%BC%94%E6%AD%8C-%E9%99%B3%E7%8F%8A%E5%A6%AE/"/>
+    <updated>2008-10-12T00:00:00+08:00</updated>
+    <id>http://bonau.github.com/blog/2008/10/12/演歌-陳珊妮</id>
+    <content type="html"><![CDATA[<p><p>你若暗戀　歌詞裡的紅粉<br />我唱一遍　何不給點掌聲<br />值得安慰的人　掛著滿臉淚痕<br />索一個吻&nbsp; 都不可能  <p>你的人輕靠我的肩膀<br />你的心爬上誰的床<br />別說有情人都善良<br />幾杯酒喝斷你肝腸<br />染紅了罪人的眼眶<br />演一首歌&nbsp; 療愛的傷  <p>一把鑰匙　開了誰家大門<br />我的疑問　像重唱著老歌<br />值得幸福的人　披著滿身傷痕<br />索一個吻&nbsp; 都不可能  <p>就讓他輕靠你肩膀<br />我回到一張單人床<br />好情人今夜別說謊<br />被你的煙微燻的裝<br />隱約幾點閃耀的光<br />演一首歌&nbsp; 療愛的傷  <p>感情的事<br />別講 <p>------ <p>今天搶聽會最興奮的莫過於聽到這首歌的歌詞了吧，<br />我已經跟同學猜了好幾個月了，好痛苦 XD <p>西班牙華麗的編曲我也很激賞，公主好棒！</p></p></p></p></p></p></p></p></p>
+
+]]></content>
+  </entry>
+  
+</feed>

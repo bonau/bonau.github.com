@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Munou Diagram 2</title>
+  <meta name="author" content="munouzin">
+
+  
+  <meta name="description" content="# [懶人快速安裝法] # (註：我用的是 cooker 套件庫) # # 先下載 http://www.alsa-project.org/~james/sound-fonts/8MBGMSFX.SF2 sudo urpmi fluidsynth jackit qsynth rosegarden &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bonau.github.com/blog/page/4/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Munou Diagram 2" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Munou Diagram 2</a></h1>
+  
+    <h2>Let's munou!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:bonau.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/08/25/midi-editing-on-mandriva-linux/">Mandriva Linux 編輯 MIDI 攻略</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-08-25T00:00:00+08:00" pubdate data-updated="true">Aug 25<span>th</span>, 2008</time>
+        
+         | <a href="/blog/2008/08/25/midi-editing-on-mandriva-linux/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><pre>  # [懶人快速安裝法]
+  # (註：我用的是 cooker 套件庫)
+  #
+  # 先下載 http://www.alsa-project.org/~james/sound-fonts/8MBGMSFX.SF2
+  sudo urpmi fluidsynth jackit qsynth rosegarden
+  jackd -d alsa # 啟動 jack audio server</pre></p>
+
+<p>  qsynth        # Setup / 進入 Soundfonts 頁面 / 開啟 8MBGMSFX.SF2 / 按下 OK<br />
+  rosegarden    # 做音樂囉！
+Rosegarden 是一款不錯的 MIDI Sequencer 軟體，不過之前在使用 Linux 的時候 MIDI 的設定可說是相當的麻煩，而且又缺少好的音源，實在有點可惜。在這裡要分享一下如何在 Mandriva Linux 編輯 MIDI 又可以即時播放的撇步。</p>
+
+<p>要安裝軟體音源則要安裝 fluidsynth：
+<pre>sudo urpmi fluidsynth</pre>
+這套軟體是管理 SoundFont 的 client command 軟體，<br />
+他需要透過 jack audio server 來運作，<br />
+而由於 Mandriva One 預設有安裝 jackd，<br />
+所以就可以不用裝了。<br />
+如果您的系統沒有 jack audio server 的話，<br />
+請用下列指令安裝：
+<pre>sudo urpmi jackit</pre>
+注意喔，不是 jack，那是一個 Python 的音效相關介面，<br />
+裝了也沒用的啊，哈哈哈。</p>
+
+<p>為了方便，再安裝一個 GUI frontend 叫做 Qsynth：
+<pre>sudo urpmi qsynth</pre>
+要使用 fluidsynth 或 Qsynth 來為您的系統增加 SoundFont 音源之前，<br />
+必須先啟動 jackd，假設使用者的系統使用的音效驅動為 ALSA：
+<pre>jackd -d alsa</pre>
+選項 -d 後面也可以加上 oss, dummy, etc.<br />
+不過我跟這些 driver 沒有很熟，<br />
+所以聲音都播不出來 囧，<br />
+建議先用 ALSA 試試看吧，<br />
+其他的我改天研究。</p>
+
+<p>然後啟動 Qsynth，看是你要用 Application Menu 還是要用終端機輸入 qsynth 都可以，正常的話應該會出現一個控制面板，過了兩三秒之後他就會自己啟動一個 Qsynth1 的元件。</p>
+
+<p>這時候按下視窗左方的 Setup 按鈕，又跳出一個視窗，切換到 Soundfonts 那一頁，按下 &#8220;Open&#8230;&#8221; 打開你要的 *.sf2 檔案，如此即可讓 Rosegarden 發出動人的 MIDI 聲音，<span style="color:red;">若您沒有適當的 SoundFont 檔案，可以使用 ALSA Wiki 網站的<a href="http://www.alsa-project.org/~james/sound-fonts/8MBGMSFX.SF2" target="_blank">免費 8MB SoundFont</a></span>(雖然版權好像是 Creative 公司的，哈！)，最後再按下 OK 就可以了。</p>
+
+<p>最後當然就是安裝 MIDI 編輯軟體&#8211;Rosegarden：
+<pre>sudo urpmi rosegarden</pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/07/21/windows-live-writer-%E6%84%9F%E8%A6%BA%E5%A5%BD%E5%83%8F%E4%B8%8D%E9%8C%AF%E3%80%82/">Windows Live Writer 感覺好像不錯。</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-21T00:00:00+08:00" pubdate data-updated="true">Jul 21<span>st</span>, 2008</time>
+        
+         | <a href="/blog/2008/07/21/windows-live-writer-%E6%84%9F%E8%A6%BA%E5%A5%BD%E5%83%8F%E4%B8%8D%E9%8C%AF%E3%80%82/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://munouzin.files.wordpress.com/2008/07/sunset.jpg"><img style="border-right:0;border-top:0;border-left:0;border-bottom:0;" height="184" alt="Sunset" src="http://munouzin.files.wordpress.com/2008/07/sunset-thumb.jpg" width="244" align="left" border="0" /></a>感覺啦，先試用一下看看。 XD </p> <p>相片都會有不錯的處理啊，<br />不過我還是比較希望跟 Flickr 作結合就是了。</p> <p>昨天去參加 HIT2008，揀了一些軟柿子，其中還有一題是 3D 鬥雞眼題目，超蠢的。 XD</p> <p>&nbsp;</p> <p>沒什麼話題可說所以正在語無倫次中，哈。</p> <p>Wordpress 不錯！</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/07/18/opera-portable/">有趣的攜帶版 Opera</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-18T00:00:00+08:00" pubdate data-updated="true">Jul 18<span>th</span>, 2008</time>
+        
+         | <a href="/blog/2008/07/18/opera-portable/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Firefox 有隨身碟版本，那麼 Opera 呢？<br />
+這要歸功於 kejut.com──我們終於有 Opera Portable 可以用啦！</p>
+
+<p><a href="http://www.kejut.com/operaportable" target="_blank">Opera Portable</a>
+http://www.kejut.com/operaportable</p>
+
+<p>作者似乎是印尼裔，不過也有可能只是懂印尼文的人？<br />
+我稍微研究了一下作者不過查不出什麼頭緒，<br />
+無論如何都要感謝他！</p>
+
+<p>至於為什麼說他有趣呢？<br />
+一方面是他的運作方式、一方面是他的網頁。</p>
+
+<p>[caption id=&#8221;&#8221; align=&#8221;alignnone&#8221; width=&#8221;500&#8221; caption=&#8221;Portable Opera House?&#8221;]<a href="http://www.flickr.com/photos/davesmith/925699800/"><img src="http://farm2.static.flickr.com/1275/925699800_8738748a9e.jpg?v=0" alt="Portable Opera House?" width="500" height="200" /></a>[/caption]
+<h3>版本與運作方式</h3>
+依照版本不同，Opera Portable 有兩種不同的運作方式，<br />
+不過兩者相同的是，Opera 都包裝在一個可執行檔裡面了，<br />
+執行的時候 Opera 會被解壓縮然後執行，速度還算快，<br />
+相當方便好用。</p>
+
+<p><strong>Personal 版本</strong>可於啟動時建立一個 Profile，<br />
+結束後所有快取、設定、密碼等等都會存在這個 Profile，<br />
+方便於 USB 隨身碟使用，屬於隱密性比較低但是較方便的版本。</p>
+
+<p><strong>One-Use 版本</strong>則是單純執行 Opera，<br />
+不會儲存任何資料，<br />
+較強調隱私性，屬於隱密性較高但是不太方便取用個人資料的版本。
+<h3>何時何地使用它？</h3>
+底下是翻譯 Opera Portable 網頁的 &#8220;Where and When to Use Opera Portable&#8221; 一段，<br />
+作者為了想出這幾點可真是費盡苦思啊！<br />
+以下列出原文與我自己的翻譯，可以參考看看。</p>
+
+<p>Where and When to Use Opera Portable<br />
+何時何地使用 Opera Portable？
+<ul>
+	<li>When you are in a library / internet cafe / lab / other public places, Opera is usually not installed, and you are forced to bear with IE or Firefox that is indeed slower than Opera.<br />
+當你在圖書館 / 網咖 / 辦公室 / 其他公共場合，電腦通常不會裝 Opera，而只好被迫忍受那些明顯比 Opera 慢的 IE 或 Firefox 的時候。</li>
+	<li>When you want to surf &#8216;secret&#8217; websites but you afraid that your traces remains, use Opera Portable, because when you close Opera Portable, all data will be overwritten and erased (not just erased)!<br />
+當你想逛一些「秘密」網站，又怕自己留下痕跡的時候，使用 Opera Portable 吧。當你關閉 Opera Portable 的時候，所有資料都會被<em>覆寫並消除</em>（不只是刪掉而已）！</li>
+	<li>When you use your own computer but IE is severely infected by worms, viruses, spyware, horses, rats, rabbits, dragonflies, etc. And you are afraid! And Opera comes&#8230;<br />
+當你使用自己電腦，但 IE 已嚴重被蠕蟲、病毒、間諜軟體、木馬、老鼠、兔子、蒼蠅&#8230; 等感染，你剉到不行！這時候 Opera 降臨&#8230;&#8230;</li>
+	<li>When you want to have Opera anywhere you go, either on a USB flash disk or a CD (because Opera Portable doesn&#8217;t require the medium to be writable!)<br />
+當你想讓 Opera 陪你走天涯，不管是裝在 USB 隨身碟或 CD 的時候（因為 Opera Portable 不一定要存在可寫的儲存裝置！）。</li>
+	<li>When you promote Opera to your friends, before installing it, it&#8217;s better if you can show it first, right?<br />
+當你想推薦 Opera 給朋友使用時，在安裝之前最好先 Show 給他們看一下，對吧？</li>
+</ul>
+總之，一起來用 Opera 吧！</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/05/18/back-to-wordpress/">又搬回來了</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-18T00:00:00+08:00" pubdate data-updated="true">May 18<span>th</span>, 2008</time>
+        
+         | <a href="/blog/2008/05/18/back-to-wordpress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>[caption id=&#8221;&#8221; align=&#8221;alignleft&#8221; width=&#8221;240&#8221; caption=&#8221;The way of moving house!&#8221;]<img src="http://farm1.static.flickr.com/29/64015728_19e34ace8d_m.jpg" alt="The way of moving house!" width="240" height="180" />[/caption]</p>
+
+<p>經過幾番波折還是回到了 Wordpress (笑)，這裡雖然沒有漂亮 Markdown 語法可以用，但我想功能是很齊全的，包括版本控制、密碼保護都有，<br />
+滿足我許多的要求。更重要的是，我厭倦了 VPS 天天出包的生活啦！</p>
+
+<p>可惡，都付不少錢了還是一直出問題，升級個系統升級了一個月還沒升好，<br />
+那我付錢不就當笨蛋嗎？所以──搬家啦！</p>
+
+<p>不過 Wordpress 最令我覺得麻煩的一點是，他一定要有個 Uncategorized 類別，這很煩，類別名稱我只想要以四個中文字做組合是不行喔！</p>
+
+<p>原來在 Wordpress 的資料我都刪掉了，只留下 tyr.munou.tw 時期的東西，「希望舊雨新知能夠繼續支持！」←老話</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/31/suicide-nouse/">高職資優生燒炭身亡──我的觀點</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-31T00:00:00+08:00" pubdate data-updated="true">Aug 31<span>st</span>, 2007</time>
+        
+         | <a href="/blog/2007/08/31/suicide-nouse/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨天報紙頭條刊這條，讓我決定買一份到實驗室看，<br />
+除了不勝唏噓之外，其實還有很多想法，<br />
+不過當時因為天氣熱而頭腦昏沉，也就沒有想要貼成一篇「文章」。</p>
+
+<p>回家之後看到很多 Blog 對這篇新聞提出了評論，直指父母的不是，<br />
+因為這次的案例不同──是一個資優生。<br />
+大家說的沒錯，我也覺得這一切不「都是網路害的」，是「溝通的問題」，<br />
+但撇開自殺行為的對錯不談，溝通不良難道是家長或小孩其中一方的錯嗎？</p>
+
+<p>這篇的標題我只寫出後果，沒有寫出原因，就是為了要探討，<br />
+究竟是什麼樣的原因造成這樣的悲劇，<br />
+正視這個問題，我想是我們網路族該做的。
+<h2>「唯一的依靠失去了」</h2>
+媒體過度放大這句話，會讓大家誤以為「這孩子是否認為父母已經溝通無用了？」<br />
+也有很多人認為「只要父母願意每天給孩子一點時間上網，哪怕只是一小時」，<br />
+都可以避免孩子走上極端的路。</p>
+
+<p>但對於高中、大學都曾經花過時間玩線上遊戲的我，<br />
+知道現在的電玩真的很令人著迷，<br />
+故事劇本做得多認真、繪圖引擎做得多好，那些都是其次，<br />
+有朋友在線上玩、在有限的天賦點數之下做出最驚人的組合，<br />
+這些才是線上遊戲的魅力之處。</p>
+
+<p>然而在遊戲裡面跑圖、解任務就要花上個半天，<br />
+別說一個小時，兩三個小時都不夠！<br />
+只給我一個小時，我一定想盡辦法翹課去打網咖。</p>
+
+<p>Online Game 儼然已經成為一種社交的手段。</p>
+
+<p>然而花這麼多的時間在上面的結果是：<br />
+減少了很多思考自己人生方向的時間、<br />
+減少了很多在別的地方努力的時間、<br />
+讓電玩漸漸變成玩家「唯一的依靠」。
+<h2>以網路成癮者的角度而言</h2>
+我身為一個重度的網路成癮者，相當了解網路成癮對實際生活所帶來的不便，<br />
+也知道這對視力相當不好，且需要節制，<br />
+但網路上令人感興趣的資訊太多了，看都看不完，<br />
+要是今天突然就讓我斷了網路，我可是就要瘋了，<br />
+然後正確地說，對我而言，網路已經成為現實生活的一部分了，<br />
+我認為這並非被「侵蝕」，<br />
+而是我認為我在現實生活中的很多事情，<br />
+都可通過網路快速的達成。</p>
+
+<p>有很多人就是不善於口語言詞表達，<br />
+但若給他們一點時間打字，是可以溝通得很流暢的，<br />
+然而日常生活中我們講話，並不能等這些內向的人慢慢編織詞彙，<br />
+也因此他們缺乏了很多表達意見的機會，<br />
+久而久之當然會造成內心的負擔；<br />
+上網聊天則沒有這樣的問題，<br />
+就算是即時通訊，對方也大多願意等你打字，<br />
+習慣了這樣的通訊方式，就很自然地會捨棄原有的溝通方式，<br />
+我想這並非個性內向者的錯誤，畢竟這並非能說改就改的，<br />
+與其給他們做些奇怪的訓練，還不如就透過文字多了解他們一些不是更好嗎？
+<h2>父母難為</h2>
+但也不是說父母就應該跟著小孩一起上網，一起花時間，<br />
+這不是必須的，但了解到這點之後，父母是否可以用書信的方式誘導小孩跟你溝通呢？<br />
+書信傳遞在現代來說，是很罕見的，也因此小孩若看到你的「家書」，<br />
+必定能體會到「代誌大條了」，也一定會花時間跟你做溝通。<br />
+或回信，或當面談，不都是一個機會嗎？</p>
+
+<p>做父母真的很辛苦，畢竟孩子出了什麼行為偏差，<br />
+社會一定將輿論指向父母身上。<br />
+然而做小孩的，常說父母不了解自己，<br />
+難道自己不吭聲、嘔氣，講些言不由衷的話，<br />
+這樣就算是溝通了嗎？</p>
+
+<p>一點機會都沒有給父母，就是現代小孩最大的罪，<br />
+然而父母沒有開一扇窗，也是有點不妥。
+<h2>你真傻</h2>
+以這個案例來說，之所以引人同情，<br />
+我想最大的原因莫過在於遺書底下的「我真傻」三個字，<br />
+我常相信自殺者是痛苦的，在生與死之間一定掙扎很久，<br />
+並非是所謂一時衝動，而是累積很久很久的不滿，<br />
+才在一個時間稍長的不理智之下，做出令大家後悔的事情。</p>
+
+<p>自殺可悲，但絕對不可憐，<br />
+自殺絕對沒有所謂的理智，<br />
+人生真的還有太多有趣的事情了。</p>
+
+<p>自殺，一點愛都沒有。</p>
+
+<p>還有太多窗口等你去吶喊了。</p>
+
+<p><a href="http://www.no-suicide-no.com.tw/">多想兩分鐘，你可以不必自殺。</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/14/google-pack-with-staroffice/">StarOffice 免費用？</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-14T00:00:00+08:00" pubdate data-updated="true">Aug 14<span>th</span>, 2007</time>
+        
+         | <a href="/blog/2007/08/14/google-pack-with-staroffice/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://www.flickr.com/photos/munouzin/1109046375"><img src="http://farm2.static.flickr.com/1054/1109046375_bea689fc9a.jpg?v=0" /></a></p></p>
+
+<p><p>這篇<a href="http://mmdays.wordpress.com/2007/08/14/google_pack_includes_staroffice/">Google 再踹 Microsoft 一腳: StarOffice 也被放進 Google Pack</a>，看了真是大快人心！雖然說 Office 2007 其實還不錯用，但對於喜愛用免費軟體的使用者來說無疑是一大福音。其實就算是資訊相關科系出身的使用者，會懂得去使用進階功能的人還真是寥寥可數，StarOffice 說實在已經夠大家用了，不過效能不會比 Office 好是確定的，Office 在近年來在效能上有很大的改善 ( 其他部分如 Bug 與安全性則不予置評 )，這點算是值得令人肯定的地方。</p></p>
+
+<p><p>就像這樣，軟體各有優劣，尊重使用者擁有多元的選擇，不正是「自由」軟體的本意嗎？</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/10/google-shared-storage-program-released/">Google 官方提供服務共享空間</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-10T00:00:00+08:00" pubdate data-updated="true">Aug 10<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><img src="http://farm2.static.flickr.com/1052/1067289640_e811f518fd.jpg?v=0" /></p></p>
+
+<p><p>有購買 Picasa 相簿的使用者最近會發現「Gmail 容量增加」的靈異事件，今天有了結論：您可以發現 Google 剛 release 一套<a href="https://www.google.com/accounts/ManageStorage?hl=zh_TW">共享空間系統</a>，目前可將您所購買的空間讓 Gmail 跟 Picasa 共用，空間與價格對照表如下。</p></p>
+
+<p><pre><code>     空間    價格
+=====================
+    6 GB    $ 20/年
+   25 GB    $ 75/年
+  100 GB    $250/年
+  250 GB    $500/年
+</code></pre></p>
+
+<p><p>有趣的是，不久前有人發現 Google 偷偷改了 6GB 的價格，本來是特價 $1/year，沒想到購買網頁一曝光後馬上被改了，看來本來 Google 是想要低調促銷 6GB 服務共享空間的。不論如何，隨著存在 Google 上面的資料越來越多，使用者要越來越懂得保護自己，隱私權保護也是我認為 Google 服務一直做得不很好的地方。</p></p>
+
+<p><p>另外，Gmail 最近大力推動 Video mail，不知道跟這項舉動有沒有任何關係？</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/08/habtm-problem-and-solution/">(HABTM) Has_and_belongs_to_many Bug in Ruby on Rails</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-08T00:00:00+08:00" pubdate data-updated="true">Aug 8<span>th</span>, 2007</time>
+        
+         | <a href="/blog/2007/08/08/habtm-problem-and-solution/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Once the HABTM relation was made, for example:
+<pre><code>class Song &lt; ActiveRecord::Base
+  has_and_belongs_to_many :artists
+end
+</code></pre>
+The operation shown below is valid:
+<pre><code>song.artists &lt;&lt; Artist.new(:name =&gt; 'Barbra Streisand')
+</code></pre>
+But this may make a BIG problem:
+<pre><code>song.artists &lt;&lt; Artist.find(:name =&gt; 'Barbra Streisand')</code></pre></p>
+
+<p>Mysql::Error: Duplicate entry &#8216;1&#8217; for key 1: INSERT INTO artists_songs (`artist_id`, `id`, `song_id`) VALUES (1, 1, 3)
+
+The <code>id</code> field should be &#8220;autoincrement&#8221;. Why pass a Fixnum to it? That is the question. I find out that when we push(&lt;&lt;) an artist to a song, whole the attributes on this artist will  be expanded as arguments of the SQL query. And then duplicate :id to :artist_id.</p>
+
+<p>Hum, it sounds great. There is no problem. <em>But</em> the :id key-value pair is still. That means <strong>we will establish a HABTM relation with a given key</strong>. So we sometimes get error from here. Try the tricky way:
+<pre><code>class Song &lt; ActiveRecord::Base
+  has_and_belongs_to_many :artists,
+  :insert_sql =&gt; 'INSERT INTO `artists_songs` ( `song_id`, `artist_id` )
+                  VALUES (#{id}, #{record.id})'
+end
+</code></pre>
+How awful the code!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/03/adsl-auto-dialup-in-xp/">WindowsXP 下 ADSL 自動撥接</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-03T00:00:00+08:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p>不久前哈比提到系統排程的問題，我忽然聯想到 WindowsXP 的系統排程好像不用登入就可以 Work，那這麼一來重開機無法自動撥接的問題就有解啦！不過在我設定三分鐘跑一次 rasdial 的時候，執行 Shell 指令就會有個 cmd 視窗出來亂，很麻煩，不但影響視線又會影響工作，就算設定不要在非閒置時工作也一樣。於是我把腦筋動到了 VBScript 身上，印象中他可以在背景執行 Shell 指令，就稍微查了一下用法，以下是 Script 內容：</p></p>
+
+<p><pre><code>Set objShell=wscript.createObject("wscript.shell")
+objShell.Run "rasdial HiShit 8xxxxxxx@ip.hinet.net password", 0, True
+</code></pre></p>
+
+<p><p>其中 HiShit 是您自訂的撥號連線名稱，帳號密碼則在其後。把這個檔案存成 dialup.vbs，之後放到排程裡，設定「從 2007/08/01 起，每天從上午 09:00 起每隔 3 分鐘為時 24 小時」跑一次，另外別忘記不要勾「登入後才執行」，這樣就大功告成啦！</p></p>
+
+<p><p>今天有點懶得截圖:p</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/07/30/blummy-one-bookmark-only/">Blummy 單一書籤‧精采生活</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-30T00:00:00+08:00" pubdate data-updated="true">Jul 30<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://blummy.com/"><img src="http://farm2.static.flickr.com/1378/942027408_ca4b3fd85c.jpg?v=0" /></a><br />
+blummy - The bookmarklet management bookmarklet<br />
+<a href="http://www.blummy.com/">http://www.blummy.com/</a></p></p>
+
+<p><p>到不常用的電腦前一屁股坐下，<br />
+卻開始苦惱瀏覽器沒有平常愛用的那些 Extension？<br />
+這時 blummy 將是您的最後希望，<br />
+從此您的瀏覽器只需要一個書籤就夠啦！</p></p>
+
+<p><p>對於常更換座位的電腦人來說<br />
+（特別是網路成癮症的患者們），<br />
+最麻煩的莫過於得四處灌瀏覽器以及其 Extensions，<br />
+像在下會光臨的電腦舉凡家裡、專題教室、多媒體實驗室、&#8230;&#8230;<br />
+曾一度灌滿了 Firefox 跟 Extensions，<br />
+一個 Extension 更新，就全部都得更新，<br />
+簡直瘋了！</p></p>
+
+<p><p>但後來回歸 Opera 懷抱後，<br />
+卻又對於 Opera 與 Web 服務結合不佳深感不滿，<br />
+於是在書籤工具列擺上一狗票的 bookmarklet，<br />
+包括 del.icio.us、Typo、Google Services 等等，<br />
+後來發現狀況其實跟之前沒啥兩樣，<br />
+到一台陌生的電腦我依然必須想辦法把這些 bookmarklet 生出來，<br />
+雖然存到 del.icio.us 標上 tag，比裝 extensions 方便許多，<br />
+不過一個個 drag &amp; drop 實在不經濟，<br />
+沒想到這時我碰上了 blummy，<br />
+它實在太棒了！</p></p>
+
+<p><p>首先申請一個帳號，然後加入自己喜愛的 Web 服務並編排一下版面，<br />
+並將綠色的 blummy 連結加入書籤列，<br />
+往後只要按下「blummy」，就會跑出一個精緻的小視窗，<br />
+裡面全都是您自訂的服務咧！</p></p>
+
+<p><p>現在我用<br />
+Opera + del.icio.us + blummy<br />
+這組合簡直是移動城堡，<br />
+以後到別的電腦只要灌一下 Opera，<br />
+把 blummy 掛上去，就可以暢快漫遊 Web 了，<br />
+要不就懶一點，直接開 IE 也可以，哈哈！</p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/5/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/3/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/mount-partition-in-disk-image.html">掛載硬碟映像檔中的分割區</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/archlinux-postgresql-shmmax.html">解決 ArchLinux 內 PostgreSQL 因 shmmax 設定無法啟動的問題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/solve-gnome-terminal-no-wrapping.html">Solve gnome-terminal no wrapping problem</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/bonau">@bonau</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'bonau',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("munouzin", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/munouzin" class="twitter-follow-button" data-show-count="false">Follow @munouzin</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - munouzin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'munou-diagram';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
