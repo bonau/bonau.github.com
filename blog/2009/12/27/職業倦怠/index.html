@@ -288,7 +288,7 @@ Linux 最後還是架起來了，也學寫了一些 PHP。</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bonau.github.com/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/" data-via="munouzin" data-counturl="http://bonau.github.com/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://bonau.github.com/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/" data-via="" data-counturl="http://bonau.github.com/blog/2009/12/27/%E8%81%B7%E6%A5%AD%E5%80%A6%E6%80%A0/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -347,51 +347,6 @@ Linux 最後還是架起來了，也學寫了一些 PHP。</p>
   </ul>
 </section>
 
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/bonau">@bonau</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'bonau',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("munouzin", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/munouzin" class="twitter-follow-button" data-show-count="false">Follow @munouzin</a>
-  
-</section>
 
 
 
