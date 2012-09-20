@@ -1,0 +1,35 @@
+---
+layout: post
+title: Ruby On Rails - Localization Generator
+categories:
+- 頭殼壞去
+tags: []
+published: true
+comments: false
+---
+<p><p>修改 app/controllers/application.rb:</p></p>
+
+<p><p>   require 'localization'<br />
+    class ApplicationController &lt;&gt;        include Localization</p></p>
+
+<p><p>修改 app/helpers/application_helper.rb:</p></p>
+
+<p><p>  module ApplicationHelper<br />
+      include Localization</p></p>
+
+<p><p>在 config/environment.rb 最後加上:</p></p>
+
+<p><p>  require 'environments/localization_environment'<br />
+    require 'localization'<br />
+    Localization::load<em>localized</em>strings</p></p>
+
+<p><p>修改 localization_environment.rb:</p></p>
+
+<p><p>  :default_language = 'zhtw'</p></p>
+
+<p><p>建立 lang/zhtw.yaml:</p></p>
+
+<p><p>  file_charset: big5</p></p>
+
+<p><p>這樣就能正常使用 Localization Generator 了，<br />
+否則會遭遇到 Iconv 的轉換問題。</p></p>

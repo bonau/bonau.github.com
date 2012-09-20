@@ -1,0 +1,28 @@
+---
+layout: post
+title: Typo update problem & solution with Subversion
+categories:
+- 頭殼壞去
+tags: []
+published: true
+comments: false
+---
+<p><p>If you update Typo with Subversion and get the error message below:</p></p>
+
+<p><pre><code>svn: Working copy 'tmp/cache' is missing or not locked
+</code></pre></p>
+
+<p><p>The way to solve it looks a little bit silly:</p></p>
+
+<p><pre><code>rm -rf tmp/cache/; svn up
+</code></pre></p>
+
+<p><p>Nevertheless,<br />
+I find out that I only have to remove tmp/cache/ once.<br />
+And it makes everything back to the right track.<br />
+I make another checkout<br />
+in order to check if the problem occurs on every case,<br />
+but it does not happen.</p></p>
+
+<p><p>I have no idea how this situation will happen again.<br />
+However, the solution is not so tricky, huh?</p></p>

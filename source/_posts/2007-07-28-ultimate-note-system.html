@@ -1,0 +1,63 @@
+---
+layout: post
+title: 終極筆記系統
+categories:
+- 頭殼壞去
+tags: []
+published: true
+comments: false
+---
+<p><h1>Ultimate Note</h1></p>
+
+<p><p>此專案尚未 Materialize，可能的實作方式是寫成 Web Service，<br />
+然後提供 API 方便其他 Application 使用.</p></p>
+
+<p><p>累加形容詞 =&gt; :<br />
+指定形容詞 =&gt; =</p></p>
+
+<p><h2>Basic Description</h2></p>
+
+<p><pre><code>user1# polarpolar:munou   ←提示字元# input
+polarpolar: munou         ←Output
+user1# pc035860:munou
+pc035860: munou
+user1# Almond:munou
+Almond: munou
+user1# .find munou
+polarpolar, pc035860, Almond</code></pre></p>
+
+<p>user1# pc035860:superman<br />
+pc035860: munou, superman<br />
+user1# .find munou<br />
+polarpolar, pc035860, Almond</p>
+
+<p>user1# polarpolar=smart<br />
+polarpolar: smart ←munou 屬性不見了
+</p>
+
+<p><h2>Detail Description 1</h2></p>
+
+<p><pre><code>user1# polarpolar university=NCCU
+polarpolar: smart
+  university: NCCU
+user1# polarpolar university id=0806449
+polarpolar: smart
+  university: NCCU
+    id: 0806449</code></pre></p>
+
+<p>; ←註解符號 (MASM？！)<br />
+; 這時候發現 NCCU 錯了，應該是 FJU 才對<br />
+; 不過我們很可能忘記曾經輸入 NCCU 的紀錄<br />
+; 結果學號會 Lost 掉<br />
+user1# polarpolar university=FJU<br />
+polarpoalr: smart<br />
+  university: FJU</p>
+
+<p>; 若改成這樣<br />
+user1# polarpolar university==FJU<br />
+polarpoalr: smart<br />
+  university: FJU<br />
+    id: 0806449</p>
+
+<p>; 嘖嘖，好像很奇怪，上課想一下好了 XD
+</p>

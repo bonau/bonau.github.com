@@ -1,0 +1,17 @@
+---
+layout: post
+title: 讓 screen 停止閃爍
+categories:
+- 主機環境
+tags: []
+published: true
+comments: true
+---
+<p>本來以為是 PuTTY 對 flashing bell 的設定有 bug<br />
+後來才發現是 screen 的問題 囧<br />
+在 ~/.screenrc 加上
+<pre>
+vbell off
+</pre>
+就可以了<br />
+或是在 screen 中按 Ctrl+A Ctrl+: 然後輸入 vbell off 也是可行的</p>

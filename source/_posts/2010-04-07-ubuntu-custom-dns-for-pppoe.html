@@ -1,0 +1,34 @@
+---
+layout: post
+title: Ubuntu custom DNS for PPPoE
+categories:
+- 有腦世界
+- 主機環境
+tags:
+- custom
+- dns
+- pppoe
+- ubuntu
+published: true
+comments: true
+---
+<p>I've found that whenever I dial up PPPoE<br />
+the /etc/resolv.conf will be rewritten<br />
+so that name server is always set as ISP's default DNS.<br />
+However, it's affected by the configuration of PPPoE.<br />
+Now we'll try to solve this.</p>
+
+<p><pre>
+$ sudoedit /etc/ppp/peers/dsl-provider
+</pre>
+find:
+<pre>
+usepeerdns
+</pre>
+change it to:
+<pre>
+#usepeerdns
+</pre></p>
+
+<p>Then feel free to edit /etc/resolv.conf.<br />
+PPPoE will not overwrite your settings anymore.</p>
