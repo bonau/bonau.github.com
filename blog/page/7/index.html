@@ -9,9 +9,7 @@
   <meta name="author" content="munouzin">
 
   
-  <meta name="description" content="在找 Apache mod_proxy 的說明時，意外發現這個東西。 Nginx = Engine X
-http://wiki.codemongers.com/Nginx Ruby On Rails + Mongrel 設定範例
-http://wiki.codemongers.com/ &hellip;">
+  <meta name="description" content="圖：台北 101 與煙火?! 一直很期待 2007 的到來，但既不是因為 Perl6, Py3k, Rite 的開發，也不是因為天時地利人和可以搞大事業，而是一直有預感，今年一定會很美好，於是就這樣期待著了。 大學過到現在已經一半多了，卻一直感受不到自己在上「大學」很像一個一天到晚在填鴨的補習班 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +77,49 @@ http://wiki.codemongers.com/ &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/01/newyear-2007/">新のものがたり</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-01T00:00:00+08:00" pubdate data-updated="true">Jan 1<span>st</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p><a href="http://www.flickr.com/photos/munouzin/355682271/"><img src="http://farm1.static.flickr.com/126/355682271_10ab398726_m.jpg" /></a><br />
+圖：台北 101 與煙火?!</p></p>
+
+<p><p>一直很期待 2007 的到來，但既不是因為 Perl6, Py3k, Rite 的開發，也不是因為天時地利人和可以搞大事業，而是一直有預感，今年一定會很美好，於是就這樣期待著了。</p></p>
+
+<p><p>大學過到現在已經一半多了，卻一直感受不到自己在上「大學」很像一個一天到晚在填鴨的補習班，然後自己就是那隻肥鴨， 2007 年，也有可能是繼續這樣度過的吧？</p></p>
+
+<p><p>1/1 就要結束了，今年也請多多指教。</p></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -509,67 +550,6 @@ http://wiki.codemongers.com/ &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2006/08/15/localization-generator/">Ruby on Rails - Localization Generator</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-08-15T00:00:00+08:00" pubdate data-updated="true">Aug 15<span>th</span>, 2006</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><p>修改 app/controllers/application.rb:</p></p>
-
-<p><p>   require &#8216;localization&#8217;<br />
-    class ApplicationController &lt;&gt;        include Localization</p></p>
-
-<p><p>修改 app/helpers/application_helper.rb:</p></p>
-
-<p><p>  module ApplicationHelper<br />
-      include Localization</p></p>
-
-<p><p>在 config/environment.rb 最後加上:</p></p>
-
-<p><p>  require &#8216;environments/localization_environment&#8217;<br />
-    require &#8216;localization&#8217;<br />
-    Localization::load<em>localized</em>strings</p></p>
-
-<p><p>修改 localization_environment.rb:</p></p>
-
-<p><p>  :default_language = &#8216;zhtw&#8217;</p></p>
-
-<p><p>建立 lang/zhtw.yaml:</p></p>
-
-<p><p>  file_charset: big5</p></p>
-
-<p><p>這樣就能正常使用 Localization Generator 了，<br />
-否則會遭遇到 Iconv 的轉換問題。</p></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -587,6 +567,10 @@ http://wiki.codemongers.com/ &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/24/ryoma-m1s-overview/">RYOMA M1S Overview</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/20/ban-dao-github-liao/">搬到 GitHub 了</a>
       </li>
     
@@ -600,10 +584,6 @@ http://wiki.codemongers.com/ &hellip;">
     
       <li class="post">
         <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
       </li>
     
   </ul>

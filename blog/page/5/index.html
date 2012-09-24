@@ -9,10 +9,7 @@
   <meta name="author" content="munouzin">
 
   
-  <meta name="description" content="blummy - The bookmarklet management bookmarklet
-http://www.blummy.com/ 到不常用的電腦前一屁股坐下，
-卻開始苦惱瀏覽器沒有平常愛用的那些 Extension？
-這時 blummy 將是您的最後希望， &hellip;">
+  <meta name="description" content="不久前哈比提到系統排程的問題，我忽然聯想到 WindowsXP 的系統排程好像不用登入就可以 Work，那這麼一來重開機無法自動撥接的問題就有解啦！不過在我設定三分鐘跑一次 rasdial 的時候，執行 Shell 指令就會有個 cmd 視窗出來亂，很麻煩，不但影響視線又會影響工作， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +77,50 @@ http://www.blummy.com/ 到不常用的電腦前一屁股坐下，
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/03/adsl-auto-dialup-in-xp/">WindowsXP 下 ADSL 自動撥接</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-03T00:00:00+08:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><p>不久前哈比提到系統排程的問題，我忽然聯想到 WindowsXP 的系統排程好像不用登入就可以 Work，那這麼一來重開機無法自動撥接的問題就有解啦！不過在我設定三分鐘跑一次 rasdial 的時候，執行 Shell 指令就會有個 cmd 視窗出來亂，很麻煩，不但影響視線又會影響工作，就算設定不要在非閒置時工作也一樣。於是我把腦筋動到了 VBScript 身上，印象中他可以在背景執行 Shell 指令，就稍微查了一下用法，以下是 Script 內容：</p></p>
+
+<p><pre><code>Set objShell=wscript.createObject("wscript.shell")
+objShell.Run "rasdial HiShit 8xxxxxxx@ip.hinet.net password", 0, True
+</code></pre></p>
+
+<p><p>其中 HiShit 是您自訂的撥號連線名稱，帳號密碼則在其後。把這個檔案存成 dialup.vbs，之後放到排程裡，設定「從 2007/08/01 起，每天從上午 09:00 起每隔 3 分鐘為時 24 小時」跑一次，另外別忘記不要勾「登入後才執行」，這樣就大功告成啦！</p></p>
+
+<p><p>今天有點懶得截圖:p</p></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -677,65 +718,6 @@ Apr. 2007 in Taipei</p></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/02/03/opera-dictionary/">在 Opera 使用其他字典</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-02-03T00:00:00+08:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><p>在 Opera 中使用字典都會連結到 Answers.com,<br />
-這對熟諳英語的人來說當然是最佳解了,<br />
-不過有時就是希望查查英漢或漢英字典,<br />
-這時該怎麼辦呢?</p></p>
-
-<p><p>首先到選單上「工具/功能設定/搜尋/新增」, 然後輸入以下資料:</p></p>
-
-<p><p><img src="http://farm1.static.flickr.com/166/378300526_edd32a4aa9.jpg?v=0" /></p></p>
-
-<p><pre><code>名稱: Yahoo!奇摩字典 ( 可自訂 )
-關鍵字: d ( 可自訂, 只要不與其他搜尋引擎相同 )
-網址: http://tw.dictionary.yahoo.com/search?ei=big5&amp;p=%s
-</code></pre></p>
-
-<p><p>確定後離開, 在網址列打「d 灰熊」, 會跑出什麼結果呢?</p></p>
-
-<p><p><a href="http://www.flickr.com/photos/munouzin/378300527/"><img src="http://farm1.static.flickr.com/148/378300527_cc59e3422b_m.jpg" /></a></p></p>
-
-<p><p>接下來是在網頁上 double click 一個英文單字,<br />
-出現選單後就可以找到我們剛剛新增的那個搜尋引擎.</p></p>
-
-<p><p><img src="http://farm1.static.flickr.com/165/378300530_df1f1f62cc.jpg?v=0" /></p></p>
-
-<p><p>提供給各位做參考.</p></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -753,6 +735,10 @@ Apr. 2007 in Taipei</p></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/09/24/ryoma-m1s-overview/">RYOMA M1S Overview</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/09/20/ban-dao-github-liao/">搬到 GitHub 了</a>
       </li>
     
@@ -766,10 +752,6 @@ Apr. 2007 in Taipei</p></p>
     
       <li class="post">
         <a href="/2012/01/about-installing-google-chrome-in-arch.html">About Installing Google Chrome in Arch Linux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/using-google-maps-api-libraries-adsense.html">Using Google Maps API Libraries (Adsense, Geometry, etc.) in gmaps4rails Way!</a>
       </li>
     
   </ul>
